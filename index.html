@@ -1,101 +1,518 @@
 <!DOCTYPE html>
 	<html>
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=0">
-		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Montserrat">		
 		
-		<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Montserrat">
+		<link rel="stylesheet" type="text/css" href="w3.css">
+		<link rel="stylesheet" type="text/css" href="fontawesome.css">
+		<link rel="stylesheet" type="text/css" href="all.css">
+		
+		<script defer src="all.js"></script>
+		
+
 <style type="text/css">
-*{	margin: 0; padding: 0; list-style: none;
-	text-decoration: none;
-	}
-body{background-color: rgba(0,255,0,0.2);} 
-div{ align:center;}
-img{
-	width: 80%; height: auto; margin: auto;
-	display: table-cell; box-shadow: 3px 2px 9px gray;	
-}
-#abc{
-	text-align: center; margin:auto; padding-top:19%;
-	width:100%;
-}
-.rtu {margin-top:6%;}
-.header{
-	background-color: #111111;
-	width: 100%;
-	height:auto;
+
+*{	margin:0; padding:0; list-style:none; text-decoration:none;	}
 	
-	padding-bottom: 30px;
-	position: fixed ;
-	top:0;
-	left:0;
+body{background-color: rgba(0,255,0,0.1)} 
+
+.header{
+		height:auto; 
+		width: 100%;
+		position:fixed; 
+		top:0; 
+		z-index:1;
+			background-color: rgba(0,0,0,0.5);
+		}
+
+ img { 	border-radius: 4px;	}
+ 
+ 
+
+.tittle{
+	background-color: rgba(0,0,0,0.6);
+	border-radius: 4px;
+	color:white;
+	font-size:17px;
+	text-align:center;
+	width:35%;
+	position:absolute; 
+	top:0; 
+
 }
-.inner_header{
-	height:;
-	width: 100%;
-	height:100%;
-	margin: 0 auto;
-	background-color: ;
-	display: block;
-	text-align: center;
-	position:;
-}
-.logo_container h1{
+
+.b{
 	color: white;
 	font-weight: 100;
 	font-family: "Montserrat";
-	font-size: 8em;
+	display: inline-block;
 }
-.logo_container h1 span {font-weight: 800;}
-.navegation a li{
-	display: inline;	
-	color:white;
-	font-family: "Montserrat";
-	font-size: 3.5em;
-	padding: 0em 0.6em;
+
+.c {
+	font-weight: 700;
 }
-https://photos.app.goo.gl/zgG8RsaHZHbhkRd46
-</style>
-	</head>
-	<body>
-		<header class="header">		 		
-		 	<div class="inner_header">
-		 		<div class="logo_container">	
-		 			<h1>Artículos <span>Bquilla</span></h1>
-				 		<ul class="navegation">	
-				 			<a href=""><li>Catalogo</li></a>
-				 			<a href="fb://facewebmodal/f?href=https://www.facebook.com/articulosbquilla/photos"><li>Facebook</li></a>
-				 			<a href=""><li>Instagram</li></a>
-				 			<a href=""><li>Contact</li></a>
-				 		</ul>	
-		 		</div>			
-		 	</div>	
-		</header>
-<div id="abc"></div>
-<div class="w3-container"> hola</div>
-<img src="https://photos.app.goo.gl/zgG8RsaHZHbhkRd46" alt="W3Schools.com" style="width:104px;height:142px;">kkkkkk
-<img src="https://drive.google.com/file/d/1VQmi0msb9jkjiwxqnraMTMMPc9Xfb3DaHA/view?usp=drivesdk">
-<a href="https://www.w3schools.com/images/w3schools_green.jpg" >this is </a>
-<a href="https://drive.google.com/file/d/1VQmi0msb9jkjiwxqnraMTMMPc9Xfb3DaHA/view?usp=drivesdk">hola</a>
-<a href="/storage/emulated/0/img_1.png" >bueno bue</a>
-<br>
-<a href="https://scontent.fbaq2-1.fna.fbcdn.net/v/t1.0-9/38653520_580160285719055_4020740037946638336_n.jpg?_nc_cat=0&oh=bfd215d1ec47d28a209078a0ebb79aa5&oe=5C35D3B6" >new </a>
-https://drive.google.com/file/d/1-SFLSKvhc2yPaCraXla1qlELSUnkm7WO/view?usp=sharing
-<script>
-var text ='';
-for (var i = 0; i < 10; i++)
+
+.w3-bottom{
+margin-top:10px;
+}
+
+
+.footer {
+	background-color: rgba(0,0,0,0.5);
+	position:fixed; 
+	bottom:0; 
+	width:100%; 		
+}
+
+.footer a	{
+	color: white;
+	float: right;
+	padding: 0px 6px;
+	font-size: 28px;
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 1;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 25%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content, {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.passing, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.9s;
+    
+    animation-name: zoom;
+    animation-duration: 0.9s;
+}
+
+@-webkit-keyframes zoom
 {
-text += '<div class="rtu"><a href="img_' + i +
-		'.png"><img src="img_' + i +
-	    '.png" alt="img_' + i + 
-	    '"></a></div>';
-} 
-	document.getElementById('abc').innerHTML = text;
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes zoom 
+{
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px)
+{
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/* */ 
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin-top: 15.7%;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 18px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 3px;
+  width: 15px;
+  margin: 0 0px;
+  background-color: #bbb;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: dodgerblue;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+
+</style>
+
+</head>
+
+
+<body>	
+
+<header class="header w3-black w3-center">	 	
+
+	<span class="b ">			
+		<h3>Art&iacute;culos <span class="c w3-text-cyan">B<span class="c w3-text-white">quilla</span></span></h3>
+	</span>		
+
+	<span class="w3-button w3-xlarge w3-right"
+		onclick="w3_open()"> <i class="fas fa-bars"></i>
+	</span> 
+<nav id="mySidebar" 
+	class="w3-sidebar w3-black w3-animate-top w3-xxlarge"
+	style="display:none;padding-top:25%; position: fixed; top: 0 ">
+
+	<a href="javascript:void(0)" 
+	  class="w3-button w3-xlarge w3-display-topright"
+	  onclick="w3_close()">  <i class="fas fa-times"></i>
+  	</a>
+  
+  	<div id="menu" 	class=" w3-bar-block w3-center">
+	 	<!-- <a class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="w3_close()"></a> -->
+	</div>	
+ </nav>
+ 
+</header>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="slide_0.png" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="slide_1.png" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="slide_2.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</div>
+
+
+		<!-- The Modal -->
+<div id="myModal" class="modal">
+	<a href="javascript:void(0)" 
+		 class="w3-button w3-black w3-xlarge w3-padding w3-display-topright"
+	   onclick="w3_close()" 
+	    style="padding:auto">  <i class="fas fa-times"></i>
+	</a>
+	<div id="abc"></div>	  	
+</div>
+
+<section id="wrapper">
+	<div class="cont" onclick="oModal(technology())"> </div>
+	<div class="cont" onclick="oModal(caps())"> </div>
+	<div class="cont" onclick="oModal()"> </div>
+	<div class="cont" onclick="oModal()"> </div>
+</section>
 	
+<footer class="footer">
+	<a></a>
+	<a></a>
+	<a></a>	
+</footer> 
+
+<script>
+
+
+
+/* Social links */	
+var facebook ="fb://facewebmodal/f?href=https://www.facebook.com/articulosbquilla/photos";
+var	face_art ='fb://page/378010675934018/photos';
+var	face_gor ='fb://page/581398665578960';
+var instagram="https://www.instagram.com/articulos_bquilla";
+var	contact = "https://api.whatsapp.com/send?phone=+573008546921";
+var server = "https://artbaq.github.io/catalogo/";
+
+
+var flechas = '<a class=" w3-btn-floating w3-xxxlarge" style="position:absolute;top:45%;left:0; color:navy" onclick="plusDivs(-1)" >&#10094 </a>'+
+ 			'<a class="w3-btn-floating w3-xxxlarge" style="position:absolute;top:45%;right:0; color:navy" onclick="plusDivs(1)">&#10095</a>';
+
+
+
+//************Categorias de productos**************
+
+var tech_tittle = 'Tecnología y Accessorios';
+var tech_src = 'technology.png';
+
+var cap_tittle = 'Gorras'; 
+var cap_src = 'gorras_girl.jpg'; 
+
+var com_tittle = 'coming soon'; 
+var com_src = 'coming.png'; 
+
+//************************************************
+
+
+
+// main menu // // main menu // // main menu //
+
+var menu = document.getElementById('menu');
+var nav_a = menu.getElementsByTagName('a');
+var nav_items ='';
+
+	for (var i = 0;  i < 5; i++)	
+	{
+		nav_items += '<a class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="w3_close()"></a>';
+
+	}		menu.innerHTML = nav_items;
+		
+	nav_a[0].innerHTML= 'Galeria <i class="fab fa-facebook-square w3-xxlarge"></i> ';	
+	nav_a[1].innerHTML= 'Galeria <i class="fab fa-instagram w3-xxlarge"></i>';	
+	nav_a[2].innerHTML= 'Contacto';
+	nav_a[3].innerHTML= 'articulosBquilla';
+	nav_a[4].innerHTML= 'gorrasBquilla';
 	
+	nav_a[0].href= facebook;
+	nav_a[1].href= instagram;
+	nav_a[2].href= contact;
+	nav_a[3].href= face_art;
+	nav_a[4].href= face_gor;
+
+//************************************************	
+
+getCategory(tech_tittle, tech_src, 0);
+getCategory(cap_tittle, cap_src, 1);			
+getCategory(com_tittle, com_src, 2);
+getCategory(com_tittle, com_src, 3);
+
+
+
+
+function getCategory(text, src, n)	
+{	
+	var x = '';
+	var y = document.getElementsByClassName('cont')[n];		
+
+		x += '<div> <img> <div class="tittle"> </div> </div>';
+				
+		y.innerHTML = x ;		
+		y.style.position = 'relative' ;
+	//  y.onclick = function() {	oModal(s);		}
+
+	var div = y.getElementsByTagName('div');
+	var img = y.getElementsByTagName('img')[0];
+
+		div[0].className = 'w3-card-4 w3-margin';
+		div[1].innerHTML = text;
+
+		img.id = 'myImg';
+		img.src = src; 
+		img.style.width = '100%';
+}
+
+
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open()	{
+  mySidebar.style.width = "100%";
+  mySidebar.style.display = "block";
+}
+
+function w3_close()	{
+  mySidebar.style.display = "none";
+  modal.style.display = "none";
+}
+
+
+// footer // // footer // // footer // // footer //
+
+var footer = document.getElementsByClassName('footer')[0];
+var a = footer.getElementsByTagName('a');
+	
+	a[0].href = instagram;
+	a[0].innerHTML = '<i class="fab fa-instagram"></i>';
+	
+	a[1].href = facebook;
+	a[1].innerHTML = '<i class="fab fa-facebook-square"></i>';
+	
+	a[2].href = contact;
+	a[2].innerHTML = '<i class="fab fa-whatsapp"></i>';
+
+
+//********************************************************
+
+   
+ 
+
+
+ 
+
+
+
+// getCaps(caps());
+
+
+
+
+
+// Get technology
+function technology()
+{   
+	var f1_Set ='';
+
+	for (var i = 0; i < 10; i++)  
+	{
+	 	 f1_Set += '<img class="passing" src="tec_' + i +'.png" style="width:100%">';
+	}
+	     f1_Set += flechas;	document.getElementById('abc').innerHTML = f1_Set;
+}
+
+
+;
+
+// Get caps
+function caps()
+{	
+	var s2_set ='';
+
+	for (var i = 0; i < 10; i++)
+	{
+		s2_set += '<img class="passing" src="cap_' + i +'.png" style="width:100%">';
+	} 
+		s2_set += flechas; 	document.getElementById('abc').innerHTML = s2_set;
+}
+
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+function oModal(type) {
+    type;
+    modal.style.display = "block";    
+    showDivs(slideIndex);       
+}
+
+var slideIndex = 1;
+
+function plusDivs(n) { showDivs(slideIndex += n); }
+
+function showDivs(n)
+{   
+  var i;   var x = document.getElementsByClassName("passing");
+  
+  if (n > x.length) { slideIndex = 1 }     
+  
+  if (n < 1) { slideIndex = x.length } 
+  
+  for (i = 0; i < x.length; i++)  { x[i].style.display = "none"; }
+  
+  x[slideIndex-1].style.display = "block";  
+}
+
+
+
+
+var slideInd = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+  slideInd++;
+  if (slideInd > slides.length) {slideInd = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideInd-1].style.display = "block";  
+  dots[slideInd-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 4 seconds
+}
+
 </script>
-	
-	</body>
-	https://drive.google.com/folderview?id=16r9F9KmR6yKGoOIKICScl3PcXy59ZgQ5
-	https://googledrive.com/host/16r9F9KmR6yKGoOIKICScl3PcXy59ZgQ5
-	</html>
+
+
+
+
+</body>
+</html>
