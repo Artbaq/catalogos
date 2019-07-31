@@ -5,222 +5,16 @@
 		<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Montserrat">		
 		
 		<link rel="stylesheet" type="text/css" href="w3.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">		
 		<link rel="stylesheet" type="text/css" href="fontawesome.css">
 		<link rel="stylesheet" type="text/css" href="all.css">
 		
 		<script defer src="all.js"></script>
-		
-
-<style type="text/css">
-
-*{	margin:0; padding:0; list-style:none; text-decoration:none;	}
-	
-body{background-color: rgba(0,255,0,0.1)} 
-
-.header{
-		height:auto; 
-		width: 100%;
-		position:fixed; 
-		top:0; 
-		z-index:1;
-			background-color: rgba(0,0,0,0.5);
-		}
-
- img { 	border-radius: 4px;	}
- 
- 
-
-.tittle{
-	background-color: rgba(0,0,0,0.6);
-	border-radius: 4px;
-	color:white;
-	font-size:17px;
-	text-align:center;
-	width:35%;
-	position:absolute; 
-	top:0; 
-
-}
-
-.b{
-	color: white;
-	font-weight: 100;
-	font-family: "Montserrat";
-	display: inline-block;
-}
-
-.c {
-	font-weight: 700;
-}
-
-.w3-bottom{
-margin-top:10px;
-}
-
-
-.footer {
-	background-color: rgba(0,0,0,0.5);
-	position:fixed; 
-	bottom:0; 
-	width:100%; 		
-}
-
-.footer a	{
-	color: white;
-	float: right;
-	padding: 0px 6px;
-	font-size: 28px;
-}
-
-#myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    opacity: 1;
-}
-
-#myImg:hover {opacity: 0.7;}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 25%; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (image) */
-.modal-content, {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-/* Caption of Modal Image */
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-/* Add Animation */
-.passing, #caption {    
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.9s;
-    
-    animation-name: zoom;
-    animation-duration: 0.9s;
-}
-
-@-webkit-keyframes zoom
-{
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
-
-@keyframes zoom 
-{
-    from {transform: scale(0.1)} 
-    to {transform: scale(1)}
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px)
-{
-    .modal-content {
-        width: 100%;
-    }
-}
-
-/* */ 
-
-.mySlides {display: none;}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin-top: 15.7%;
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 18px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 3px;
-  width: 15px;
-  margin: 0 0px;
-  background-color: #bbb;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: dodgerblue;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-
-</style>
-
-</head>
+	</head>
 
 
 <body>	
-
-<header class="header w3-black w3-center">	 	
+	<header class="header w3-black w3-center">
 
 	<span class="b ">			
 		<h3>Art&iacute;culos <span class="c w3-text-cyan">B<span class="c w3-text-white">quilla</span></span></h3>
@@ -229,6 +23,8 @@ img {vertical-align: middle;}
 	<span class="w3-button w3-xlarge w3-right"
 		onclick="w3_open()"> <i class="fas fa-bars"></i>
 	</span> 
+
+
 <nav id="mySidebar" 
 	class="w3-sidebar w3-black w3-animate-top w3-xxlarge"
 	style="display:none;padding-top:25%; position: fixed; top: 0 ">
@@ -238,20 +34,26 @@ img {vertical-align: middle;}
 	  onclick="w3_close()">  <i class="fas fa-times"></i>
   	</a>
   
-  	<div id="menu" 	class=" w3-bar-block w3-center">
+  	<div id="menu" class=" w3-bar-block w3-center">
 	 	<!-- <a class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="w3_close()"></a> -->
 	</div>	
  </nav>
  
 </header>
 
+ 
 
 <div class="slideshow-container">
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
+	<div class="w3-card-4 w3-margin w3-padding " style="border-left: 5px solid green; background-color: whitesmoke;">
+ 	<span style="color: red; font-size: 18px"><b>Selecciona una categoria... </b></span>
+ 	
+ </div>
+
+<div class="mySlides fade">  
+  <div class="numbertext">2 / 3</div>
   <img src="slide_0.png" style="width:100%">
-  <div class="text">Caption Text</div>
+  <div class="text">Caption Two</div>
 </div>
 
 <div class="mySlides fade">
@@ -262,7 +64,7 @@ img {vertical-align: middle;}
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="slide_2.jpg" style="width:100%">
+  <img src="slide_2.png" style="width:100%">
   <div class="text">Caption Three</div>
 </div>
 
@@ -277,13 +79,24 @@ img {vertical-align: middle;}
 
 		<!-- The Modal -->
 <div id="myModal" class="modal">
-	<a href="javascript:void(0)" 
-		 class="w3-button w3-black w3-xlarge w3-padding w3-display-topright"
-	   onclick="w3_close()" 
-	    style="padding:auto">  <i class="fas fa-times"></i>
-	</a>
+		<a class="w3-button w3-black w3-xlarge w3-padding w3-display-topright"
+		   onclick="w3_close()" style="padding:auto;" href="javascript:void(0)">  <i class="fas fa-times"></i>
+		</a>
 	<div id="abc"></div>	  	
 </div>
+
+
+
+ <div class="w3-card-4 w3-margin w3-padding " style="border-left: 5px solid green; background-color: whitesmoke;">
+ 	<span style="color: teal; font-size: 20px"> 
+ 		<b>Permitenos el gusto de atenderte.</b>
+ 	</span>
+ 	<p> En articulos Bquilla contamos con una gran variedad de productos para todo publico y con un equipo de trabajo enfocados a satifacer las necesidaded de nuestros clientes.</p>	 
+ </div>
+
+
+
+
 
 <section id="wrapper">
 	<div class="cont" onclick="oModal(technology())"> </div>
@@ -318,13 +131,13 @@ var flechas = '<a class=" w3-btn-floating w3-xxxlarge" style="position:absolute;
 
 //************Categorias de productos**************
 
-var tech_tittle = 'Tecnología y Accessorios';
+var tech_tittle = 'Tecnología y Accessorios &#10095';
 var tech_src = 'technology.png';
 
-var cap_tittle = 'Gorras'; 
+var cap_tittle = 'Gorras &#10095'; 
 var cap_src = 'gorras_girl.jpg'; 
 
-var com_tittle = 'coming soon'; 
+var com_tittle = 'coming soon &#10095'; 
 var com_src = 'coming.png'; 
 
 //************************************************
@@ -358,8 +171,11 @@ var nav_items ='';
 //************************************************	
 
 getCategory(tech_tittle, tech_src, 0);
+
 getCategory(cap_tittle, cap_src, 1);			
+
 getCategory(com_tittle, com_src, 2);
+
 getCategory(com_tittle, com_src, 3);
 
 
@@ -390,12 +206,15 @@ function getCategory(text, src, n)
 
 var mySidebar = document.getElementById("mySidebar");
 
-function w3_open()	{
+function w3_open()
+{
   mySidebar.style.width = "100%";
   mySidebar.style.display = "block";
 }
 
-function w3_close()	{
+
+function w3_close()
+{
   mySidebar.style.display = "none";
   modal.style.display = "none";
 }
@@ -426,7 +245,7 @@ var a = footer.getElementsByTagName('a');
 
 
 
-// getCaps(caps());
+
 
 
 
@@ -437,15 +256,16 @@ function technology()
 {   
 	var f1_Set ='';
 
-	for (var i = 0; i < 10; i++)  
-	{
+	for (var i = 0; i < 10; i++){
 	 	 f1_Set += '<img class="passing" src="tec_' + i +'.png" style="width:100%">';
 	}
-	     f1_Set += flechas;	document.getElementById('abc').innerHTML = f1_Set;
+	  
+	  f1_Set += flechas;	
+	  document.getElementById('abc').innerHTML = f1_Set;
 }
 
 
-;
+
 
 // Get caps
 function caps()
@@ -463,45 +283,75 @@ function caps()
 // Get the modal
 var modal = document.getElementById('myModal');
 
-function oModal(type) {
+function oModal(type)
+{
+
     type;
+
     modal.style.display = "block";    
+
     showDivs(slideIndex);       
 }
 
+
+
+
+
+
 var slideIndex = 1;
 
-function plusDivs(n) { showDivs(slideIndex += n); }
+
+function plusDivs(n)
+{ 
+	showDivs(slideIndex += n);
+}
+
 
 function showDivs(n)
 {   
-  var i;   var x = document.getElementsByClassName("passing");
+  var i;   
+  var x = document.getElementsByClassName("passing");
   
-  if (n > x.length) { slideIndex = 1 }     
-  
-  if (n < 1) { slideIndex = x.length } 
-  
-  for (i = 0; i < x.length; i++)  { x[i].style.display = "none"; }
-  
-  x[slideIndex-1].style.display = "block";  
+	if (n > x.length)
+	{
+		slideIndex = 1;
+	}     
+	  
+	if (n < 1) 
+	{
+		slideIndex = x.length 
+	} 
+	  
+	for (i = 0; i < x.length; i++)  
+	{
+		x[i].style.display = "none";
+	}
+    
+    	x[slideIndex-1].style.display = "block";  
 }
 
 
 
 
 var slideInd = 0;
+
 showSlides();
 
 function showSlides() {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
+  
   for (i = 0; i < slides.length; i++) {
+
     slides[i].style.display = "none"; 
   }
+
   slideInd++;
+
   if (slideInd > slides.length) {slideInd = 1}    
   for (i = 0; i < dots.length; i++) {
+
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideInd-1].style.display = "block";  
