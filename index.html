@@ -14,26 +14,28 @@
 
 
 <body>	
-	<header class="header w3-black w3-center">
+	
+<header class="header">
 
 	<span class="b ">			
 		<h3>Art&iacute;culos <span class="c w3-text-cyan">B<span class="c w3-text-white">quilla</span></span></h3>
 	</span>		
 
-	<span class="w3-button w3-xlarge w3-right"
-		onclick="w3_open()"> <i class="fas fa-bars"></i>
+	<span class="w3-button w3-xlarge w3-right" onclick="w3_open()"> 
+		<i class="fas fa-bars"></i>
 	</span> 
 
 
-<nav id="mySidebar"> <a>
-						<i class="fas fa-times"></i>	
-					</a>
+	<nav id="mySidebar"> 		
+	<a>
+		<i class="fas fa-times"></i>	
+	</a>
 	<div id="menu" class=" w3-bar-block w3-center">
 	  <a href=""></a>
 	  <a href=""></a>
 	  <a href=""></a>
 	</div>	
- </nav>
+	</nav>
  
 
 
@@ -70,20 +72,23 @@
 
 
 		<!-- The Modal -->
-<div id="myModal" class="modal"><a>
-									<i class="fas fa-times"></i>
-								</a>
-	<div id="container-modal"></div>	  	
+<div id="myModal" class="modal">
+		<img class="caption" src="logo.png" style="position:absolute; top: left; margin: 5%; width:30%; z-index: 1;">
+	<a>
+		<i class="fas fa-times"></i>
+	</a>
+	<div id="container-modal">
+		
+	</div>
 </div>
 
 
-
- <div class="w3-card-4 w3-margin w3-padding " style="border-left: 5px solid green; background-color: whitesmoke;">
- 	<span style="color: navy; font-size: 16px"><b>Selecciona una categoria... </b></span>
+ <div class="w3-card-4 w3-margin w3-padding " style="border-left: 5px solid green; background-color: white;"><span style="color: navy; font-size: 16px"><b>Selecciona una categoria... </b></span>
  	
  </div>
 
- <div class="w3-card-4 w3-margin w3-padding " style="border-left: 5px solid green; background-color: whitesmoke;">
+ <div class="w3-card-4 w3-margin w3-padding " 
+ style="border-left: 5px solid green; background-color: white;">
  	<span style="color: teal; font-size: 16px"> 
  		<b>Permitenos el gusto de atenderte.</b>
  	</span>
@@ -95,9 +100,10 @@
 
 
 <section id="wrapper">
-	<div class="cont" onclick="oModal(get_images('tec_'))"> </div>
-	<div class="cont" onclick="oModal(get_images('cap_'))"> </div>
-	<div class="cont" onclick=""> </div>
+	<div class="cont" onclick="oModal('tec_')"> </div>
+	<div class="cont" onclick="oModal('cap_')"> </div>
+	<div class="cont" onclick="oModal('')"> </div>
+	<div class="cont" onclick="oModal('')"> </div>
 </section>
 	
 <footer class="footer">
@@ -136,33 +142,33 @@ var cap_text = 'Gorras &#10095&#10095',
 var com_text = 'coming soon &#10095&#10095', 
 	com_src = 'coming.png'; 
 
-//    getCategory(tec_text, tec_src, 0);
+
 //************************************************
+
+var mySidebar = document.getElementById("mySidebar");
+var menu = document.getElementById('menu');
 
 
 getCategory(tec_text, tec_src, 0);
 getCategory(cap_text, cap_src, 1);
 getCategory(com_text, com_src, 2);
-//getCategory(com_text, com_src, 3);
-//getCategory(com_text, com_src, 3);
+getCategory(com_text, com_src, 3);
+//getCategory(com_text, com_src, 4);
 
 
 function getCategory(text, src, n)	
 {	
-	var x = '';
-	var y = document.getElementsByClassName('cont')[n];		
+	var y = document.getElementsByClassName('cont')[n];
+	var	x = '<div> <img> <div class="tittle"> </div> </div>';
 
-		x += '<div> <img> <div class="tittle"> </div> </div>';
-				
 		y.innerHTML = x ;		
-		y.style.position = 'relative' ;
-	//  y.onclick = function() {	oModal(s);		}
 
 	var div = y.getElementsByTagName('div');
 	var img = y.getElementsByTagName('img')[0];
 
 		div[0].className = 'w3-card-4 w3-margin';
 		div[1].innerHTML = text;
+		//div.onclick = function() { oModal(get_images());		}
 
 		img.id = 'myImg';
 		img.src = src; 
@@ -170,16 +176,13 @@ function getCategory(text, src, n)
 	}
 
 
-var mySidebar = document.getElementById("mySidebar");
 
 	mySidebar.className = 'w3-sidebar w3-black w3-animate-top w3-xxlarge';
-	mySidebar.style.cssText ='display:none;padding-top:25%; position: fixed; top: 0;';
+	
 
 	
 // main menu // // main menu // // main menu //
 
-var menu_links ='';
-var menu = document.getElementById('menu');
 var menu_a = menu.getElementsByTagName('a');
 var menu_i = menu.getElementsByTagName('i');
 
@@ -187,7 +190,9 @@ var a_Class ='w3-bar-item w3-button w3-text-grey w3-hover-black';
 var close = 'w3_close()';
 
 
-	for (var i = 0;  i < menu_a.length; i++)	
+var menu_links ='';
+
+	for (var i = 0;  i < menu_a.length; i++)
 	{
 		menu_links += '<a class="'+ a_Class +'" onclick="'+ close +'"></a>';
 
@@ -261,20 +266,7 @@ var a = footer.getElementsByTagName('a');
 
 
 //********************************************************
-
-   
- 
-
-
- 
-
-
-
-
-
-
-
-
+var containerModal = document.getElementById('container-modal');
 
 // Get images
 function get_images(y) {   	
@@ -285,7 +277,8 @@ var f1_Set ='';
 	 	 f1_Set += '<img class="passing" src="'+ y + i +'.png" style="width:100%">';
 	}
 	f1_Set += flechas;				
-	document.getElementById('container-modal').innerHTML = f1_Set;
+	 containerModal.innerHTML = f1_Set;
+	 containerModal.style.cssText = 'background-image:url(blur_large.png);background-repeat:no-repeat; background-size: 100%;';
 }
 
 
@@ -298,9 +291,9 @@ var modal = document.getElementById('myModal');
 
 function oModal(type)
 {
-    exit_Icon(myModal);
-    type;
     modal.style.display = "block";
+    exit_Icon(myModal);
+    get_images(type)
     showDivs(slideIndex); 
 }
 
