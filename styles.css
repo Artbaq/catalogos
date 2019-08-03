@@ -192,6 +192,7 @@ img {vertical-align: middle;}
   top:8%;
   z-index: 1;
 background-color: white;
+box-shadow: 1px 1px 15px;
 }
 
 /* Caption text */
