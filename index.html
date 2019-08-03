@@ -56,9 +56,7 @@
 </div>
 
 
-<h2 style="padding-left: 25px">Catalogos</h2>
 
-<hr>
 
 <!--
  <div class="w3-card-4 w3-margin w3-padding " style="border-left: 5px solid green;  background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.2);"><span style="color: navy; font-size: 16px"><b>Selecciona una categoria... </b></span>
@@ -88,9 +86,9 @@
 
 		<!-- The Modal -->
 <div id="myModal" class="modal">	
-	<div class="modal-text">45</div>	
 	<img src="marco.png" style="position:absolute; width: 100%;z-index:1;">
 	<div id="container-modal"></div>
+	<div class="modal-text">###</div>	
 	<a>	
 		<i class="fas fa-times"></i> 
 	</a>
@@ -98,6 +96,9 @@
 
 
 <section id="wrapper">
+
+<h2 style="padding-left: 25px">Catalogos</h2>
+<hr>
 	<div class="cont" onclick="oModal('tec_')"> </div>
 	<div class="cont" onclick="oModal('cap_')"> </div>
 	<div class="cont"> </div>
@@ -147,13 +148,17 @@ var com_text = 'coming soon &#10095&#10095',
 //************************************************
 
 var mySidebar = document.getElementById("mySidebar");
+var modal = document.getElementById('myModal');
+
 
 var menu = document.getElementById('menu');
-var menu_a = menu.getElementsByTagName('a');
-var menu_i = menu.getElementsByTagName('i');
+	var menu_a = menu.getElementsByTagName('a');
+	var menu_i = menu.getElementsByTagName('i');
+
+var containerModal = document.getElementById('container-modal');
 
 var footer = document.getElementById('footer');
-var footer_a = footer.getElementsByTagName('a');
+	var footer_a = footer.getElementsByTagName('a');
 
 
 
@@ -223,13 +228,32 @@ var menu_links ='';
 	menu_i[2].className = 'fab fa-whatsapp w3-xxlarge';
 //************************************************	
 
+// footer // // footer // 
+footer_a[0].href = instagram;
+footer_a[1].href = facebook;
+footer_a[2].href = contact;
+// footer // // footer //
 
 
+// Get images
+function get_images(y) {   	
+
+	var f1_Set ='';
+	for (var i = 0; i < 10; i++)	{	f1_Set += '<img class="caption" src="logo.png"><img class="passing" src="'+ y + i +'.png" style="width:100%">';
+	}	f1_Set += flechas;	
+
+	 	containerModal.innerHTML = f1_Set; 
+}
 
 
-
-
-
+// Get the modal
+function oModal(type)
+{
+    modal.style.display = "block";
+    exit_Icon(myModal);
+    get_images(type)
+    showDivs(slideIndex); 
+}
 
 function exit_Icon(id)
 {		
@@ -256,48 +280,6 @@ function w3_close()
   modal.style.display = "none";
 }
 
-
-// footer // 
-	// footer // 
-footer_a[0].href = instagram;
-footer_a[1].href = facebook;
-footer_a[2].href = contact;
-	// footer // 
-// footer //
-	
-
-
-//********************************************************
-var containerModal = document.getElementById('container-modal');
-
-// Get images
-function get_images(y) {   	
-
-var f1_Set ='';
-	for (var i = 0; i < 10; i++)	{
-
-	 	 f1_Set += '<img class="caption" src="logo.png" style="position:absolute; top: left; margin: 5%; width:30%; z-index: 1;"><img class="passing" src="'+ y + i +'.png" style="width:100%">';
-	}
-	f1_Set += flechas;	
-
-	 containerModal.innerHTML = f1_Set; 
-}
-
-
-
-
-
-
-// Get the modal
-var modal = document.getElementById('myModal');
-
-function oModal(type)
-{
-    modal.style.display = "block";
-    exit_Icon(myModal);
-    get_images(type)
-    showDivs(slideIndex); 
-}
 
 
 
