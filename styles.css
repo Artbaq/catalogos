@@ -1,7 +1,7 @@
 
 *{	margin:0; padding:0; list-style:none; text-decoration:none;	}
 	
-body{background-color: #ffffff;} 
+body{background-color: #ffffff; padding-top:18%;} 
 
 #mySidebar{
   display:none;
