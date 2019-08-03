@@ -1,7 +1,14 @@
 
-*{	margin:0; padding:0; list-style:none; text-decoration:none;	}
+*{
+margin:0; 
+padding:0; 
+list-style:none; 
+text-decoration:none;	
+}
 	
-body{background-color: #ffffff;} 
+body{
+background-color: #ffffff;
+} 
 
 #mySidebar{
   display:none;
@@ -11,13 +18,13 @@ body{background-color: #ffffff;}
 }
 
 #wrapper{
-  margin-top:10%;
+  margin-top:8%;
 }
 
 
 .header{		 
   background-color: white;
-		width: 100%;
+  width: 100%;
     height:;
 		position:fixed; 
 		top:0; 
@@ -187,9 +194,9 @@ img {vertical-align: middle;}
 .slideshow-container {
   width: 100%;
   max-width: 700px;
-  position:;
+  
   margin: auto;
-  top:12%;
+  Margin-top:12%;
   z-index: 1;
 background-color: white;
 box-shadow: 1px 1px 15px;
