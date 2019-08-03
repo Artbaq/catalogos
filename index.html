@@ -18,27 +18,12 @@
 <header class="header">
 
 	<span class="b ">			
-		<h3>Art&iacute;culos <span class="c w3-text-cyan">B<span class="c w3-text-white">quilla</span></span></h3>
+		<h3>Art&iacute;culos <span class="c w3-text-black">B<span class="c w3-text-red">quilla</span></span></h3>
 	</span>		
 
 	<span class="w3-button w3-xlarge w3-right" onclick="w3_open()"> 
 		<i class="fas fa-bars"></i>
 	</span> 
-
-
-	<nav id="mySidebar"> 		
-	<a>
-		<i class="fas fa-times"></i>	
-	</a>
-	<div id="menu" class=" w3-bar-block w3-center">
-	  <a href=""></a>
-	  <a href=""></a>
-	  <a href=""></a>
-	</div>	
-	</nav>
- 
-
-
 </header>
 
 
@@ -71,42 +56,62 @@
 </div>
 
 
-		<!-- The Modal -->
-<div id="myModal" class="modal">
-		<img class="caption" src="logo.png" style="position:absolute; top: left; margin: 5%; width:30%; z-index: 1;">
-	<a>
-		<i class="fas fa-times"></i>
-	</a>
-	<div id="container-modal">
-		
-	</div>
-</div>
+<h2 style="padding-left: 25px">Catalogos</h2>
+
+<hr>
+
+<!--
+ <div class="w3-card-4 w3-margin w3-padding " style="border-left: 5px solid green;  background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.2);"><span style="color: navy; font-size: 16px"><b>Selecciona una categoria... </b></span>
+ 	
+ </div>
 
  <div class="w3-card-4 w3-margin w3-padding " 
  style="border-left: 5px solid green; background-color: white;">
  	<span style="color: teal; font-size: 16px"> 
- 		<b>Te invitamos a conocer nuestros productos.</b>
+ 		<b>Permitenos el gusto de atenderte.</b>
  	</span>
- 	<p> </p>	 
- </div>
+ 	<p> En articulos Bquilla contamos con una gran variedad de productos para todo publico y con un equipo de trabajo enfocados a satifacer las necesidaded de nuestros clientes.</p>	 
+ </div>  -->
 
- <div class="w3-card-4 w3-margin w3-padding " style="border-left: 5px solid green; background-color: white;"><span style="color: navy; font-size: 16px"><b>Selecciona una categoria... </b></span>
- 	
- </div>
+
+
+<nav id="mySidebar" class="w3-animate-top"> 		
+<a>
+	<i class="fas fa-times"></i>	
+</a>
+<div id="menu" class=" w3-bar-block w3-center">
+  <a href=""></a>
+  <a href=""></a>
+  <a href=""></a>
+</div>	
+</nav>
+
+		<!-- The Modal -->
+<div id="myModal" class="modal">	
+	<div class="modal-text">45</div>	
+	<img src="marco.png" style="position:absolute; width: 100%;z-index:1;">
+	<div id="container-modal"></div>
+	<a>	
+		<i class="fas fa-times"></i> 
+	</a>
+</div>
 
 
 <section id="wrapper">
 	<div class="cont" onclick="oModal('tec_')"> </div>
 	<div class="cont" onclick="oModal('cap_')"> </div>
-	<div class="cont" onclick="oModal('')"> </div>
-	<div class="cont" onclick="oModal('')"> </div>
+	<div class="cont"> </div>
+	<div class="cont"> </div>
 </section>
+
 	
-<footer class="footer">
-	<a></a>
-	<a></a>
-	<a></a>	
+<footer id="footer">
+	<a><i class="fab fa-instagram"></i></a>
+	<a><i class="fab fa-facebook-square"></i></a>
+	<a><i class="fab fa-whatsapp"></i></a>	
 </footer> 
+
+
 
 <script>
 
@@ -122,8 +127,8 @@ var	face_gor ='fb://page/581398665578960';
 var server = "https://artbaq.github.io/catalogo/";
 
 
-var flechas = '<a class=" w3-btn-floating w3-xxxlarge" style="position:absolute;top:45%;left:0; color:navy" onclick="plusDivs(-1)" >&#10094 </a>'+
- 			'<a class="w3-btn-floating w3-xxxlarge" style="position:absolute;top:45%;right:0; color:navy" onclick="plusDivs(1)">&#10095</a>';
+var flechas = '<a class=" w3-btn-floating w3-xxxlarge" style="position:absolute;top:45%;left:0; color:navy; z-index:2;" onclick="plusDivs(-1)" >&#10094 </a>'+
+ 			'<a class="w3-btn-floating w3-xxxlarge" style="position:absolute;top:45%;right:0; color:navy; z-index:2;" onclick="plusDivs(1)">&#10095</a>';
 
 
 
@@ -142,13 +147,21 @@ var com_text = 'coming soon &#10095&#10095',
 //************************************************
 
 var mySidebar = document.getElementById("mySidebar");
+
 var menu = document.getElementById('menu');
+var menu_a = menu.getElementsByTagName('a');
+var menu_i = menu.getElementsByTagName('i');
+
+var footer = document.getElementById('footer');
+var footer_a = footer.getElementsByTagName('a');
+
+
 
 
 getCategory(tec_text, tec_src, 0);
 getCategory(cap_text, cap_src, 1);
-//getCategory(com_text, com_src, 2);
-//getCategory(com_text, com_src, 3);
+getCategory(com_text, com_src, 2);
+getCategory(com_text, com_src, 3);
 //getCategory(com_text, com_src, 4);
 
 
@@ -173,14 +186,12 @@ function getCategory(text, src, n)
 
 
 
-	mySidebar.className = 'w3-sidebar w3-black w3-animate-top w3-xxlarge';
+	
 	
 
 	
 // main menu // // main menu // // main menu //
 
-var menu_a = menu.getElementsByTagName('a');
-var menu_i = menu.getElementsByTagName('i');
 
 var a_Class ='w3-bar-item w3-button w3-text-grey w3-hover-black';
 var close = 'w3_close()';
@@ -246,19 +257,14 @@ function w3_close()
 }
 
 
-// footer // // footer // // footer // // footer //
-
-var footer = document.getElementsByClassName('footer')[0];
-var a = footer.getElementsByTagName('a');
+// footer // 
+	// footer // 
+footer_a[0].href = instagram;
+footer_a[1].href = facebook;
+footer_a[2].href = contact;
+	// footer // 
+// footer //
 	
-	a[0].href = instagram;
-	a[0].innerHTML = '<i class="fab fa-instagram"></i>';
-	
-	a[1].href = facebook;
-	a[1].innerHTML = '<i class="fab fa-facebook-square"></i>';
-	
-	a[2].href = contact;
-	a[2].innerHTML = '<i class="fab fa-whatsapp"></i>';
 
 
 //********************************************************
@@ -270,11 +276,11 @@ function get_images(y) {
 var f1_Set ='';
 	for (var i = 0; i < 10; i++)	{
 
-	 	 f1_Set += '<img class="passing" src="'+ y + i +'.png" style="width:100%">';
+	 	 f1_Set += '<img class="caption" src="logo.png" style="position:absolute; top: left; margin: 5%; width:30%; z-index: 1;"><img class="passing" src="'+ y + i +'.png" style="width:100%">';
 	}
-	f1_Set += flechas;				
-	 containerModal.innerHTML = f1_Set;
-	 containerModal.style.cssText = 'background-image:url(blur_large.png);background-repeat:no-repeat; background-size: 100%;';
+	f1_Set += flechas;	
+
+	 containerModal.innerHTML = f1_Set; 
 }
 
 
@@ -311,6 +317,7 @@ function showDivs(n)
 {   
   var i;   
   var x = document.getElementsByClassName("passing");
+  var y = document.getElementsByClassName("caption");
   
 	if (n > x.length)
 	{
@@ -325,9 +332,11 @@ function showDivs(n)
 	for (i = 0; i < x.length; i++)  
 	{
 		x[i].style.display = "none";
+		y[i].style.display = "none";
 	}
     
     	x[slideIndex-1].style.display = "block";  
+    	y[slideIndex-1].style.display = "block";
 }
 
 
