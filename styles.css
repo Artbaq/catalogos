@@ -1,7 +1,7 @@
 
 *{	margin:0; padding:0; list-style:none; text-decoration:none;	}
 	
-body{background-color: #ffffff; padding-top:18%;} 
+body{background-color: #ffffff;} 
 
 #mySidebar{
   display:none;
@@ -189,7 +189,7 @@ img {vertical-align: middle;}
   max-width: 700px;
   position:;
   margin: auto;
-  top:8%;
+  top:12%;
   z-index: 1;
 background-color: white;
 box-shadow: 1px 1px 15px;
