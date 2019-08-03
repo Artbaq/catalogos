@@ -13,13 +13,15 @@ body{background-color: #ffffff;}
 
 
 .header{		 
-  background-color: #111;
+  background-color: white;
 		width: 100%;
+    height:;
 		position:fixed; 
 		top:0; 
 		z-index:1;
-    color: white;
+    color: black;
     text-align: center;
+    box-shadow: 3px 2px 22px; 
 }
  
 .cont{
@@ -41,6 +43,7 @@ body{background-color: #ffffff;}
 	font-weight: 100;
 	font-family: "Montserrat";
 	display: inline-block;
+
 }
 
 .c {
@@ -52,15 +55,26 @@ body{background-color: #ffffff;}
   border-radius: 7px;
 }
 
+#mySidebar{
+  background-color: black;
+  height: 100%;
+  font-size: 10vw;
+  z-index: 1;
+}
 
-.footer {
+hr{
+  width: 80%;
+  margin:auto;
+
+}
+#footer {
 	background-color: rgba(0,0,0,0.5);
 	position:fixed; 
 	bottom:0; 
 	width:100%; 		
 }
 
-.footer a	{
+#footer a	{
 	color: white;
 	float: right;
 	padding: 0px 6px;
@@ -89,14 +103,25 @@ body{background-color: #ffffff;}
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+
 }
 
-/* Modal Content (image) */
-.modal-content, {
+#container-modal{
+
+   background-image:url(blur_large.png);
+    background-repeat:no-repeat;
+    background-size: 100%;
+}
+
+/* Modal Content (image) 
+*/
+.modal-text, {
+  color: white;
     margin: auto;
     display: block;
     width: 80%;
     max-width: 700px;
+   
 }
 
 /* Caption of Modal Image */
@@ -112,7 +137,7 @@ body{background-color: #ffffff;}
 }
 
 /* Add Animation */
-.passing, #caption {    
+.passing, .caption {    
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.9s;
     
@@ -147,11 +172,11 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  width: 95%;
+  width: 100%;
   max-width: 700px;
   position: relative;
   margin: auto;
-  padding-top: 12%;
+  margin-top: 11vw;
 }
 
 /* Caption text */
