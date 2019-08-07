@@ -27,36 +27,6 @@
 </header>
 
 
-<div class="slideshow-container">
-
-<div class="mySlides fade">  
-  <div class="numbertext">2 / 3</div>
-  <img src="slide_0.png" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="slide_1.png" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="slide_2.png" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-</div>
-
-
-
 
 <!--
  <div class="w3-card-4 w3-margin w3-padding " style="border-left: 5px solid green;  background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.2);"><span style="color: navy; font-size: 16px"><b>Selecciona una categoria... </b></span>
@@ -73,10 +43,9 @@
 
 
 
-<nav id="mySidebar" class="w3-animate-top"> 		
-<a>
-	<i class="fas fa-times"></i>	
-</a>
+<nav id="mySidebar" class="w3-animate-top"> 
+	<a>	<i class="fas fa-times"></i> </a>
+	
 <div id="menu" class=" w3-bar-block w3-center">
   <a href=""></a>
   <a href=""></a>
@@ -95,17 +64,55 @@
 </div>
 
 
+
+	
+<div class="slideshow-container">
+
+<div class="mySlides fade">  
+  <div class="numbertext">2 / 3</div>
+  <img src="slide_0.png" style="width:100%">
+  <div class="text">Bienvenidos</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="slide_1.png" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="slide_2.png" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+
+<div class="dots">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</div>
+
 <section id="wrapper">
+<h2 style="padding-left: 25px">Acerca de nosotros</h2>
+<hr>
+<p style="padding-left: 25px">En Artículo Bquilla nos dedicamos a la comercialización de productos que satisfaga la demanda de nuestros clientes. Estamos comprometidos a traer la mejor calidad. 
+Y así seguir fortaleciendo la credibilidad que nos caracteriza.</p>
 
 <h2 style="padding-left: 25px">Catalogos</h2>
-<hr>
+<hr> 
+
 	<div class="cont" onclick="oModal('tec_')"> </div>
 	<div class="cont" onclick="oModal('cap_')"> </div>
 	<div class="cont"> </div>
 	<div class="cont"> </div>
+    <div class="behind" onload="oModal('tec_')" style="display: none"></div>
 </section>
 
-	
+
+
+
 <footer id="footer">
 	<a><i class="fab fa-instagram"></i></a>
 	<a><i class="fab fa-facebook-square"></i></a>
@@ -165,11 +172,12 @@ var footer = document.getElementById('footer');
 
 getCategory(tec_text, tec_src, 0);
 getCategory(cap_text, cap_src, 1);
-//getCategory(com_text, com_src, 2);
-//getCategory(com_text, com_src, 3);
+getCategory(com_text, com_src, 2);
+getCategory(com_text, com_src, 3);
 //getCategory(com_text, com_src, 4);
-get_images('tec_');
-	get_images('cap_');
+//get_images('cap_');
+//oModal('tec_');
+
 
 function getCategory(text, src, n)	
 {	
@@ -239,9 +247,12 @@ footer_a[2].href = contact;
 // Get images
 function get_images(y) {   	
 
-	var f1_Set ='';
-	for (var i = 0; i < 10; i++)	{	f1_Set += '<img class="caption" src="logo.png"><img class="passing" src="'+ y + i +'.png" style="width:100%">';
-	}	f1_Set += flechas;	
+var f1_Set ='';
+for (var i = 0; i < 10; i++)	
+	{	
+			f1_Set += '<img class="caption" src="logo.png"><img class="passing" src="'+ y + i +'.png" style="width:100%">';
+	}	
+	f1_Set += flechas;	
 
 	 	containerModal.innerHTML = f1_Set; 
 }
@@ -325,8 +336,8 @@ function showDivs(n)
 
 
 
-var slideInd = 0;
 
+var slideInd = 0;
 showSlides();
 
 function showSlides() {
@@ -334,6 +345,7 @@ function showSlides() {
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
   
+  //Hide all the slide with a loop
   for (i = 0; i < slides.length; i++) {
 
     slides[i].style.display = "none"; 
@@ -341,10 +353,11 @@ function showSlides() {
 
   slideInd++;
 
-  if (slideInd > slides.length) {slideInd = 1}    
+  if (slideInd > slides.length) {slideInd = 1}  
+
   for (i = 0; i < dots.length; i++) {
 
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace("active", "");
   }
   slides[slideInd-1].style.display = "block";  
   dots[slideInd-1].className += " active";

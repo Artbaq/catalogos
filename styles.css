@@ -1,14 +1,7 @@
 
-*{
-margin:0; 
-padding:0; 
-list-style:none; 
-text-decoration:none;	
-}
+*{	margin:0; padding:0; list-style:none; text-decoration:none;	}
 	
-body{
-background-color: #ffffff;
-} 
+body{background-color: #ffffff;} 
 
 #mySidebar{
   display:none;
@@ -17,21 +10,18 @@ background-color: #ffffff;
   top: 0;
 }
 
-#wrapper{
-  margin-top:8%;
-}
 
 
 .header{		 
   background-color: white;
-  width: 100%;
+		width: 100%;
     height:;
-		position:fixed; 
+		position:sticky; 
 		top:0; 
 		z-index:2;
     color: black;
     text-align: center;
-    box-shadow: 3px 2px 22px; 
+    box-shadow: 3px 2px 18px; 
 }
  
 .cont{
@@ -187,25 +177,30 @@ hr{
 
 /* */ 
 
-.mySlides {display: none;}
+.mySlides {
+  display: none;
+  max-width: 700px;
+  margin:auto ;
+
+
+}
 img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  width: 100%;
-  max-width: 700px;
+  border-bottom: 1.5px solid brown;
+  position:relative;
+  width: 100%;  
+  margin:auto;
+  box-shadow: 0px 0px 8px;
   
-  margin: auto;
-  Margin-top:12%;
-  z-index: 1;
-background-color: white;
-box-shadow: 1px 1px 15px;
+  
 }
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 20px;
+  color: yellow;
+  font-size: 25px;
   padding: 8px 12px;
   position: absolute;
   bottom: 18px;
@@ -226,9 +221,17 @@ box-shadow: 1px 1px 15px;
 }
 
 /* The dots/bullets/indicators */
+div .dots{
+  text-align:center;
+  position: absolute; 
+  right: 50%;
+  bottom: 1%
+
+}
 .dot {
-  height: 3px;
-  width: 15px;
+  height: 0.5vw;
+  width: 3vw;
+  border-radius: 2vw;
   margin: 0 0px;
   background-color: #bbb;
   display: inline-block;
@@ -236,7 +239,7 @@ box-shadow: 1px 1px 15px;
 }
 
 .active {
-  background-color: dodgerblue;
+  background-color: orange;
 }
 
 /* Fading animation */
@@ -260,4 +263,3 @@ box-shadow: 1px 1px 15px;
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
-
