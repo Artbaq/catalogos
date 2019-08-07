@@ -141,7 +141,7 @@ hr{
 .caption{
    position:absolute; 
    top: left;
-   margin: 5%; 
+   margin: 10%; 
    width:30%; 
    z-index: 1;
 }
@@ -192,15 +192,16 @@ img {vertical-align: middle;}
   position:relative;
   width: 100%;  
   margin:auto;
-  box-shadow: 0px 0px 8px;
+  //*margin-top:4vw;*//
+  box-shadow: 0 0 8px;
   
   
 }
 
 /* Caption text */
 .text {
-  color: yellow;
-  font-size: 25px;
+  color: #f2f2f2;
+  font-size: 20px;
   padding: 8px 12px;
   position: absolute;
   bottom: 18px;
@@ -230,7 +231,7 @@ div .dots{
 }
 .dot {
   height: 0.5vw;
-  width: 3vw;
+  width: 2vw;
   border-radius: 2vw;
   margin: 0 0px;
   background-color: #bbb;
@@ -263,3 +264,4 @@ div .dots{
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
+
