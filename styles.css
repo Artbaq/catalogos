@@ -25,18 +25,15 @@ body{background-color: #ffffff;}
 }
 
 
-
-
 .header{		 
-  background-color: white;
-		width: 100%;
+	background-color: white;
+	width: 100%;
     height:;
-		position:sticky; 
-		top:0; 
-		z-index:2;
+	position:sticky; 
+	top:0; 
+	z-index:2;
     color: black;
     padding: 0;
-    
     box-shadow: 3px 2px 18px; 
 }
  
@@ -84,18 +81,20 @@ hr{
   margin:auto;
 
 }
+
 #footer {
-	background-color: rgba(0,0,0,0.5);
-	position:fixed; 
-	bottom:0; 
-	width:100%; 		
+	background-color:;
+	position:relative; 
+	width:100%; 
+	height:70%;		
 }
 
 #footer a	{
-	color: white;
-	float: right;
+	color: purple;
+	display: block;
 	padding: 0px 6px;
-	font-size: 28px;
+	font-size: 35px;
+	text-align:center;
 }
 
 #myImg {
@@ -205,20 +204,18 @@ hr{
   height: 250px;
   font-family: "Montserrat";
 }
-.efect p{
-	font-size:1.5em;
-}
-.efect h3, p{
- font-size:2em;
- 
-  margin: 0;
-}
+
 .enunc{
 	color: dodgerblue;
-	text-shadow:2px 2px white;}
+	text-shadow:2px 2px white;
+	font-size:2em;
+	margin: 0;
+	}
 	
 .stat{
-	text-shadow:2px 2px dodgerblue;}
+	text-shadow:2px 2px dodgerblue;
+	font-size:1.3em;
+	margin: 0;}
 
 .efect img{
   float: left;
@@ -266,32 +263,10 @@ hr{
 /* Slideshow container */
 .slideshow-container {
   box-shadow: 3px 2px 18px;
-  position:;
+  position:relative;
   width: 100%;  
   margin:auto;
-  
-  
 }
-
-/* Caption text 
-
-.text {
-  color: #f2f2f2;
-  font-size: 20px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 18px;
-  width: 100%;
-  text-align: center;
-  background-size: 100%;
-
-  
-}
-
-*/
-
-
-
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
@@ -305,14 +280,14 @@ hr{
 div .dots{
   text-align:center;
   position: absolute; 
-  right: 50%;
-  bottom: 1%;
+  right: 45%;
+  bottom: 2%;
   z-index:1;
 
 }
 .dot {
   height: 0.5vw;
-  width: 2vw;
+  width: 3.5vw;
   border-radius: 2vw;
   margin: 0 0px;
   background-color: #bbb;
@@ -321,7 +296,7 @@ div .dots{
 }
 
 .active {
-  background-color: orange;
+  background-color: yellow;
 }
 
 /* Fading animation */
