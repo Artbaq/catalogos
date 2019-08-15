@@ -203,17 +203,22 @@ hr{
   color: white;
   height: 250px;
   font-family: "Montserrat";
+  -webkit-filter: grayscale(35%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(35%);
 }
 
 .enunc{
 	color: dodgerblue;
-	text-shadow:2px 2px white;
+	font-weight:800;
+	text-shadow:1px 1px white;
 	font-size:2em;
 	margin: 0;
 	}
 	
 .stat{
-	text-shadow:2px 2px dodgerblue;
+	font-weight:600;
+	color:white;
+	text-shadow:1px 1px dodgerblue;
 	font-size:1.3em;
 	margin: 0;}
 
