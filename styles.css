@@ -10,6 +10,21 @@ body{background-color: #ffffff;}
   top: 0;
 }
 
+#inner_header{
+  text-align: center;  
+  margin: 0 auto 0 auto;  
+  width: 75%;
+  color: black;
+
+}
+
+@media only screen and (max-width: 400px){
+  #inner_header{
+        width: 100%;
+  }
+}
+
+
 
 
 .header{		 
@@ -20,7 +35,8 @@ body{background-color: #ffffff;}
 		top:0; 
 		z-index:2;
     color: black;
-    text-align: center;
+    padding: 0;
+    
     box-shadow: 3px 2px 18px; 
 }
  
@@ -48,6 +64,7 @@ body{background-color: #ffffff;}
 
 .c {
 	font-weight: 700;
+	color: red;
 }
 
 
@@ -105,6 +122,10 @@ hr{
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 
 }
+.promo{
+ 
+
+  }
 
 #container-modal{
 
@@ -139,10 +160,11 @@ hr{
 */
 
 .caption{
+  vertical-align: middle;
    position:absolute; 
    top: left;
-   margin: 10%; 
-   width:30%; 
+   margin: 18%; 
+   width:25%; 
    z-index: 1;
 }
 
@@ -167,38 +189,92 @@ hr{
     to {transform: scale(1)}
 }
 
+
+
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 500px)
+@media only screen and (max-width: 323px)
 {
     .modal-content {
         width: 100%;
     }
 }
 
-/* */ 
+.efect{
+  background-image: linear-gradient(to bottom right , yellow,orange,red, purple);
+  color: white;
+  height: 250px;
+  font-family: "Montserrat";
+}
+.efect p{
+	font-size:1.5em;
+}
+.efect h3, p{
+ font-size:2em;
+ 
+  margin: 0;
+}
+.enunc{
+	color: dodgerblue;
+	text-shadow:2px 2px white;}
+	
+.stat{
+	text-shadow:2px 2px dodgerblue;}
 
-.mySlides {
-  display: none;
-  max-width: 700px;
-  margin:auto ;
-
+.efect img{
+  float: left;
+  width: 35%;
 
 }
-img {vertical-align: middle;}
+
+.text {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+   
+  
+}
+
+@media only screen and (max-width: 500px){
+
+  .efect{
+    height: auto;
+  }
+
+  .efect h3, p {
+    display: inline-block;
+    width: 100%;
+    text-align: center;    
+  }
+
+  .efect img {
+    width: 70%;
+    float: none;
+  }
+}
+
+
+/* */ 
+
+.mySlides {  
+  display: none;
+  max-width: 700px;
+  height: ;
+  margin:auto ;
+}
+
 
 /* Slideshow container */
 .slideshow-container {
-  border-bottom: 1.5px solid brown;
-  position:relative;
+  box-shadow: 3px 2px 18px;
+  position:;
   width: 100%;  
   margin:auto;
-  //*margin-top:4vw;*//
-  box-shadow: 0 0 8px;
   
   
 }
 
-/* Caption text */
+/* Caption text 
+
 .text {
   color: #f2f2f2;
   font-size: 20px;
@@ -212,12 +288,16 @@ img {vertical-align: middle;}
   
 }
 
+*/
+
+
+
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 20px;
   padding: 8px 12px;
-  position: absolute;
+  position: ;
   top: 20;
 }
 
@@ -226,7 +306,8 @@ div .dots{
   text-align:center;
   position: absolute; 
   right: 50%;
-  bottom: 1%
+  bottom: 1%;
+  z-index:1;
 
 }
 .dot {
@@ -264,4 +345,3 @@ div .dots{
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
-

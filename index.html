@@ -16,31 +16,16 @@
 <body>	
 	
 <header class="header">
+	<div id="inner_header">
+		<span class="b ">			
+			<h3>Art&iacute;culos <span class="c w3-text-dodgerblue">B<span class="c">quilla</span></span></h3>
+		</span>		
 
-	<span class="b ">			
-		<h3>Art&iacute;culos <span class="c w3-text-black">B<span class="c w3-text-red">quilla</span></span></h3>
-	</span>		
-
-	<span class="w3-button w3-xlarge w3-right" onclick="w3_open()"> 
-		<i class="fas fa-bars"></i>
-	</span> 
+		<span class="w3-button w3-xlarge w3-right" onclick="w3_open()"> 
+			<i class="fas fa-bars"></i>
+		</span> 
+	</div>
 </header>
-
-
-
-<!--
- <div class="w3-card-4 w3-margin w3-padding " style="border-left: 5px solid green;  background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.2);"><span style="color: navy; font-size: 16px"><b>Selecciona una categoria... </b></span>
- 	
- </div>
-
- <div class="w3-card-4 w3-margin w3-padding " 
- style="border-left: 5px solid green; background-color: white;">
- 	<span style="color: teal; font-size: 16px"> 
- 		<b>Permitenos el gusto de atenderte.</b>
- 	</span>
- 	<p> En articulos Bquilla contamos con una gran variedad de productos para todo publico y con un equipo de trabajo enfocados a satifacer las necesidaded de nuestros clientes.</p>	 
- </div>  -->
-
 
 
 <nav id="mySidebar" class="w3-animate-top"> 		
@@ -69,10 +54,51 @@
 	
 <div class="slideshow-container">
 
-<div class="mySlides fade">  
-  <div class="numbertext">2 / 3</div>
-  <img src="slide_0.png" style="width:100%">
-  <div class="text">Caption Two</div>
+<div class="mySlides fade txt">
+	<div class="efect">
+  		<p>
+  			
+  			<img src="promo_0.png" class="promo">
+  			<h3 class="enunc">Smart TV BOX plus</h3>
+  			<p class="stat">Aprovecha que solo quedan pocos</p></img>
+  		</p>
+	</div> 
+</div>
+
+
+<div class="mySlides fade txt">
+	<div class="efect">
+  		<p>
+  			<img src="promo_1.png" class="promo">
+  			<h3 class="enunc">Receptor Bluetooth</h3>
+  			<p class="stat">Convierte tu viejo equipo de sonido a Bluetooth</p>
+  		</p>
+	</div> 
+</div>
+
+<div class="mySlides fade txt">
+	<div class="efect">
+  		<p>
+  			<img src="promo_2.png" class="promo">
+  			<h3 class="enunc">Speaker/Parlante Bluetooth</h3>
+  			<p class="stat">Lleva tu musica a donde quieras.</p>
+  		</p>
+	</div> 
+</div>
+
+
+
+
+
+
+
+
+
+<!--
+<div class="mySlides fade">
+		  	<div class="numbertext">2 / 3</div>
+	  	<img src="slide_0.png" style="width:100%">
+	  	<div class="text">Caption Two</div>
 </div>
 
 <div class="mySlides fade">
@@ -86,12 +112,13 @@
   <img src="slide_2.png" style="width:100%">
   <div class="text">Caption Three</div>
 </div>
-
+-->
 
 <div class="dots">
   <span class="dot"></span> 
   <span class="dot"></span> 
   <span class="dot"></span> 
+  
 </div>
 </div>
 
@@ -99,12 +126,29 @@
 <h2 style="padding-left: 25px">Catalogos</h2>
 <hr> 
 
-	<div class="cont" onclick="oModal('tec_')"> </div>
-	<div class="cont" onclick="oModal('cap_')"> </div>
+	<div class="cont" onclick="oModal('tec_',13)"> </div>
+	<div class="cont" onclick="oModal('cap_',9)"> </div>
 	<div class="cont"> </div>
 	<div class="cont"> </div>
     <div class="behind" onload="oModal('tec_')" style="display: none"></div>
+
+
+
+ <!--
+ <div class="w3-card-4 w3-margin w3-padding " style="border-left: 5px solid green;  background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.2);"><span style="color: navy; font-size: 16px"><b>Selecciona una categoria... </b></span> -->
+ 	
+ </div>
+
+ <div class="w3-card-4 w3-margin w3-padding " 
+ style="border-left: 5px solid green; background-color: white;">
+ 	<span style="color: teal; font-size: 16px"> 
+ 		<b>Permitenos el gusto de atenderte.</b>
+ 	</span>
+ 	<p> En articulos Bquilla contamos con una gran variedad de productos para todo publico y con un equipo de trabajo enfocados a satifacer las necesidaded de nuestros clientes.</p>	 
+ </div>  
 </section>
+
+
 
 
 
@@ -168,7 +212,7 @@ var footer = document.getElementById('footer');
 
 getCategory(tec_text, tec_src, 0);
 getCategory(cap_text, cap_src, 1);
-getCategory(com_text, com_src, 2);
+//getCategory(com_text, com_src, 2);
 //getCategory(com_text, com_src, 3);
 //getCategory(com_text, com_src, 4);
 //get_images('cap_');
@@ -241,10 +285,10 @@ footer_a[2].href = contact;
 
 
 // Get images
-function get_images(y) {   	
+function get_images(y, n) {   	
 
 var f1_Set ='';
-for (var i = 0; i < 13; i++)	
+for (var i = 0; i <= n; i++)	
 	{	
 			f1_Set += '<img class="caption" src="logo.png"><img class="passing" src="'+ y + i +'.png" style="width:100%">';
 	}	
@@ -255,11 +299,11 @@ for (var i = 0; i < 13; i++)
 
 
 // Get the modal
-function oModal(type)
+function oModal(nam , num)
 {
     modal.style.display = "block";
     exit_Icon(myModal);
-    get_images(type)
+    get_images(nam , num)
     showDivs(slideIndex); 
 }
 
