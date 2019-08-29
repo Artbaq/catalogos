@@ -64,7 +64,6 @@
 	</div> 
 </div>
 
-
 <div class="mySlides fade txt">
 	<div class="efect">
   		<p>
@@ -111,15 +110,27 @@
 	myself and I, exploring the universe of unknownment.
 	I have a heart of love and an interest of this to became in an amazin experience to grow up.
 	
-	</p>
 
-<h2 style="padding-left: 25px">Siguenos</h2>
-		<hr> 
- <footer id="footer">
- <a><i class="fab fa-instagram"></i></a>
- <a><i class="fab fa-facebook-square"></i></a>
- <a><i class="fab fa-whatsapp"></i></a>	
- </footer>
+
+<div id="footer">
+	<h5><b>Permítenos ser tu proveedor de confianza.</b></h5>
+
+	<p style="padding: 10px">Artículos Bquilla es un grupo de distribuidores. Cuando necesites accesorios para tu celular, Tablet, equipos de audio, nosotros podemos ayudarte. Y para los mas atrevidos contamos con un amplio surtido en Gorras .</p>
+	<p style="padding: 10px">Permítenos enseñarte porqué nuestros clientes nos prefieren. </p><br>
+
+	<button><b><a>Contactanos <i class="fab fa-whatsapp"></i></a></b></button>
+
+	
+	<div id="social">		
+		<h4><b>Siguenos</b></h4>
+			<a><i class="fab fa-instagram"></i></a>
+			<a><i class="fab fa-facebook-square"></i></a>
+			<a><i class="fab fa-linkedin"></i></a>	
+			<a><i class="fab fa-google-plus-square"></i></a>
+				
+			<p>Copyright &copy 2019  Art&iacute;culos Bquilla. </p>
+	</div>
+</div>
 
 
 </body>
@@ -129,17 +140,17 @@
 
 
 /* Social links */	
-var facebook ="fb://facewebmodal/f?href=https://www.facebook.com/articulosbquilla/photos";
+var facebook ="fb://facewebmodal/f?href=https://www.facebook.com/articulosbquilla";
 var instagram="https://www.instagram.com/articulos_bquilla";
 var	contact = "https://api.whatsapp.com/send?phone=+573008546921";
 
-var	face_art ='fb://page/378010675934018/photos';
+var	face_art ='fb://page/378010675934018';
 var	face_gor ='fb://page/581398665578960';
 var server = "https://artbaq.github.io/catalogo/";
 
 
-var flechas = '<a class=" w3-btn-floating w3-xxxlarge" style="position:absolute;top:45%;left:0; color:navy; z-index:2;" onclick="plusDivs(-1)" >&#10094 </a>'+
- 			'<a class="w3-btn-floating w3-xxxlarge" style="position:absolute;top:45%;right:0; color:navy; z-index:2;" onclick="plusDivs(1)">&#10095</a>';
+var flechas = '<a class="transparent" style="left:0;" onclick="plusDivs(-1)" >&#10094 </a>'+
+ 			'<a class="transparent" style="right:0;" onclick="plusDivs(1)">&#10095</a>';
 
 
 
@@ -167,7 +178,7 @@ var menu = document.getElementById('menu');
 
 var containerModal = document.getElementById('container-modal');
 
-var footer = document.getElementById('footer');
+var footer = document.getElementById('social');
 	var footer_a = footer.getElementsByTagName('a');
 
 
@@ -242,9 +253,10 @@ var menu_links ='';
 
 // footer // // footer // 
 footer_a[0].href = instagram;
-footer_a[1].href = facebook;
+footer_a[1].href = face_art;
 footer_a[2].href = contact;
 // footer // // footer //
+
 
 
 // Get images
@@ -367,6 +379,21 @@ function showSlides() {
   setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
 
+
+
+
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady()
+{ 
+   document.addEventListener("backbutton", onBackKeyDown, false); 
+} 
+
+function onBackKeyDown() 
+{ 
+  mainView.router.back(); 
+}
 </script>
 
 
