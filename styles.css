@@ -1,7 +1,42 @@
 
 *{	margin:0; padding:0; list-style:none; text-decoration:none;	}
 	
-body{background-color: #ffffff;} 
+body{background-color: #fff; color: black;} 
+
+
+#header{     
+  background-color: #fff;
+  box-shadow: 3px 2px 18px; 
+  position:sticky;  top:0; z-index:2;   
+  width: 100%;
+  padding:auto;
+}
+ 
+#inner_header{
+  margin: 0 auto 0 auto;  
+  text-align: left;  
+  width: 80%; 
+}
+
+@media only screen and (max-width: 400px){
+  #inner_header{
+  width: 90%;
+  text-align: center;  
+  }
+}
+
+#articulos{	
+	font-family: "Montserrat";
+	display: inline-block;
+}
+
+#bquilla{
+	font-weight: 700;
+	color: red;
+}
+
+
+/*********************************/
 
 #mySidebar{
   display:none;
@@ -9,60 +44,29 @@ body{background-color: #ffffff;}
   position: fixed;
   top: 0;
 }
-
-#inner_header{
-  text-align: center;  
-  margin: 0 auto 0 auto;  
-  width: 75%;
-  color: black;
-}
-
-@media only screen and (max-width: 400px){
-  #inner_header{
-	width: 100%;
-  }
+#wrapper div{
+  
 }
 
 
-.header{		 
-	background-color: white;
-	width: 100%;
-    height:;
-	position:sticky; 
-	top:0; 
-	z-index:2;
-    color: black;
-    padding: 0;
-    box-shadow: 3px 2px 18px; 
-}
- 
+
 .cont{
   position: relative;
   padding:auto;
+  width: 98%;
 }
 
 .tittle{
-	background-color: rgba(0,0,0,0.6);
-	border-radius: 4px;
-	color:white;
-	font-size:17px;
-	text-align:center;
-	width:35%;
-	position:absolute; 
-	top:0; 
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 4px;
+  color:white;
+  font-size:17px;
+  text-align:center;
+  width:35%;
+  position:absolute; 
+  top:0; 
 }
 
-.b{
-	font-weight: 100;
-	font-family: "Montserrat";
-	display: inline-block;
-
-}
-
-.c {
-	font-weight: 700;
-	color: red;
-}
 
 
 .w3-card-4{

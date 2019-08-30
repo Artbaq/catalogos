@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-	<html>
+<html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Montserrat">		
@@ -12,15 +12,14 @@
 		<script defer src="all.js"></script>
 	</head>
 
-
 <body>	
 	
-<header class="header">
+<header id="header">
 	<div id="inner_header">
-		<span class="b ">			
-			<h3>Art&iacute;culos <span class="c w3-text-dodgerblue">B<span class="c">quilla</span></span></h3>
+		<span id="articulos"><h3>
+			Art&iacute;culos <span id="bquilla">Bquilla</span></h3>
 		</span>		
-
+		
 		<span class="w3-button w3-xlarge w3-right" onclick="w3_open()"> 
 			<i class="fas fa-bars"></i>
 		</span> 
@@ -118,7 +117,12 @@
 	<p style="padding: 10px">Artículos Bquilla es un grupo de distribuidores. Cuando necesites accesorios para tu celular, Tablet, equipos de audio, nosotros podemos ayudarte. Y para los mas atrevidos contamos con un amplio surtido en Gorras .</p>
 	<p style="padding: 10px">Permítenos enseñarte porqué nuestros clientes nos prefieren. </p><br>
 
-	<button><b><a>Contactanos <i class="fab fa-whatsapp"></i></a></b></button>
+
+	<button>
+		<b>
+			<a id="contactanos">Contactanos</a>
+		</b><i class="fab fa-whatsapp"></i>
+	</button>
 
 	
 	<div id="social">		
@@ -178,8 +182,18 @@ var menu = document.getElementById('menu');
 
 var containerModal = document.getElementById('container-modal');
 
-var footer = document.getElementById('social');
-	var footer_a = footer.getElementsByTagName('a');
+
+document.getElementById("contactanos").href=contact;
+
+
+////// Social links //////////
+var social = document.getElementById('social');
+	var social_a = social.getElementsByTagName('a');
+
+		social_a[0].href = instagram;
+		social_a[1].href = face_art;
+		//social_a[2].href = linkedin;
+		//social_a[3].href = google;
 
 
 
@@ -196,7 +210,7 @@ getCategory(cap_text, cap_src, 1);
 function getCategory(text, src, n)	
 {	
 	var y = document.getElementsByClassName('cont')[n];
-	var	x = '<div> <img> <div class="tittle"> </div> </div>';
+	var	x = '<div> <img> <div class="tittle"> </div>  </div>';
 
 		y.innerHTML = x ;		
 
@@ -210,6 +224,8 @@ function getCategory(text, src, n)
 		img.id = 'myImg';
 		img.src = src; 
 		img.style.width = '100%';
+
+
 	}
 
 
@@ -252,9 +268,8 @@ var menu_links ='';
 //************************************************	
 
 // footer // // footer // 
-footer_a[0].href = instagram;
-footer_a[1].href = face_art;
-footer_a[2].href = contact;
+
+
 // footer // // footer //
 
 
