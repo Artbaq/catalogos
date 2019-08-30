@@ -19,7 +19,7 @@
 		<span id="articulos"><h3>
 			Art&iacute;culos <span id="bquilla">Bquilla</span></h3>
 		</span>		
-		
+
 		<span class="w3-button w3-xlarge w3-right" onclick="w3_open()"> 
 			<i class="fas fa-bars"></i>
 		</span> 
@@ -31,7 +31,7 @@
 <a>
 	<i class="fas fa-times"></i>	
 </a>
-<div id="menu" class=" w3-bar-block w3-center">
+<div id="menu" class=" w3-bar-item w3-center">
   <a href=""></a>
   <a href=""></a>
   <a href=""></a>
@@ -48,59 +48,41 @@
 	</a>
 </div>
 
-
-
 	
 <div class="slideshow-container">
 
-<div class="mySlides fade txt">
-	<div class="efect">
-  		<p>
-  			<img src="promo_0.png" class="promo">
-  			<h3 class="enunc">Smart TV BOX plus</h3>
-  			<p class="stat">Aprovecha que solo quedan pocos</p></img>
-  		</p>
-	</div> 
-</div>
+	<div class="mySlides fade txt">
+		<div class="efect">	<p>	<img class="promo">
+	  		<h3 class="enunc"></h3>	<p class="stat"></p> </p>
+	  	</div> 
+	</div>
 
-<div class="mySlides fade txt">
-	<div class="efect">
-  		<p>
-  			<img src="promo_1.png" class="promo">
-  			<h3 class="enunc">Receptor Bluetooth</h3>
-  			<p class="stat">Convierte tu viejo equipo de sonido a Bluetooth</p>
-  		</p>
-	</div> 
-</div>
+	<div class="mySlides fade txt">
+		<div class="efect">	<p>	<img class="promo">
+	  		<h3 class="enunc"></h3>	<p class="stat"></p> </p>
+	  	</div> 
+	</div>
 
-<div class="mySlides fade txt">
-	<div class="efect">
-  		<p>
-  			<img src="promo_2.png" class="promo">
-  			<h3 class="enunc">Speaker Bluetooth</h3>
-  			<p class="stat">Lleva tu musica a donde quieras.</p>
-  		</p>
-	</div> 
-</div>
+	<div class="mySlides fade txt">
+		<div class="efect">	<p>	<img class="promo">
+	  		<h3 class="enunc"></h3>	<p class="stat"></p> </p>
+	  	</div> 
+	</div>
+
+	<div class="mySlides fade txt">
+		<div class="efect">	<p>	<img class="promo">
+	  		<h3 class="enunc"></h3>	<p class="stat"></p> </p>
+	  	</div> 
+	</div>
 
 	<div class="dots">
   		<span class="dot"></span> 
 		<span class="dot"></span> 
   		<span class="dot"></span>  
+		<span class="dot"></span>  
 	</div>
 	
 </div>
-
-<section id="wrapper">
-	<h2 style="padding-left: 25px">Catalogos</h2>
-		<hr> 
-	<div class="cont" onclick="oModal('tec_',13)"> </div>
-	<div class="cont" onclick="oModal('cap_',9)"> </div>
-	<div class="cont"> </div>
-	<div class="cont"> </div>
-    <div class="behind" onload="oModal('tec_')" style="display: none"></div>
-   
-</section>
 
 <h2 style="padding-left:25px">Nosotros</h2>
 		<hr> 
@@ -109,6 +91,21 @@
 	myself and I, exploring the universe of unknownment.
 	I have a heart of love and an interest of this to became in an amazin experience to grow up.
 	
+
+<section id="wrapper">
+	<h2 style="padding-left: 25px">Catalogos</h2>
+		<hr> 
+	<div class="cont" onclick="oModal('tec_',13)"> </div>
+	<hr>
+	<div class="cont" onclick="oModal('cap_',9)"> </div>
+	<hr>
+	<div class="cont"> </div>
+	<hr>
+	<div class="cont"> </div>
+	<hr>
+    <div class="behind" onload="oModal('tec_')" style="display: none"></div>
+   
+</section>
 
 
 <div id="footer">
@@ -135,6 +132,7 @@
 			<p>Copyright &copy 2019  Art&iacute;culos Bquilla. </p>
 	</div>
 </div>
+<div id="demo"></div>
 
 
 </body>
@@ -147,14 +145,20 @@
 var facebook ="fb://facewebmodal/f?href=https://www.facebook.com/articulosbquilla";
 var instagram="https://www.instagram.com/articulos_bquilla";
 var	contact = "https://api.whatsapp.com/send?phone=+573008546921";
-
 var	face_art ='fb://page/378010675934018';
 var	face_gor ='fb://page/581398665578960';
 var server = "https://artbaq.github.io/catalogo/";
 
+/* End of Social links */	
 
 var flechas = '<a class="transparent" style="left:0;" onclick="plusDivs(-1)" >&#10094 </a>'+
  			'<a class="transparent" style="right:0;" onclick="plusDivs(1)">&#10095</a>';
+
+
+
+
+
+
 
 
 
@@ -183,28 +187,49 @@ var menu = document.getElementById('menu');
 var containerModal = document.getElementById('container-modal');
 
 
-document.getElementById("contactanos").href=contact;
 
 
 ////// Social links //////////
 var social = document.getElementById('social');
 	var social_a = social.getElementsByTagName('a');
 
-		social_a[0].href = instagram;
-		social_a[1].href = face_art;
-		//social_a[2].href = linkedin;
-		//social_a[3].href = google;
 
 
+var promo_0 = "promo_0.png Smart TV BOX plus ⛱ Aprovecha que solo quedan pocos.";
+var promo_1 = "promo_1.png Receptor Bluetooth ⛱ Convierte tu viejo equipo de sonido a Bluetooth";
+var promo_2 = "promo_2.png Speaker Bluetooth ⛱ Lleva tu musica a donde quieras.";
+var promo_3 = "promo_3.png Gorras Planas ⛱ Tu mejor estilo para cada ocacion.";
 
+getPromo(promo_0,0);
+getPromo(promo_1,1);
+getPromo(promo_2,2);
+getPromo(promo_3,3);
 
 getCategory(tec_text, tec_src, 0);
 getCategory(cap_text, cap_src, 1);
-//getCategory(com_text, com_src, 2);
-//getCategory(com_text, com_src, 3);
-//getCategory(com_text, com_src, 4);
-//get_images('cap_');
-//oModal('tec_');
+getCategory(com_text, com_src, 2);
+
+document.getElementById("contactanos").href=contact;
+
+	social_a[0].href = instagram;
+	social_a[1].href = face_art;
+//social_a[2].href = linkedin;
+//social_a[3].href = google;
+
+function getPromo(vary,n){
+
+var a = vary.search("promo");
+var b = vary.search("png");
+var c = vary.search("⛱");
+
+var source = vary.substring(a , b + 3);
+var tittle = vary.substring(b + 3 , c);
+var coment = vary.substring(c + 1);
+
+document.getElementsByClassName("promo")[n].src= source;
+document.getElementsByClassName("enunc")[n].innerHTML= tittle;
+document.getElementsByClassName("stat")[n].innerHTML= coment;
+}
 
 
 function getCategory(text, src, n)	
@@ -237,7 +262,7 @@ function getCategory(text, src, n)
 // main menu // // main menu // // main menu //
 
 
-var a_Class ='w3-bar-item w3-button w3-text-grey w3-hover-black';
+var a_Class ='w3-bar w3-button w3-text-grey w3-hover-black';
 var close = 'w3_close()';
 
 
@@ -262,8 +287,8 @@ var menu_links ='';
 	//menu_a[3].href= face_art;
 	//menu_a[4].href= face_gor;
 
-	menu_i[0].className = 'fab fa-facebook-square w3-xxlarge';
-	menu_i[1].className = 'fab fa-instagram w3-xxlarge';
+	menu_i[0].className = 'fab fa-facebook-square w3-xlarge';
+	menu_i[1].className = 'fab fa-instagram w3xlarge';
 	menu_i[2].className = 'fab fa-whatsapp w3-xxlarge';
 //************************************************	
 
@@ -310,7 +335,7 @@ function exit_Icon(id)
 
 function w3_open()
 {
-  mySidebar.style.width = "100%";
+  //mySidebar.style.width = "50%";
   mySidebar.style.display = "block";
   exit_Icon(mySidebar);
 }
@@ -409,6 +434,11 @@ function onBackKeyDown()
 { 
   mainView.router.back(); 
 }
+
+
+
+
+
 </script>
 
 

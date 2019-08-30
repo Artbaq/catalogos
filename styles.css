@@ -3,13 +3,11 @@
 	
 body{background-color: #fff; color: black;} 
 
-
 #header{     
   background-color: #fff;
   box-shadow: 3px 2px 18px; 
   position:sticky;  top:0; z-index:2;   
   width: 100%;
-  padding:auto;
 }
  
 #inner_header{
@@ -40,20 +38,23 @@ body{background-color: #fff; color: black;}
 
 #mySidebar{
   display:none;
-  padding-top:25%;
+  padding:15% 0 15% 0;
   position: fixed;
   top: 0;
-}
-#wrapper div{
+  right:0;
+  background-color: ;
+  background-color: rgba(0,0,0,0.8);
+  height: auto;
+  font-size: 2em;
+  z-index: 2;
+  width: 40%;
   
 }
-
-
 
 .cont{
   position: relative;
   padding:auto;
-  width: 98%;
+  width: 99%;
 }
 
 .tittle{
@@ -73,13 +74,6 @@ body{background-color: #fff; color: black;}
   border-radius: 7px;
 }
 
-#mySidebar{
-  background-color: black;
-  height: 100%;
-  font-size: 10vw;
-  z-index: 2;
-}
-
 hr{
   width: 80%;
   margin:auto;
@@ -94,6 +88,7 @@ hr{
 button{
   background-color: transparent;
   border: 1px solid rgb(38,76,83);
+  border-radius: 7px;
   padding: 10px;
   margin: 10px; 
   color: rgb(38,76,83);
@@ -110,9 +105,7 @@ button{
 }
 
 #social a	{
-	padding: 0px 12px;
-	font-size: 35px;
-	
+	padding: 0px 12px; font-size: 35px;
 }
 
 #myImg {
@@ -204,8 +197,8 @@ button{
   top:45%;
   z-index:2;
 
-
 }
+
 .efect{
   background-image: linear-gradient(to bottom right , yellow,orange,red, purple);
   color: white;
@@ -219,8 +212,10 @@ button{
 	color: dodgerblue;
 	font-weight:800;
 	text-shadow:1px 1px white;
-	font-size:2em;
+	font-size:2.5em;
 	margin: 0;
+  position: relative;
+  top: 25%;
 	}
 	
 .stat{
@@ -228,7 +223,10 @@ button{
 	color:white;
 	text-shadow:1px 1px dodgerblue;
 	font-size:1.3em;
-	margin: 0;}
+	margin: 0;
+  position: relative;
+  top: 25%;
+}
 
 .efect img{
   float: left;
