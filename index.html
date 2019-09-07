@@ -28,14 +28,14 @@
 
 
 <nav id="mySidebar" class="w3-animate-top"> 		
-<a>
-	<i class="fas fa-times"></i>	
-</a>
-<div id="menu" class=" w3-bar-item w3-center">
-  <a href=""></a>
-  <a href=""></a>
-  <a href=""></a>
-</div>	
+	<a>
+		<i class="fas fa-times"></i>	
+	</a>
+	<div id="menu" class=" w3-bar w3-center">
+	  <a href=""></a>
+	  <a href=""></a>
+	  <a href=""></a>
+	</div>	
 </nav>
 
 		<!-- The Modal -->
@@ -75,14 +75,75 @@
 	  	</div> 
 	</div>
 
+
+
+
 	<div class="dots">
   		<span class="dot"></span> 
 		<span class="dot"></span> 
   		<span class="dot"></span>  
 		<span class="dot"></span>  
-	</div>
-	
+	</div>	
 </div>
+
+
+
+<section id="wrapper">
+<!--	<h2 style="padding-left: 25px; text-align:center">Tecnología & Accesorios</h2>
+	-->
+<div class="w3-card">
+		<h3  class="tit">Tecnología & Accesorios</h3>
+		
+	
+		<div class="back_border"><hr>	
+			<div class="cont2" onclick="oModal('ear_',3)">
+				<p class="icon">🎧</p>
+				<p>Audifonos & Bluetooth</p>
+			</div>
+		</div>
+
+		<div class="back_border"><hr>
+			<div class="cont2" onclick="oModal('cha_',4)">
+				<p class="icon">🔌</p>
+				<p>Cargadores & Cables</p>
+			</div>
+		</div>
+
+		<div class="back_border">	<hr>
+			<div class="cont2" onclick="oModal('spe_',2)">
+				<p class="icon">📻</p>
+				<p> Speakers </p>
+			</div>
+		</div>
+</div>
+
+
+<div class="w3-card">
+		<h3 class="tit">Gorras</h3>
+	
+	
+	<div class="back_border">	<hr>	
+		<div class="cont2" onclick="oModal('cur_',2)">
+		<p>	<span class="icon"><img src="cur_2.png" width="80"> </span></p>
+	<p>	 Gorras curvadas</p>
+		</div>
+	</div>
+
+<div class="back_border">	<hr>
+		<div class="cont2" onclick="oModal('pla_',6)">
+		<p>	<span class="icon"><img src="cap_5.png" width="80"></span></p>
+		<p>	Gorras Planas </p>
+		</div>
+	</div>
+</div>
+
+
+	<div class="cont" onclick="oModal('tec_',17)"> </div>
+	<div class="cont" onclick="oModal('cap_',9)"> </div>
+	<div class="cont"> </div>
+    <div class="behind" onload="oModal('tec_')" style="display: none"></div>
+   
+</section>
 
 <h2 style="padding-left:25px">Nosotros</h2>
 		<hr> 
@@ -91,21 +152,6 @@
 	myself and I, exploring the universe of unknownment.
 	I have a heart of love and an interest of this to became in an amazin experience to grow up.
 	
-
-<section id="wrapper">
-	<h2 style="padding-left: 25px">Catalogos</h2>
-		<hr> 
-	<div class="cont" onclick="oModal('tec_',13)"> </div>
-	<hr>
-	<div class="cont" onclick="oModal('cap_',9)"> </div>
-	<hr>
-	<div class="cont"> </div>
-	<hr>
-	<div class="cont"> </div>
-	<hr>
-    <div class="behind" onload="oModal('tec_')" style="display: none"></div>
-   
-</section>
 
 
 <div id="footer">
@@ -205,9 +251,9 @@ getPromo(promo_1,1);
 getPromo(promo_2,2);
 getPromo(promo_3,3);
 
-getCategory(tec_text, tec_src, 0);
-getCategory(cap_text, cap_src, 1);
-getCategory(com_text, com_src, 2);
+//getCategory(tec_text, tec_src, 0);
+//getCategory(cap_text, cap_src, 1);
+
 
 document.getElementById("contactanos").href=contact;
 
@@ -287,8 +333,8 @@ var menu_links ='';
 	//menu_a[3].href= face_art;
 	//menu_a[4].href= face_gor;
 
-	menu_i[0].className = 'fab fa-facebook-square w3-xlarge';
-	menu_i[1].className = 'fab fa-instagram w3xlarge';
+	menu_i[0].className = 'fab fa-facebook-square w3-xxlarge';
+	menu_i[1].className = 'fab fa-instagram w3-xxlarge';
 	menu_i[2].className = 'fab fa-whatsapp w3-xxlarge';
 //************************************************	
 
@@ -335,7 +381,7 @@ function exit_Icon(id)
 
 function w3_open()
 {
-  //mySidebar.style.width = "50%";
+  mySidebar.style.width = "100%";
   mySidebar.style.display = "block";
   exit_Icon(mySidebar);
 }

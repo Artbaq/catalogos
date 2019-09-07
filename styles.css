@@ -41,21 +41,72 @@ body{background-color: #fff; color: black;}
   padding:15% 0 15% 0;
   position: fixed;
   top: 0;
-  right:0;
   background-color: ;
   background-color: rgba(0,0,0,0.8);
-  height: auto;
+  height: 100%;
   font-size: 2em;
   z-index: 2;
-  width: 40%;
-  
+  width: 100%;
 }
+
+#menu{
+width:40%;
+ background-color: blue;
+ position: absolute;
+ top: 0;
+ right:0;
+ 
+}
+
+.w3-card{
+  border-radius: 7px;  
+  margin:5%;
+  margin-bottom:10%;
+  position: relative;
+  padding-top:4%;
+  border:1px solid orange;
+}
+
+.w3-card div{
+  display: inline-table;   
+}
+
+.back_border{
+  background-color:rgb(100,100,188);
+  margin:3%;
+  width:26%;
+  text-align:center;
+}
+
+.back_border:hover{
+  background-color: rgb(171,217,225);
+  }
+  
 
 .cont{
   position: relative;
   padding:auto;
   width: 99%;
 }
+
+.cont2{    
+  background-color: white;
+  border-radius: 30px 0px 0px 0px;  
+  font-size:1.3em;
+  height:100%;
+  padding: 4%;
+  width: 100%;
+}
+
+.cont2:hover{
+  background-color: lightgray;
+
+}
+
+
+.icon{
+  font-size:60px;
+  }
 
 .tittle{
   background-color: rgba(0,0,0,0.6);
@@ -68,14 +119,22 @@ body{background-color: #fff; color: black;}
   top:0; 
 }
 
-
-
-.w3-card-4{
-  border-radius: 7px;
+.tit{
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 4px;
+  color:white;
+  font-size:20px;
+  text-align:center;
+  width:70%;
+  position:absolute;
+  top:-5.3vw;
+  left:15%;
 }
 
+
+
 hr{
-  width: 80%;
+  
   margin:auto;
   border: 0.01 solid black;
 
@@ -258,6 +317,14 @@ button{
     width: 70%;
     float: none;
   }
+.back_border{
+	width:42%;
+	}
+.tit{
+	top: -9.5vw;
+	left: 7.5%;
+	width:85%;}
+	
 }
 
 
@@ -276,7 +343,7 @@ button{
   box-shadow: 3px 2px 18px;
   position:relative;
   width: 100%;  
-  margin:auto;
+  margin-bottom:15%;
 }
 /* Number text (1/3 etc) */
 .numbertext {
