@@ -2,58 +2,55 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Montserrat">		
-		
+		<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Montserrat">
 		<link rel="stylesheet" type="text/css" href="w3.css">
 		<link rel="stylesheet" type="text/css" href="styles.css">		
 		<link rel="stylesheet" type="text/css" href="fontawesome.css">
 		<link rel="stylesheet" type="text/css" href="all.css">
 		
 		<script defer src="all.js"></script>
+		<script defer src="myscript.js"></script>
 	</head>
 
-<body>	
-	
-<header id="header">
-	<div id="inner_header">
-		<span id="articulos"><h3>
-			Art&iacute;culos <span id="bquilla">Bquilla</span></h3>
-		</span>		
+<body id="home" class="w3-animate-top">		
 
-		<span class="w3-button w3-xlarge w3-right" onclick="w3_open()"> 
-			<i class="fas fa-bars"></i>
-		</span> 
+<header id="header">
+	<div id="inner_header">			
+		<img src="logo_oficial.png">
+		<span>
+			<a href="#home"> <i class="fa fa-home "></i> </a>
+		</span>
+		<span style="padding-left:15px;"><h1>Artículos <span>Bquilla<span class="w3-xlarge w3-text-red" style="transform:rotateY(180deg)">&#9998</span></span></h1></span>
+		<span id="⁝" class="btn w3-button" onclick="w3_open()">&#10247</span>
 	</div>
 </header>
 
-
-<nav id="mySidebar" class="w3-animate-top"> 		
-	<a>
-		<i class="fas fa-times"></i>	
-	</a>
-	<div id="menu" class=" w3-bar w3-center">
-	  <a href=""></a>
-	  <a href=""></a>
-	  <a href=""></a>
+<nav id="mySidebar" class="animate-right">
+	<div id="menu">
+		<div><img id="abc"><a class="close"></a></div>
+		<hr>
+			<a href="#home"></a>	
+			<a href="#about"></a> 
+			<a href="#catalog"></a> 
+			<a href="#contact"></a>	
 	</div>	
 </nav>
 
+ 
 		<!-- The Modal -->
 <div id="myModal" class="modal">	
+	<a class="close"></a>
 	<img src="marco.png" style="position:absolute; width: 100%;z-index:1;">
 	<div id="container-modal"></div>
 	<div class="modal-text">###</div>	
-	<a>	
-		<i class="fas fa-times"></i> 
-	</a>
-</div>
-
 	
+</div>	
+
 <div class="slideshow-container">
-
+	<div class="empty-box"></div>
+	
 	<div class="mySlides fade txt">
-		<div class="efect">	<p>	<img class="promo">
-	  		<h3 class="enunc"></h3>	<p class="stat"></p> </p>
+		<div class="efect">	<p>	<img class="promo">	<h3 class="enunc"></h3>	<p class="stat"></p> </p>
 	  	</div> 
 	</div>
 
@@ -74,8 +71,13 @@
 	  		<h3 class="enunc"></h3>	<p class="stat"></p> </p>
 	  	</div> 
 	</div>
-
-
+	
+	
+	<div class="mySlides fade txt">
+	<div class="efect">	<p>	<img class="promo">
+	<h3 class="enunc"></h3>	<p class="stat"></p> </p>
+	</div> 
+</div>
 
 
 	<div class="dots">
@@ -83,20 +85,22 @@
 		<span class="dot"></span> 
   		<span class="dot"></span>  
 		<span class="dot"></span>  
+		<span class="dot"></span>
 	</div>	
 </div>
 
-
-
 <section id="wrapper">
-<!--	<h2 style="padding-left: 25px; text-align:center">Tecnología & Accesorios</h2>
-	-->
-<div class="w3-card">
-		<h3  class="tit">Tecnología & Accesorios</h3>
-		
+
+	<hr id="catalog"><hr><hr><hr><hr><hr><hr><hr>
+	<h2 id=""><span class="w3-xlarge ">&#9930</span>Catalogos</h2><br>
 	
-		<div class="back_border"><hr>	
-			<div class="cont2" onclick="oModal('ear_',3)">
+	<div class="w3-card ">
+
+	<h3  class="tit">Tecnología & Accesorios</h3>		
+	
+		<div class="back_border" onclick="oModal('ear_',3)">
+			<hr>	
+			<div class="cont2">
 				<p class="icon">🎧</p>
 				<p>Audifonos & Bluetooth</p>
 			</div>
@@ -118,15 +122,15 @@
 		
 		
 		<div class="back_border">	<hr>
-		<div class="cont2" onclick="oModal('tec_',17)">
-		<p class="icon"><img src="tec_2.png" width="100"></p>
+		<div class="cont2" onclick="oModal('tec_',20)">
+		<p class="icon"><img src="tec_19.png" width="100"></p>
 		<p>Miselaneos & más</p>
 		</div>
 		</div>
-</div>
+	</div>
 
 
-<div class="w3-card">
+	<div class="w3-card">
 		<h3 class="tit">Gorras</h3>
 	
 	
@@ -137,33 +141,27 @@
 		</div>
 	</div>
 
-<div class="back_border">	<hr>
+	<div class="back_border">	<hr>
 		<div class="cont2" onclick="oModal('pla_',6)">
 		<p>	<span class="icon"><img src="cap_5.png" width="100"></span></p>
 		<p>	Gorras Planas </p>
 		</div>
 	</div>
-</div>
 
-
-	<div class="cont" onclick="oModal('tec_',17)"> </div>
-	<div class="cont" onclick="oModal('cap_',9)"> </div>
-	<div class="cont"> </div>
-    <div class="behind" onload="oModal('tec_')" style="display: none"></div>
-   
+	     
 </section>
 
-<h2 style="padding-left:25px">Nosotros</h2>
-		<hr> 
-	<p style="padding:25px; text-align: justify;">Just me, myself and I, exploring the universe of unknownment.
-	 I have a heart of love and an interest of this to became in an amazin experience to grow up.
-	myself and I, exploring the universe of unknownment.
-	I have a heart of love and an interest of this to became in an amazin experience to grow up.
-	
+<hr id="about">
+<hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>	
+<h2>Nosotros</h2>
+		
+	<p style="padding:0px 25px 25px 25px; text-align: justify;">Articulos Bquilla nace, como una iniciativa de ayudar a esas personas que ya sea por trabajo o por otras razones. no dispongan de mucho tiempo. 
+	De esta manera brindarles un servicio, el cual le permite ahorrar tiempo que puede ser usado con fines productivos ya sea a nivel profesional, familiar o espiritual.
+	Asi es como se gesta y da a lugar a una empresa que tiene como objetivo principal mantenar la satisfacion de sus  servicio al cliente  
 
 
 <div id="footer">
-	<h5><b>Permítenos ser tu proveedor de confianza.</b></h5>
+	<h5 id="contact"><b>Permítenos ser tu proveedor de confianza.</b></h5>
 
 	<p style="padding: 10px">Artículos Bquilla es un grupo de distribuidores. Cuando necesites accesorios para tu celular, Tablet, equipos de audio, nosotros podemos ayudarte. Y para los mas atrevidos contamos con un amplio surtido en Gorras .</p>
 	<p style="padding: 10px">Permítenos enseñarte porqué nuestros clientes nos prefieren. </p><br>
@@ -186,311 +184,6 @@
 			<p>Copyright &copy 2019  Art&iacute;culos Bquilla. </p>
 	</div>
 </div>
-<div id="demo"></div>
-
-
 </body>
-
-<script>
-
-
-
-/* Social links */	
-var facebook ="fb://facewebmodal/f?href=https://www.facebook.com/articulosbquilla";
-var instagram="https://www.instagram.com/articulos_bquilla";
-var	contact = "https://api.whatsapp.com/send?phone=+573008546921";
-var	face_art ='fb://page/378010675934018';
-var	face_gor ='fb://page/581398665578960';
-var server = "https://artbaq.github.io/catalogo/";
-
-/* End of Social links */	
-
-var flechas = '<a class="transparent" style="left:0;" onclick="plusDivs(-1)" >&#10094 </a>'+
- 			'<a class="transparent" style="right:0;" onclick="plusDivs(1)">&#10095</a>';
-
-
-
-//************Categorias de productos**************
-
-var tec_text = 'Tecnolog&iacutea &#10095&#10095',
-	tec_src = 'technology.png';
-
-var cap_text = 'Gorras &#10095&#10095', 
-	cap_src = 'gorras_girl.jpg'; 
-
-var com_text = 'coming soon &#10095&#10095', 
-	com_src = 'coming.png'; 
-
-
-//************************************************
-
-var mySidebar = document.getElementById("mySidebar");
-var modal = document.getElementById('myModal');
-
-
-var menu = document.getElementById('menu');
-	var menu_a = menu.getElementsByTagName('a');
-	var menu_i = menu.getElementsByTagName('i');
-
-var containerModal = document.getElementById('container-modal');
-
-
-
-
-////// Social links //////////
-var social = document.getElementById('social');
-	var social_a = social.getElementsByTagName('a');
-
-
-
-var promo_0 = "promo_0.png Smart TV BOX plus ⛱ Aprovecha que solo quedan pocos.";
-var promo_1 = "promo_1.png Receptor Bluetooth ⛱ Convierte tu viejo equipo de sonido a Bluetooth";
-var promo_2 = "promo_2.png Speaker Bluetooth ⛱ Lleva tu musica a donde quieras.";
-var promo_3 = "promo_3.png Gorras Planas ⛱ Tu mejor estilo para cada ocacion.";
-
-getPromo(promo_0,0);
-getPromo(promo_1,1);
-getPromo(promo_2,2);
-getPromo(promo_3,3);
-
-//getCategory(tec_text, tec_src, 0);
-//getCategory(cap_text, cap_src, 1);
-
-
-document.getElementById("contactanos").href=contact;
-
-	social_a[0].href = instagram;
-	social_a[1].href = face_art;
-//social_a[2].href = linkedin;
-//social_a[3].href = google;
-
-function getPromo(vary,n){
-
-var a = vary.search("promo");
-var b = vary.search("png");
-var c = vary.search("⛱");
-
-var source = vary.substring(a , b + 3);
-var tittle = vary.substring(b + 3 , c);
-var coment = vary.substring(c + 1);
-
-document.getElementsByClassName("promo")[n].src= source;
-document.getElementsByClassName("enunc")[n].innerHTML= tittle;
-document.getElementsByClassName("stat")[n].innerHTML= coment;
-}
-
-
-function getCategory(text, src, n)	
-{	
-	var y = document.getElementsByClassName('cont')[n];
-	var	x = '<div> <img> <div class="tittle"> </div>  </div>';
-
-		y.innerHTML = x ;		
-
-	var div = y.getElementsByTagName('div');
-	var img = y.getElementsByTagName('img')[0];
-
-		div[0].className = 'w3-card-4 w3-margin';
-		div[1].innerHTML = text;
-		//div.onclick = function() { oModal(get_images());		}
-
-		img.id = 'myImg';
-		img.src = src; 
-		img.style.width = '100%';
-
-
-	}
-
-
-
-	
-	
-
-	
-// main menu // // main menu // // main menu //
-
-
-var a_Class ='w3-bar w3-button w3-text-grey w3-hover-black';
-var close = 'w3_close()';
-
-
-var menu_links ='';
-
-	for (var i = 0;  i < menu_a.length; i++)
-	{
-		menu_links += '<a class="'+ a_Class +'" onclick="'+ close +'"></a>';
-
-	}		
-		menu.innerHTML = menu_links;
-		
-	menu_a[0].innerHTML= 'Galeria <i></i>';	
-	menu_a[1].innerHTML= 'Galeria <i></i>';	
-	menu_a[2].innerHTML= 'Contacto <i></i>';
-	//menu_a[3].innerHTML= 'articulosBquilla';
-	//menu_a[4].innerHTML= 'gorrasBquilla';
-
-	menu_a[0].href= facebook;
-	menu_a[1].href= instagram;
-	menu_a[2].href= contact;
-	//menu_a[3].href= face_art;
-	//menu_a[4].href= face_gor;
-
-	menu_i[0].className = 'fab fa-facebook-square w3-xxlarge';
-	menu_i[1].className = 'fab fa-instagram w3-xxlarge';
-	menu_i[2].className = 'fab fa-whatsapp w3-xxlarge';
-//************************************************	
-
-// footer // // footer // 
-
-
-// footer // // footer //
-
-
-
-// Get images
-function get_images(y, n) {   	
-
-var f1_Set ='';
-for (var i = 0; i <= n; i++)	
-	{	
-			f1_Set += '<img class="caption" src="logo.png"><img class="passing" src="'+ y + i +'.png" style="width:100%">';
-	}	
-	f1_Set += flechas;	
-
-	 	containerModal.innerHTML = f1_Set; 
-}
-
-
-// Get the modal
-function oModal(nam , num)
-{
-    modal.style.display = "block";
-    exit_Icon(myModal);
-    get_images(nam , num)
-    showDivs(slideIndex); 
-}
-
-function exit_Icon(id)
-{		
-	var exit_Icon = id.getElementsByTagName("a")[0]; 
-
-		exit_Icon.className = 'w3-button w3-xlarge w3-display-topright w3-text-white'; 
-		exit_Icon.src = "javascript:void(0)";
-		exit_Icon.onclick = function(){ w3_close() };
-	}
-
-
-
-function w3_open()
-{
-  mySidebar.style.width = "100%";
-  mySidebar.style.display = "block";
-  exit_Icon(mySidebar);
-}
-
-
-function w3_close()
-{
-  mySidebar.style.display = "none";
-  modal.style.display = "none";
-}
-
-
-
-
-
-
-
-var slideIndex = 1;
-
-
-function plusDivs(n)
-{ 
-	showDivs(slideIndex += n);
-}
-
-
-function showDivs(n)
-{   
-  var i;   
-  var x = document.getElementsByClassName("passing");
-  var y = document.getElementsByClassName("caption");
-  
-	if (n > x.length)
-	{
-		slideIndex = 1;
-	}     
-	  
-	if (n < 1) 
-	{
-		slideIndex = x.length 
-	} 
-	  
-	for (i = 0; i < x.length; i++)  
-	{
-		x[i].style.display = "none";
-		y[i].style.display = "none";
-	}
-    
-    	x[slideIndex-1].style.display = "block";  
-    	y[slideIndex-1].style.display = "block";
-}
-
-
-
-
-
-var slideInd = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  
-  //Hide all the slide with a loop
-  for (i = 0; i < slides.length; i++) {
-
-    slides[i].style.display = "none"; 
-  }
-
-  slideInd++;
-
-  if (slideInd > slides.length) {slideInd = 1}  
-
-  for (i = 0; i < dots.length; i++) {
-
-    dots[i].className = dots[i].className.replace("active", "");
-  }
-  slides[slideInd-1].style.display = "block";  
-  dots[slideInd-1].className += " active";
-  setTimeout(showSlides, 4000); // Change image every 4 seconds
-}
-
-
-
-
-
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady()
-{ 
-   document.addEventListener("backbutton", onBackKeyDown, false); 
-} 
-
-function onBackKeyDown() 
-{ 
-  mainView.router.back(); 
-}
-
-
-
-
-
-</script>
-
-
-
-
 
 </html>

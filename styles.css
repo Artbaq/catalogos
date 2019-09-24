@@ -1,67 +1,161 @@
 
 *{	margin:0; padding:0; list-style:none; text-decoration:none;	}
+body{margin:0; padding:0;}	
+	/*slideshow-container {
+	/*-webkit-filter: (100%);*/ /* Chrome, Safari, Opera 
+	filter: invert;}*/
 	
-body{background-color: #fff; color: black;} 
+	/*
+	
+	img {
+	-webkit-filter: drop-shadow(8px 8px 10px red);  Chrome, Safari, Opera 
+	filter: drop-shadow(1px 1px 2px dodgerblue);
+	}
+	
+	img{
+	filter: hue-rotate;
+	}*/
+	
+	.test{
+		background-color:teal;}
+	
+body{
+	background-color: #fff;
+	color: black;
+	width:100%;
+	transition: width 0.4s;} 
 
-#header{     
-  background-color: #fff;
-  box-shadow: 3px 2px 18px; 
-  position:sticky;  top:0; z-index:2;   
+.btn{
+	padding: 2px 5px 2px 5px;
+  font-size: 29px; 
+}
+
+
+#header{  /*                      */
+  box-shadow: 0px 0px 4px;      
+  position:fixed;  top:0; z-index:1;   
   width: 100%;
-}
- 
-#inner_header{
-  margin: 0 auto 0 auto;  
-  text-align: left;  
-  width: 80%; 
-}
+  height: 56px;
+   
+	}
+	
+	#inner_header{
+    background-color:white;
+    position:fixed;  top:0; z-index:-0; 
+    margin: 0px 0px 0px 0px;
+    width:100%;
+    height: 56px;
+    padding: 3px; 
+
+  }
+
+	#inner_header img{	width:50px;/**/ border-radius: 40px; float: left; z-index: 0; 		}	
+	#inner_header a:first-child{   display: none;  } 
+  #inner_header span:last-child{ 	float: right; 	}	
 
 @media only screen and (max-width: 400px){
-  #inner_header{
-  width: 90%;
-  text-align: center;  
-  }
+	  #inner_header{
+	  width: 100%;
+	  padding: 0;
+    }
+    
 }
 
-#articulos{	
-	font-family: "Montserrat";
-	display: inline-block;
+h1{ font-family: "Montserrat";  display:inline-block;   font-size:1.7em; }
+h1 span{  font-weight: 700; color: red; }
+h1::first-letter{  color:red; }
+
+h2{
+	padding-top:1em;
+	padding-bottom: 0px;
 }
 
-#bquilla{
-	font-weight: 700;
-	color: red;
-}
 
 
 /*********************************/
-
 #mySidebar{
-  display:none;
-  padding:15% 0 15% 0;
-  position: fixed;
-  top: 0;
-  background-color: ;
-  background-color: rgba(0,0,0,0.8);
-  height: 100%;
-  font-size: 2em;
-  z-index: 2;
-  width: 100%;
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	
+  width:0%;
+  font-size: 1.5em;
+  height: 100%;   
+  position: fixed;/**/right: 0; 
+  transition: width 0.4s;
 }
 
 #menu{
-width:40%;
- background-color: blue;
- position: absolute;
- top: 0;
- right:0;
- 
+  background-color:rgba(0, 0, 0, 10);
+  height:100%;
 }
+
+#menu img{
+	width:50px;
+	 border-radius: 40px; 
+	 float:; 
+	 z-index: 0;
+	 filter:invert(100%);
+}
+
+#menu span{
+  padding-left: 25px ;
+  
+}
+
+#menu a{
+	padding:7.5% 3.5% 7.5% 3.5% ;
+	display: block;
+    color: dodgerblue;
+}
+
+#menu a:hover{
+  background-color: dodgerblue;
+  color: white;  
+}
+
+
+#menu a:first-child{  
+  color:white;  
+  width: 25%;
+  text-align:;
+  position: absolute;
+  float:right;
+  margin-bottom: 8%;
+}
+
+
+#menu a:first-child:hover{
+  padding-right:;
+  color:white;
+   
+}
+
+.animate-left{
+  position:relative;
+  animation:animateleft 0.4s
+}
+
+@keyframes animateleft{
+  from{left:-300px;opacity:0}
+  to{left:0;opacity:1}
+}
+
+.animate-right{
+    position:relative;
+    animation:animateright 0.4s
+    }
+
+@keyframes animateright{
+  from{right:-300px;opacity:0}
+  to{right:0;opacity:1}
+}
+
+
 
 .w3-card{
   border-radius: 7px;  
   margin:5%;
-  margin-bottom:10%;
+  margin-bottom:15%;
   position: relative;
   padding-top:4%;
   border:1px solid orange;
@@ -72,22 +166,14 @@ width:40%;
 }
 
 .back_border{
-  background-color:rgb(100,100,188);
+  background-color:grey;
   margin:3%;
   width:26%;
   text-align:center;
 }
 
-.back_border:hover{
-  background-color: rgb(171,217,225);
-  }
-  
 
-.cont{
-  position: relative;
-  padding:auto;
-  width: 99%;
-}
+  
 
 .cont2{    
   background-color: white;
@@ -98,29 +184,14 @@ width:40%;
   width: 100%;
 }
 
-.cont2:hover{
-  background-color: lightgray;
+.back_border:hover{   background-color: rgb(171,217,225);  }
+.cont2:hover{   background-color: lightgray;    }
+.icon{  font-size:60px;  }
 
-}
 
-
-.icon{
-  font-size:60px;
-  }
-
-.tittle{
-  background-color: rgba(0,0,0,0.6);
-  border-radius: 4px;
-  color:white;
-  font-size:17px;
-  text-align:center;
-  width:35%;
-  position:absolute; 
-  top:0; 
-}
 
 .tit{
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,50,50,0.6);
   border-radius: 4px;
   color:white;
   font-size:20px;
@@ -131,17 +202,13 @@ width:40%;
   left:15%;
 }
 
+hr{  margin:auto; }
 
-
-hr{
-  
-  margin:auto;
-  border: 0.01 solid black;
-
-}
 #footer {
-  width: 100%; background-color: rgb(171,217,225); text-align: center;
+  background-color: rgb(171,217,225);
   color: rgb(38,76,83); padding-top: 10px;
+  text-align: center;
+  width: 100%; 
 }
 
 button{
@@ -164,17 +231,9 @@ button{
 }
 
 #social a	{
-	padding: 0px 12px; font-size: 35px;
+  padding: 0px 12px; 
+  font-size: 35px;
 }
-
-#myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    opacity: 1;
-}
-
-#myImg:hover {opacity: 0.7;}
 
 /* The Modal (background) */
 .modal {
@@ -190,6 +249,24 @@ button{
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
+
+.modal a:first-child{  
+  font-size:1.5em;
+  padding:3%;
+  text-align: center;
+  position: absolute;
+  top:0;
+  right: 0;
+  z-index:1;
+  color: white;
+  
+}
+.close
+{
+    width:50px;text-align:center;
+}
+
+.close:hover{ 	background-color:dodgerblue;  }
 
 #container-modal{
    background-image:url(blur_large.png);
@@ -220,24 +297,12 @@ button{
 .passing, .caption {    
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.9s;
-    
     animation-name: zoom;
     animation-duration: 0.9s;
 }
 
-@-webkit-keyframes zoom
-{
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
-
-@keyframes zoom 
-{
-    from {transform: scale(0.1)} 
-    to {transform: scale(1)}
-}
-
-
+@-webkit-keyframes zoom  {from {-webkit-transform: scale(0)}to {-webkit-transform: scale(1)}}
+        @keyframes zoom {from {transform: scale(0.1)} to {transform: scale(1)} }
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 323px)
@@ -301,57 +366,40 @@ button{
   
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px)
+{
+  .efect img {    width:70%;  float:none;  }
+  .efect h3, p{  width:100%;  display: inline-block;  text-align: center;  }
+  .efect{ 	height: auto; }
 
-  .efect{
-    height: auto;
-  }
+  .back_border{ 	width:42%;	}
+	.tit{ 	width:85%; 	top: -9.5vw;	left: 7.5%;  }
+ 	 h1 { display: none; }
 
-  .efect h3, p {
-    display: inline-block;
-    width: 100%;
-    text-align: center;    
-  }
-
-  .efect img {
-    width: 70%;
-    float: none;
-  }
-.back_border{
-	width:42%;
-	}
-.tit{
-	top: -9.5vw;
-	left: 7.5%;
-	width:85%;}
-	
+  #inner_header img:first-child{ position:fixed; left :42%;}
+  #inner_header a:first-child{display: inline;color:red; font-size:30px;}
 }
 
-
-/* */ 
-
-.mySlides {  
-  display: none;
-  max-width: 700px;
-  height: ;
-  margin:auto ;
+.mySlides {   
+    display:none;
+    margin:auto ;  
+    max-width:700px;
 }
-
 
 /* Slideshow container */
 .slideshow-container {
-  box-shadow: 3px 2px 18px;
-  position:relative;
-  width: 100%;  
-  margin-bottom:15%;
+  box-shadow: 3px 2px 18px;  
+  width: 100%;
+  height: 70%;
+  margin-top: ;    
+  position : relative;
 }
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 20px;
-  padding: 8px 12px;
+
+.empty-box{
+  height: 56px;
   position: ;
-  top: 20;
+  background-color: ;
+
 }
 
 /* The dots/bullets/indicators */
@@ -360,7 +408,7 @@ div .dots{
   position: absolute; 
   right: 45%;
   bottom: 2%;
-  z-index:1;
+  z-index:0;
 
 }
 .dot {
@@ -385,16 +433,7 @@ div .dots{
   animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
+@-webkit-keyframes fade {    from {opacity: .4}   to {opacity: 1} }
+@keyframes fade {   from {opacity: .4}    to {opacity: 1} }
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+@media only screen and (max-width: 300px) { .text {font-size: 11px }
