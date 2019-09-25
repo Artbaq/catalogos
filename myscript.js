@@ -139,7 +139,7 @@ function oModal(nam , num){
 
 function exit_Icon(id){
 	var x = id.getElementsByTagName("a")[0]; 
-		x.innerHTML = "&#10060";			
+		x.innerHTML = "&#10006";			
 		x.src = "javascript:void(0)";
 		x.onclick = function(){ w3_close() };
 		}
@@ -156,14 +156,12 @@ var closeClass = document.getElementsByClassName("close");
 
 
 
-
 function w3_open(){ 
 
 	exit_Icon(mySidebar);
 	mySidebar.style.width = " 57.5%";
-	
 	mySidebar.style.zIndex ="1"	;
-		body.style.width = "42.5%" 
+	body.style.width = "42.5%" 
 	
  	header.style.cssText = "background-color:rgba(0,0,0,0.7); height:100%; ";
  	innerHeader.style.cssText = "background-color:rgba(0,0,0,0); ";
@@ -172,11 +170,12 @@ function w3_open(){
 	header.getElementsByTagName("img")[0].style.cssText="width:0.5px; transition:width 0.4s;";
 
 	
+
 	menu.style.cssText = "z-index:1;";
 	menuLogo.src = headerLogo.src;
 	menuLogo.style.cssText = "margin:20px;"
 	
-	closeClass[0].style.cssText="float:right; color:white";
+	closeClass[0].style.cssText=" display:; color:white";
 }
 
 
@@ -185,7 +184,7 @@ function w3_close()	{
 	modal.style.display = "none";
 	body.style.cssText = "position: relative ; right:0%;"
 	header.style.cssText = "background-color:white;  ";
-	closeClass[0].style.cssText="float:; background-color:black; ";
+	closeClass[0].style.cssText="display:none; background-color:black; ";
 	
 	header.getElementsByTagName("span")[0].style.display="";
 	header.getElementsByTagName("img")[0].style.cssText="width:50px; transition:width 0.4s;";
