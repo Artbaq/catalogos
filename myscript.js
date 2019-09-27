@@ -39,7 +39,7 @@ var promo_2 = "promo_2.png Speaker Bluetooth ⛱ Lleva tu musica a donde quieras
 var promo_3 = "promo_3.png Gorras Planas ⛱ Tu mejor estilo para cada ocacion.";
 var promo_4 = "promo_4.png Game pad ⛱ Llevas tus juegos a otro nivel ";
 
-getMenu(); // Hamburger menu 
+getMenu(); // Hamburger menu - Three dots
 getPromo(promo_0,0);
 getPromo(promo_1,4);
 getPromo(promo_2,2);
@@ -125,7 +125,7 @@ function get_images(y, n)
 	 	}	
 			f1_Set += flechas;	
 
-	 	containerModal.innerHTML = f1_Set; 
+	 	containerModal.innerHTML += f1_Set; 
 }
 
 
@@ -147,7 +147,6 @@ function exit_Icon(id){
 
 var header = document.getElementById("header");
 var innerHeader = document.getElementById("inner_header");
-
 var menuIcon = document.getElementById("⁝");
 var headerLogo = header.getElementsByTagName("img")[0];
 var body = document.getElementsByTagName("body")[0];
@@ -161,15 +160,13 @@ function w3_open(){
 	exit_Icon(mySidebar);
 	mySidebar.style.width = " 57.5%";
 	mySidebar.style.zIndex ="1"	;
-	body.style.width = "42.5%" 
+	body.style.width = "42.5%" ;
 	
- 	header.style.cssText = "background-color:rgba(0,0,0,0.7); height:100%; ";
- 	innerHeader.style.cssText = "background-color:rgba(0,0,0,0); ";
-		
+ 	header.style.cssText = "background-color:rgba(0,0,0,0.8); height:100%; ";
+ 	innerHeader.style.cssText = "background-color:rgba(0,0,0,0);";
+	
 	header.getElementsByTagName("span")[0].style.display="none";
-	header.getElementsByTagName("img")[0].style.cssText="width:0.5px; transition:width 0.4s;";
-
-	
+	header.getElementsByTagName("img")[0].style.cssText="width:0px; transition:width 0.4s;";
 
 	menu.style.cssText = "z-index:1;";
 	menuLogo.src = headerLogo.src;
