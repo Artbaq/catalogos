@@ -9,35 +9,23 @@ var	face_art ='fb://page/378010675934018';
 var	face_gor ='fb://page/581398665578960';
 var server = "https://artbaq.github.io/catalogo/";
 
-/* End of Social links */	
-
 var flechas = '<a class="transparent" style="left:0;" onclick="plusDivs(-1)" >&#10094 </a>'+
  			'<a class="transparent" style="right:0;" onclick="plusDivs(1)">&#10095</a>';
-
-
-//**********************
-
-
-var mySidebar = document.getElementById("mySidebar");
-var modal = document.getElementById('myModal');
-
-var menu = document.getElementById('menu');
-var menu_a = menu.getElementsByTagName('a');
-var menu_i = menu.getElementsByTagName('i');
-
-var containerModal = document.getElementById('container-modal');
-
-////// Social links //////////
-var social = document.getElementById('social');
-	var social_a = social.getElementsByTagName('a');
-
-
 
 var promo_0 = "promo_0.png Smart TV BOX plus ⛱ Aprovecha que solo quedan pocos.";
 var promo_1 = "promo_1.png Receptor Bluetooth ⛱ Convierte tu viejo equipo de sonido a Bluetooth";
 var promo_2 = "promo_2.png Speaker Bluetooth ⛱ Lleva tu musica a donde quieras.";
 var promo_3 = "promo_3.png Gorras Planas ⛱ Tu mejor estilo para cada ocacion.";
 var promo_4 = "promo_4.png Game pad ⛱ Llevas tus juegos a otro nivel ";
+
+
+//**********************
+var containerModal = document.getElementById('container-modal');
+var mySidebar = document.getElementById("mySidebar");
+var modal = document.getElementById('myModal');
+var social = document.getElementById('social');
+var menu = document.getElementById('menu');
+
 
 getMenu(); // Hamburger menu - Three dots
 getPromo(promo_0,0);
@@ -46,16 +34,27 @@ getPromo(promo_2,2);
 getPromo(promo_3,3);
 getPromo(promo_4,1);
 
-//getCategory(tec_text, tec_src, 0);
-//getCategory(cap_text, cap_src, 1);
-
+function getMenu(){						
+	var a = menu.getElementsByTagName('a'),
+	 	txt = ["" , "Inicio" , "Nosotros" , "Catalogos" , "Contacto" ],
+	 	logo = [ "","fa fa-home","fa fa-user","fa fa-list","fa fa-phone-alt" ];
+	
+  	for (var i = 1;  i < a.length; i++)
+	{		
+		a[i].innerHTML +=  "<i class='" + logo[i] +"'></i>" +
+						        "<span>" + txt[i] +"</span>";
+    	a[i].onclick = function(){w3_close()};
+	}		
+}
 
 document.getElementById("contactanos").href=contact;
 
-	social_a[0].href = instagram;
-	social_a[1].href = face_art;
-//social_a[2].href = linkedin;
-//social_a[3].href = google;
+	 social.getElementsByTagName('a')[0].href = instagram;
+	 social.getElementsByTagName('a')[1].href = face_art;
+	
+	
+// social.getElementsByTagName('a')[2].href = linkedin;
+// social.getElementsByTagName('a')[3].href = google;
 
 
 function getPromo(vary,n){
@@ -101,18 +100,6 @@ function getCategory() {
 
 	}
 
-function getMenu()		
-{						
-	var menuTxt = ["" , "Inicio" , "Nosotros" , "Catalogos" , "Contacto" ];
-	var 	logo = [ "","fa fa-home","fa fa-user","fa fa-list","fa fa-phone-alt" ]
-	
-  	for (var i = 1;  i < menu_a.length; i++)
-	{		
-		menu_a[i].innerHTML +=  "<i class='" + logo[i] +"'></i>" +
-						 "<span>" + menuTxt[i] +"</span>";
-    	menu_a[i].onclick = function(){w3_close()};
-	}		
-}
 
 
 
@@ -123,9 +110,10 @@ function get_images(y, n)
 		{	
 			f1_Set += '<img class="caption" src="logo.png"><img class="passing" src="'+ y + i +'.png" style="width:100%">';
 	 	}	
+			f1_Set += '<img src="marco.png" style="position:absolute; top:0; width: 100%;z-index:2;">';
 			f1_Set += flechas;	
 
-	 	containerModal.innerHTML += f1_Set; 
+	 	containerModal.innerHTML = f1_Set; 
 }
 
 
@@ -153,24 +141,19 @@ var body = document.getElementsByTagName("body")[0];
 var menuLogo = menu.getElementsByTagName("img")[0];
 var closeClass = document.getElementsByClassName("close");
 
-
+    menuLogo.src = headerLogo.src;
+	menuLogo.style.cssText = "margin:20px;"
 
 function w3_open(){ 
 
 	exit_Icon(mySidebar);
 	mySidebar.style.width = " 57.5%";
 	mySidebar.style.zIndex ="1"	;
-	body.style.width = "42.5%" ;
-	
- 	header.style.cssText = "background-color:rgba(0,0,0,0.8); height:100%; ";
- 	innerHeader.style.cssText = "background-color:rgba(0,0,0,0);";
+	body.style.width = "42.5%" ;		
 	
 	header.getElementsByTagName("span")[0].style.display="none";
-	header.getElementsByTagName("img")[0].style.cssText="width:0px; transition:width 0.4s;";
-
-	menu.style.cssText = "z-index:1;";
-	menuLogo.src = headerLogo.src;
-	menuLogo.style.cssText = "margin:20px;"
+	header.getElementsByTagName("img")[0].style.cssText="width:0px;";
+ 	header.style.cssText = "background-color:rgba(0,0,0,0.8); height:100%; ";	
 	
 	closeClass[0].style.cssText=" display:; color:white";
 }
@@ -181,10 +164,10 @@ function w3_close()	{
 	modal.style.display = "none";
 	body.style.cssText = "position: relative ; right:0%;"
 	header.style.cssText = "background-color:white;  ";
-	closeClass[0].style.cssText="display:none; background-color:black; ";
+	closeClass[0].style.cssText="display:none; ";
 	
 	header.getElementsByTagName("span")[0].style.display="";
-	header.getElementsByTagName("img")[0].style.cssText="width:50px; transition:width 0.4s;";
+	header.getElementsByTagName("img")[0].style.cssText="width:50px;";
 
 	
 }

@@ -10,21 +10,29 @@
 		
 		<script defer src="all.js"></script>
 		<script defer src="myscript.js"></script>
+		<script defer src="variables.js"></script>
 	</head>
 
-<body id="home" class="w3-animate-top">		
+<body id="home" class="w3-animate-top">	
 
+		<!-- The Header -->
 <header id="header">
-	<div id="inner_header">			
+	<div id="inner_header">	
 		<img src="logo_oficial.png">
-		<span>
-			<a href="#home"> <i class="fa fa-home "></i> </a>
-		</span>
-		<span style="padding-left:15px;"><h1>Artículos <span>Bquilla<span class="w3-xlarge w3-text-red" style="transform:rotateY(180deg)">&#9998</span></span></h1></span>
-		<span id="⁝" class="btn w3-button" onclick="w3_open()">&#10247</span>
+			<span>
+				<a href="#home"><i class="fa fa-home "></i></a>
+			</span>
+			<span>
+				<h1>Artículos 
+					<span>Bquilla
+						<span class="w3-xlarge w3-text-red" style="transform:rotateY(180deg)">&#9998</span>
+					</span>
+				</h1>
+			</span>
+			<span id="⁝" class="w3-button" onclick="w3_open()">&#10247</span>
 	</div>
 </header>
-
+		<!-- The Nav Menu -->
 <nav id="mySidebar" class="animate-right">
 	<div id="menu">
 		<div><img id="abc"><a class="close"></a></div>
@@ -34,17 +42,17 @@
 			<a href="#catalog"></a> 
 			<a href="#contact"></a>	
 	</div>	
-</nav>
-
- 
+</nav> 
 		<!-- The Modal -->
 <div id="myModal" class="modal">	
 	<a class="close"></a>
 	
-	<div id="container-modal"><img src="marco.png" style="position:absolute; width: 100%;z-index:2;"></div>
-	<div class="modal-text">###</div>	
-	
+	<div id="container-modal">
+		<div class="modal-text">###</div>
+	</div>
 </div>	
+
+
 
 <div class="slideshow-container">
 	<div class="empty-box"></div>
@@ -87,6 +95,7 @@
 		<span class="dot"></span>  
 		<span class="dot"></span>
 	</div>	
+
 </div>
 
 <section id="wrapper">
@@ -154,13 +163,14 @@
 	     
 </section>
 
-<hr id="about">
-<hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>	
-<h2>Nosotros</h2>
-		
-	<p style="padding:0px 25px 25px 25px; text-align: justify;">Articulos Bquilla nace, como una iniciativa de ayudar a esas personas que ya sea por trabajo o por otras razones. no dispongan de mucho tiempo. 
-	De esta manera brindarles un servicio, el cual le permite ahorrar tiempo que puede ser usado con fines productivos ya sea a nivel profesional, familiar o espiritual.
-	Asi es como se gesta y da a lugar a una empresa que tiene como objetivo principal mantenar la satisfacion de sus  servicio al cliente  
+
+<div id="about" class="w3-card">  
+	<h2 align="left">Nosotros</h2>		
+	<p id="aboutUs"> </p>
+</div>
+
+
+
 
 
 <div id="footer">
