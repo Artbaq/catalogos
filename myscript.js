@@ -49,7 +49,7 @@ function getMenu(){
 
 document.getElementById("contactanos").href=contact;
 
-	 social.getElementsByTagName('a')[0].href = instagram;
+	 social.getElementsByTagName('a')[0].href = facebook;
 	 social.getElementsByTagName('a')[1].href = facebook;
 	
 	
