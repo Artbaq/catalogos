@@ -9,7 +9,7 @@ section{
 
 #top_header { height:75px;    padding: 1%;    width:100% 
 }
-#header_img { display:none; width:75px;  float: left;    
+#header_img { height:100%;  float: left;    
 }
 #header_tittle{ display:inline-block;   font-weight: 700;
 }
