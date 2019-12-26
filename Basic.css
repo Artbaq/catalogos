@@ -1,0 +1,58 @@
+h1,h2,h3,h4,h5,h6{  text-align : center
+}
+section{
+  margin: auto;
+  vertical-align:top;
+  width:100%; 
+}
+
+
+#top_header { height:75px;    padding: 1%;    width:100% 
+}
+#header_img { height:100%;  float: left;    
+}
+#header_tittle{ display:inline-block;   font-weight: 700;
+}
+#bottom_header{  height:3.4em;   text-align:right;    overflow: hidden;   
+                 background-color:rgb(171,217,225);  box-shadow: 1px 1px 3px;
+              }  
+#bottom_header p{   display: ; float: right;  font-size:2em; height: 1.7em; 
+                }
+
+#bottom_header a{   font-size:150%; font-weight:bold;
+                    padding:1em;   text-decoration:none; color: rgb(38,76,83) ;
+                  }
+#bottom_header span{ display:none;} 
+#bottom_header a:hover , #bottom_header p:hover{ background-color:black;  color: white;  }
+#bottom_header .svg-inline--fa {vertical-align:bottom; font-size:0.8em; /*padding:10px; padding-top:2%;*/ }
+
+@media only screen and (min-width: 400px){    
+  
+    #bottom_header span{ display:inline-table; vertical-align:middle;} 
+    #bottom_header a{ font-size:100%;}
+    
+	#bottom_header .svg-inline--fa {vertical-align:middle;
+}
+
+
+/*
+body {
+  --google-blue-600: rgb(26, 115, 232);
+  --google-blue-700: rgb(25, 103, 210);
+  --google-gray-50: rgb(248, 249, 250);
+  --google-gray-300: rgb(218, 220, 224);
+  --google-gray-500: rgb(154, 160, 166);
+  --google-gray-600: rgb(128, 134, 139);
+  --google-gray-700: rgb(95, 99, 104);
+  --google-gray-900: rgb(32, 33, 36);
+  background-color: #fff;
+  color: var(--google-gray-700);
+  word-wrap: break-word;
+}
+
+
+  background: #fff;
+  border: 1px solid var(--google-gray-500);
+  color: var(--google-blue-700);
+  
+*/
