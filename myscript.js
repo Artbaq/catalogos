@@ -13,15 +13,11 @@ var server = "https://artbaq.github.io/catalogo/";
 var flechas = '<a class="transparent" style="left:0;" onclick="plusDivs(-1)" >&#10094 </a>'+
  			'<a class="transparent" style="right:0;" onclick="plusDivs(1)">&#10095</a>';
 
-
-
-const promotion = [
-	{image: "promo_0.png" , title: "Smart TV BOX plus" , senten: "Aprovecha que solo quedan pocos."},
-	{image: "promo_1.png" , title: "Receptor Bluetooth", senten: "Convierte tu viejo equipo de sonido a Bluetooth."},
-	{image: "promo_2.png" , title: "Speaker Bluetooth" , senten: "Lleva tu musica a donde quieras."},
-	{image: "promo_3.png" , title: "Gorras Planas"		 , senten: "Tu mejor estilo para cada ocacion."},
-	{image: "promo_4.png" , title: "Game pad" 				 , senten: "Llevas tus juegos a otro nivel."},
-]
+var promo_0 = "promo_0.png Smart TV BOX plus ⛱ Aprovecha que solo quedan pocos.";
+var promo_1 = "promo_1.png Receptor Bluetooth ⛱ Convierte tu viejo equipo de sonido a Bluetooth";
+var promo_2 = "promo_2.png Speaker Bluetooth ⛱ Lleva tu musica a donde quieras.";
+var promo_3 = "promo_3.png Gorras Planas ⛱ Tu mejor estilo para cada ocacion.";
+var promo_4 = "promo_4.png Game pad ⛱ Llevas tus juegos a otro nivel ";
 
 
 //**********************
@@ -31,52 +27,53 @@ var social = document.getElementById('social');
 var modal = document.getElementById('myModal');
 var menu = document.getElementById('bottom_header');
 var myNav = document.getElementById("myNav");
-
-
-
-getPromo2();
+//getMenu(menu); // Hamburger menu - Three dots
+getPromo(promo_0,0);
+getPromo(promo_1,4);
+getPromo(promo_2,2);
+getPromo(promo_3,3);
+getPromo(promo_4,1);
 
 var txtx = [" Inicio", " Nosotros", " Catalogos", " Contacto"];
 var faLogo = ["fa fa-home", "fa fa-user", "fa fa-list", "fa fa-phone-alt"];
 
-function navLinks(id , idName) {	
-		
+function navLinks(id , idName) {			
 	let myDiv = document.createElement('div'); 
 	let myH = document.createElement('h4'); 
 	id.appendChild(myDiv);
 	myDiv.appendChild(myH)
 	myDiv.id= idName;
-
+	
 	for (let i = 0; i < txtx.length; i++) 
 	{
+		let mySpan = document.createElement('span');
 		let myA = document.createElement('a');
 		let myI = document.createElement('i'); 
+			
 			myDiv.appendChild(myA);
 			myA.appendChild(myI);
-
-			if (myDiv.id == "undefined") {	myH.style.display ='none';	}
-
-			myH.innerHTML = myDiv.id.substring(2);
+			myA.appendChild(mySpan);
 			myI.className = faLogo[i];
+
+		if (myDiv.id == "undefined") {	myH.style.display ='none';	}
+			mySpan.innerHTML += txtx[i];
+			myH.innerHTML = myDiv.id.substring(2);
 			myA.href = '#'+ txtx[i].substring(1).toLowerCase();
 			myA.setAttribute('onclick', 'w3_close()');
-			myA.innerHTML += txtx[i];
 	}
 }
+
 navLinks(bottom_header); 
 navLinks(myNav); 
 
-
-var links = [	"oModal('ear_',3)","oModal('cha_',4)","('spe_',2)","oModal('tec_',20)" ];
+var links = [	"oModal('ear_',3)","oModal('cha_',4)","oModal('spe_',2)","oModal('tec_',20)" ];
 var txt = [	"Audifonos & Bluetooth","Cargadores & Cables","Speakers","Miselaneos & más" ];
 var icon = [ "🎧 ", "🔌 " , "📻 ", "► " ];
 
 function getCategory(id , idName) {	
-		
 	let myDiv = document.createElement('div'); 
 	let myH = document.createElement('h4');
-	id.appendChild(myDiv);
-	myDiv.appendChild(myH)
+	id.appendChild(myDiv);	myDiv.appendChild(myH);
 	myDiv.id= idName;
 
 	for (var i = 0; i < txt.length; i++) {
@@ -98,21 +95,17 @@ function getCategory(id , idName) {
 			myP2.innerHTML = txt[i];
 
 		if (icon.length == 0)
-		{
-			myP.appendChild(myImg); 
+		{	myP.appendChild(myImg); 
 			myImg.src = imagenes[i];
-		}else{	
-			myP.innerHTML = icon[i];				
-		}
+		}else{	myP.innerHTML = icon[i];	}
 	}
-}// ►►►►►► Calling the function ◄◄◄◄◄◄◄ 
+}
 
 
 var socialLink = ["fb://facewebmodal/f?href=https://www.facebook.com/articulosbquilla","https://www.instagram.com/articulos_bquilla","#","#"]
 var socialFaLogo = [ "fab fa-facebook-square", "fab fa-instagram", "fab fa-linkedin", "fab fa-google-plus-square"];
 
-function socialLinks(id , idName) {	
-		
+function socialLinks(id , idName) {		
 	let myDiv = document.createElement('div'); 
 	let myH = document.createElement('h4'); 
 	id.appendChild(myDiv);
@@ -125,9 +118,8 @@ function socialLinks(id , idName) {
 		let myI = document.createElement('i'); 
 			myDiv.appendChild(myA);
 			myA.appendChild(myI);
-
-			if (myDiv.id == "undefined") {	myH.style.display ='none';	}
-
+		
+		if (myDiv.id == "undefined") {	myH.style.display ='none';	}
 			myH.innerHTML = myDiv.id.substring(2);
 			myI.className = socialFaLogo[i];
 			myA.href = socialLink[i];
@@ -135,46 +127,33 @@ function socialLinks(id , idName) {
 			//myA.innerHTML += txt[i];
 	}
 }
+
+getCategory(techno);
+
 socialLinks(footer , "ftSiguenos");
 navLinks(footer , 'ftMenu');
-getCategory(techno);
 getCategory(footer , 'ftTecnología');
 
-	links = ["oModal('cur_',2)" , "oModal('pla_',6)"];
-	txt =	["Gorras Cuvadas" , "Gorras Planas"];
+   links =  ["oModal('cur_',2)" , "oModal('pla_',6)"];
+	 txt =	["Gorras Cuvadas" , "Gorras Planas"];
 imagenes = 	["cur_2.png" , "pla_5.png"]
 	icon = 	[];
 
 getCategory(gorras);	
 getCategory(footer , 'ftGorras');
+//document.getElementById("contactanos").href=contact;
 
+function getPromo(vary,n){
+	var a = vary.search("promo"),
+		b = vary.search("png"),
+	 	c = vary.search("⛱"),
+	 source = vary.substring(a , b + 3),
+	 tittle = vary.substring(b + 3 , c),
+	 coment = vary.substring(c + 1);
 
-function getPromo2(){
-	promotion.forEach(function(item){
-
-		let myDiv = document.createElement("div");
-				myDiv.className = "mySlides fade txt";
-		let myImg = document.createElement("img");
-				myImg.className = "promo";
-		let myDiv2 = document.createElement("div");
-				myDiv2.className = "promoTxt";
-		let myH3 = document.createElement("h3");
-				myH3.className = "enunc";
-		let myp = document.createElement("p");
-				myp.className = "stat";
-		
-		let slideShow = document.getElementById('slideshow');
-
-				slideShow.appendChild(myDiv)
-				myDiv.appendChild(myImg);
-				myDiv.appendChild(myDiv2);
-				myDiv.appendChild(myH3);
-				myDiv.appendChild(myp);
-
-				myImg.src = item.image;
-				myH3.innerHTML = item.title;
-				myp.innerHTML = item.senten;
-				});
+	document.getElementsByClassName("promo")[n].src= source;
+	document.getElementsByClassName("enunc")[n].innerHTML= tittle;
+	document.getElementsByClassName("stat")[n].innerHTML= coment;
 }
 
 function get_images(y, n)
@@ -194,40 +173,33 @@ function get_images(y, n)
 // Get the modal
 function oModal(nam , num){
 	exit_Icon(myModal);
-		modal.style.display = "block";    
+    modal.style.display = "block";    
     get_images(nam , num)
     showDivs(slideIndex); 
-	}
+}
 
 function exit_Icon(id){
 	var x = id.getElementsByTagName("a")[0]; 
-		x.innerHTML = "&#10006";			
-		x.src = "javascript:void(0)";
-		x.onclick = function(){ w3_close() };
-		}
-
+	x.innerHTML = "&#10006";			
+	x.src = "javascript:void(0)";
+	x.onclick = function(){ w3_close() };
+}
 
 function w3_open(){ 
-	
 	mySidebar.style.backgroundColor = 'rgba(0,0,0,0.8)'; 
 	mySidebar.style.color = 'white'; 
 	mySidebar.style.width = '40%';
 	mySidebar.style.zIndex = '1';
-	closeClass[0].style.cssText = 'display:;';
 }
+
 function w3_close()	{
 	modal.style.display = 'none';
-	mySidebar.style.width = '0%';
-	mySidebar.style.color = 'rgba(0,0,0,0.1)'; //'rgba(255,255,255,0.8)'
-	closeClass[0].style.display = 'none';
+	//this.style.width = '0%';
+	//this.style.color = 'rgba(0,0,0,0.1)'; //'rgba(255,255,255,0.8)'
 }
-		
-
-
-var closeClass = document.getElementsByClassName("close");
-
 
 var slideIndex = 1;
+
 function plusDivs(n)	{ 
 	showDivs(slideIndex += n);
 }
@@ -252,27 +224,21 @@ function showDivs(n)	{     var i;
 var slideInd = 1;
 showSlides(slideInd);
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
+function showSlides() {	var i, slides, dots;
+  slides= document.getElementsByClassName("mySlides");
+  dots= document.getElementsByClassName("dot");
   
-  
-  //Hide all the slide with a loop
-
-   for (i = 0; i < slides.length; i++) {
-
-    slides[i].style.display = "none"; 
-  }
-
-  slideInd++;
-
-  if (slideInd > slides.length) {slideInd = 1}  
-
-  for (i = 0; i < dots.length; i++) {
-
-    dots[i].className = dots[i].className.replace("active", "");
-  }
+	for (i=0; i<slides.length; i++) {
+		slides[i].style.display = "none"; 
+  	}
+	slideInd++;
+	if(slideInd>slides.length) {
+  		slideInd = 1
+	}  
+	for (i=0; i<dots.length; i++) {
+    	dots[i].className =
+   		dots[i].className.replace("active","");
+	}
 
   slides[slideInd-1].style.display = "block";  
   dots[slideInd-1].className += " active";
@@ -295,3 +261,23 @@ function onBackKeyDown()
   mainView.router.back(); 
 }
 
+var Share = {
+facebook: function(purl, ptitle, pimg, text) {
+url = 'fb://facewebmodal/f?href=https://www.facebook.com/sharer.php?s=100';
+url += '&p[title]=' + encodeURIComponent(ptitle);
+url += '&p[summary]=' + encodeURIComponent(text);
+url += '&p[url]=' + encodeURIComponent(purl);
+url += '&p[images][0]=' + encodeURIComponent(pimg);
+Share.popup(url);
+},
+twitter: function(purl, ptitle) {
+url = 'http://twitter.com/share?';
+url += 'text=' + encodeURIComponent(ptitle);
+url += '&url=' + encodeURIComponent(purl);
+url += '&counturl=' + encodeURIComponent(purl);
+Share.popup(url);
+},
+popup: function(url) {
+window.open(url,'','toolbar=0,status=0,width=626, height=436');
+}
+};
