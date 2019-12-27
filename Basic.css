@@ -1,4 +1,4 @@
-h1,h2,h3,h4,h5,h6{  text-align : center
+h1,h2,h3,h4,h5,h6{ background:teal; text-align : center
 }
 section{
   margin: auto;
@@ -7,9 +7,9 @@ section{
 }
 
 
-#top_header { height:75px;    padding: 1%;    width:100% 
+#top_header{background:teal;height:75px;    padding: 1%;    width:100% 
 }
-#header_img { height:100%;  float: left;    
+#header_img{ height:100%;  float: left;    
 }
 #header_tittle{ display:inline-block;   font-weight: 700;
 }
