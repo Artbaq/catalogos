@@ -132,7 +132,10 @@ function socialLinks(id , idName) {
 getCategory(techno);
 
 socialLinks(footer , "ftSiguenos");
+
 navLinks(footer , 'ftMenu');
+ftMenu.getElementsByTagName('a')[3].href= whatsapp;
+
 getCategory(footer , 'ftTecnología');
 
    links =  ["oModal('cur_',2)" , "oModal('pla_',6)"];
