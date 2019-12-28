@@ -25,8 +25,8 @@ var containerModal = document.getElementById('container-modal');
 var mySidebar = document.getElementById("mySidebar");
 var social = document.getElementById('social');
 var modal = document.getElementById('myModal');
-var menu = document.getElementById('bottom_header');
-var myNav = document.getElementById("myNav");
+//var menu = document.getElementById('bottom_header');
+//var myNav = document.getElementById("myNav");
 //getMenu(menu); // Hamburger menu - Three dots
 getPromo(promo_0,0);
 getPromo(promo_1,4);
