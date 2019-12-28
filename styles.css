@@ -49,7 +49,7 @@ button{
 }
 
 #container-modal{
-    background-image:url(blur_large.png);
+    /*background-image:url(blur_large.png);*/
     background-repeat:no-repeat;
     background-size: 100%;
       margin: auto;
