@@ -32,7 +32,7 @@ getPromo(promo_0,0);
 getPromo(promo_1,4);
 getPromo(promo_2,2);
 getPromo(promo_3,3);
-getPromo(promo_4,1);
+getPromo(promo_4,1); 
 
 var txtx = [" Inicio", " Nosotros", " Catalogos", " Contacto"];
 var faLogo = ["fa fa-home", "fa fa-user", "fa fa-list", "fab fa-whatsapp"];
