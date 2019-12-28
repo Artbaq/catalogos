@@ -5,9 +5,9 @@
 
 var facebook ="fb://facewebmodal/f?href=https://www.facebook.com/articulosbquilla";
 var instagram="https://www.instagram.com/articulos_bquilla";
-var	contact = "https://api.whatsapp.com/send?phone=+573008546921";
-var	face_art ='fb://page/378010675934018';
-var	face_gor ='fb://page/581398665578960';
+var whatsapp = "https://api.whatsapp.com/send?phone=+573008546921";
+var face_art ='fb://page/378010675934018';
+var face_gor ='fb://page/581398665578960';
 var server = "https://artbaq.github.io/catalogo/";
 
 var flechas = '<a class="transparent" style="left:0;" onclick="plusDivs(-1)" >&#10094 </a>'+
@@ -35,7 +35,7 @@ getPromo(promo_3,3);
 getPromo(promo_4,1);
 
 var txtx = [" Inicio", " Nosotros", " Catalogos", " Contacto"];
-var faLogo = ["fa fa-home", "fa fa-user", "fa fa-list", "fa fa-phone-alt"];
+var faLogo = ["fa fa-home", "fa fa-user", "fa fa-list", "fab fa-whatsapp"];
 
 function navLinks(id , idName) {			
 	let myDiv = document.createElement('div'); 
@@ -64,7 +64,8 @@ function navLinks(id , idName) {
 }
 
 navLinks(bottom_header); 
-navLinks(myNav); 
+bottom_header.getElementsByTagName('a')[3].href= whatsapp;
+//navLinks(myNav); 
 
 var links = [	"oModal('ear_',3)","oModal('cha_',4)","oModal('spe_',2)","oModal('tec_',20)" ];
 var txt = [	"Audifonos & Bluetooth","Cargadores & Cables","Speakers","Miselaneos & más" ];
