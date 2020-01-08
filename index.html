@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<script defer src="myscript.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Montserrat">
 		<link rel="stylesheet" type="text/css" href="w3.css">
+		<link rel="stylesheet" type="text/css" href="basic.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">		
 		<link rel="stylesheet" type="text/css" href="fontawesome.css">
 		<link rel="stylesheet" type="text/css" href="all.css">
-                <link rel="stylesheet" type="text/css" href="Basic.css">
-		<link rel="stylesheet" type="text/css" href="styles.css">
 		<link rel="stylesheet" type="text/css" href="mycss.css">
 		
 				
 		<script defer src="all.js"></script>
-		<script defer src="myscript.js"></script>
-		<script defer src="variables.js"></script>
+		
+		
 		<script src="jquery-3.2.1.min.js"></script>
 </head>
 
-<body id="inicio" class="w3-animate-top">	
+<body id="inicio" class="w3-animate-top" onscroll="scrolling(); backTopTrigger();" on>	
 
 <header>
 	<div id="top_header">
 		<img id="header_img" src="logo_oficial.png">
-		<h1 id="header_tittle">Artículos bquilla</h1>		
+		<h1 id="header_tittle">Artículos bquilla</h1>	
+			
 	</div> 
-
-	<div id="bottom_header">
-	<!--	<p id="header_menu" onclick="w3_open()">&#10247</p>-->
+	
+<div id="bottom_header">
+	<img id="logo" src="logo_oficial.png" style="height:99%; opacity:0%">
+	
+		<!--<p id="header_menu" onclick="w3_open()">&#10247</p>-->
 		<!--<a href="">-->
 	</div>
+	<div id="emptySpace" style="background-color:floralwhite;"></div>
+	
 </header>  
 <!---------------END OF HEADER -------------->
 <nav id="mySidebar">
@@ -41,59 +48,18 @@
 	<a class="close"></a>	
 	<div id="container-modal">
 		<div class="modal-text">###</div>
-		
 	</div>
-	<a onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')"> {sharing is sexy}</a>
-	<a onclick="Share.twitter('URL','TITLE')"> {sharing is sexy}</a>
-	
 </div>	
 <!---------------END OF MODAL-------------->
-<div class="slideshow-container">
-	
-	<div class="mySlides fade txt">
-	<img class="promo">
-	<div id="promoTxt">
-		<h3 class="enunc"></h3>
-		<p class="stat"></p>
-	</div>		
-	</div>
-	<div class="mySlides fade txt">
-	<img class="promo">
-	<div id="promoTxt">
-	<h3 class="enunc"></h3>
-	<p class="stat"></p>
-	</div>		
-	</div>
-	<div class="mySlides fade txt">
-	<img class="promo">
-	<div id="promoTxt">
-	<h3 class="enunc"></h3>
-	<p class="stat"></p>
-	</div>		
-	</div>
-	<div class="mySlides fade txt">
-	<img class="promo">
-	<div id="promoTxt">
-	<h3 class="enunc"></h3>
-	<p class="stat"></p>
-	</div>		
-	</div>
-	<div class="mySlides fade txt">
-	<img class="promo">
-	<div id="promoTxt">
-	<h3 class="enunc"></h3>
-	<p class="stat"></p>
-	</div>		
-	</div>
-</div>
+<div id="slideshow" class="slideshow-container"></div>
 
-<div class="dots">
-			<span class="dot"></span> 
-		  <span class="dot"></span> 
-			<span class="dot"></span>  
-		  <span class="dot"></span>  
-		  <span class="dot"></span>
-	  </div>	
+<div id="dotsBox" class="dots">
+	<span class="dot"></span> 
+	<span class="dot"></span> 
+	<span class="dot"></span>  
+	<span class="dot"></span>  
+	<span class="dot"></span>
+</div>	
 	
 	</div>
 </div>
@@ -119,7 +85,7 @@
 
 <div id="about" class="w3-card">  
 		
-	<p id=""> </p>
+	<p id="aboutUs"> </p>
 </div>
 
 
@@ -155,9 +121,7 @@
 	</div>
 -->
 </div>
-
-<p style="background:rgb(38,76,83);text-align: center; color:rgb(171,217,225);"><br>Copyright &copy 2019  Art&iacute;culos Bquilla. </p>
-
+<p style="background:rgb(38,76,83);text-align: center; color:rgb(171,217,225)">Copyright &copy 2019  Art&iacute;culos Bquilla. </p>
 
 </body>
 
