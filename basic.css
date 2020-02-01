@@ -1,5 +1,4 @@
-h1,h2,h3,h4,h5,h6{  text-align : center
-}
+h1,h2,h3,h4,h5,h6{  text-align : center	}
 section{
   margin: auto;
   vertical-align:top;
@@ -7,31 +6,9 @@ section{
 }
 
 
-#top_header { height:75px;    padding: 1%;    width:100% 
-}
-#header_img { height:100%;  float: left;    
-}
-#header_tittle{ display:inline-block;   font-weight: 700;
-}
-#bottom_header{  height:3.4em;   text-align:right;    overflow: hidden;   
-                 background-color:rgb(171,217,225);  box-shadow: 1px 1px 3px;
-              }  
-#bottom_header p{   display: ; float: right;  font-size:2em; height: 1.7em; 
-                }
-
-#bottom_header a{   font-size:150%; font-weight:bold;
-                    padding:1em;   text-decoration:none; color: rgb(38,76,83) ;
-                  }
-#bottom_header span{ display:none;} 
-#bottom_header .svg-inline--fa {vertical-align:bottom; font-size:0.8em; /*padding:10px; padding-top:2%;*/ }
 
 @media only screen and (min-width: 400px){    
-  
-    #bottom_header span{ display:inline-table; vertical-align:middle;} 
-    #bottom_header a{ font-size:100%;}
-    #bottom_header a:hover , #bottom_header p:hover{ background-color:black;  color: white;  }
-    
-	#bottom_header .svg-inline--fa {vertical-align:middle;}
+  #header a{ font-size:100%;}
 }
 
 
@@ -70,7 +47,7 @@ body {
 svg.svg-inline--fa.fa-home.fa-w-18 {
     margin: 8px;
     /*vertical-align: middle;*/
-    font-size:1.6em;
+    font-size:1.8em;
 }
 
 .show { 
@@ -87,18 +64,12 @@ svg.svg-inline--fa.fa-home.fa-w-18 {
 }
 
 #logo{
-margin-left:2%;
- vertical-aling:middle; 
- float:left; 
-  height:99%
- opacity:0;
-  margin:; 
-  transition:1s;
-
-}
-
-
-
-
-
-
+  margin-left:2%;
+   vertical-align:middle; 
+   float:left; 
+    height:99%;
+   opacity:0;
+    margin:; 
+    transition:1s;
+  
+  }

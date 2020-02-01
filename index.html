@@ -2,7 +2,14 @@
 <html>
 <head>
 
+	
+	
 	<script defer src="myscript.js"></script>
+	<script defer src="main.js"></script>
+	
+	
+	<!---<script defer src="functions.js"></script>-->
+	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Montserrat">
 		<link rel="stylesheet" type="text/css" href="w3.css">
@@ -19,25 +26,31 @@
 		<script src="jquery-3.2.1.min.js"></script>
 </head>
 
-<body id="inicio" class="w3-animate-top" onscroll="scrolling(); backTopTrigger();" on>	
+<body id="inicio" onscroll="scrolling(); backTopTrigger();">	
+	
+<div id="topBar"> <img src="logo_oficial.png">	<h1>Artículos Bquilla</h1></div> 
 
-<header>
-	<div id="top_header">
-		<img id="header_img" src="logo_oficial.png">
-		<h1 id="header_tittle">Artículos bquilla</h1>	
-			
-	</div> 
-	
-<div id="bottom_header">
-	<img id="logo" src="logo_oficial.png" style="height:99%; opacity:0%">
-	
-		<!--<p id="header_menu" onclick="w3_open()">&#10247</p>-->
-		<!--<a href="">-->
-	</div>
-	<div id="emptySpace" style="background-color:floralwhite;"></div>
-	
-</header>  
+<header id="header">
+	<img id="logo" src="logo_oficial.png" style="height:99%; opacity:0%">	
+</header> 
 <!---------------END OF HEADER -------------->
+
+<div id="emptySpace"></div>
+<div id="slideshow" class="slideshow-container"></div>
+
+
+<div id="dotsBox" class="dots">
+	<span class="dot"></span> 
+	<span class="dot"></span> 
+	<span class="dot"></span>  
+	<span class="dot"></span>  
+	<span class="dot"></span>
+</div>	
+	
+	</div>
+</div>
+<!---------------END OF slideshow-container-------------->
+
 <nav id="mySidebar">
 	<p onclick="w3_close()">&#10006</p>	
 	<div id="myNav"></div>
@@ -51,76 +64,10 @@
 	</div>
 </div>	
 <!---------------END OF MODAL-------------->
-<div id="slideshow" class="slideshow-container"></div>
 
-<div id="dotsBox" class="dots">
-	<span class="dot"></span> 
-	<span class="dot"></span> 
-	<span class="dot"></span>  
-	<span class="dot"></span>  
-	<span class="dot"></span>
-</div>	
-	
-	</div>
-</div>
-<!---------------END OF slideshow-container-------------->
-<div id="wrapper">
-	<section id="techno">	<hr id="catalogos">			
-		<h2 class="titulos">&#9930Tecnología</h2>
-			<hr style="width: 80%; margin: 10px auto ; box-shadow: 1px 1px 3px;">
-			<!---------------AuTo-------------->
-	</section>
-	
-	<section id="gorras">	<hr>		
-		<h2 class="titulos">&#9930Gorras</h2>
-		<hr style="width: 80%; margin: 10px auto ; box-shadow: 1px 1px 3px;">
-		<!---------------AuTo-------------->
-	</section>
-</div>
+<div id="wrapper"></div>
+<div id="footer"></div>
 
-
-
-
-<h2 class="titulos">&#9930Nosotros</h2>
-
-<div id="about" class="w3-card">  
-		
-	<p id="aboutUs"> </p>
-</div>
-
-
-
-
-
-<div id="footer">
-	
-
-
-<!-- 
-	<h5 id="contacto"><b>Permítenos ser tu proveedor de confianza.</b></h5>
-
-	<p style="padding: 10px">Artículos Bquilla es un grupo de distribuidores. Cuando necesites accesorios para tu celular, Tablet, equipos de audio, nosotros podemos ayudarte. Y para los mas atrevidos contamos con un amplio surtido en Gorras .</p>
-	<p style="padding: 10px">Permítenos enseñarte porqué nuestros clientes nos prefieren. </p><br>
-
-	<button>
-		<b>
-			<a id="contactanos">Contactanos</a>
-		</b><i class="fab fa-whatsapp"></i>
-	</button>
-
-	
-	<div id="social">		
-		<h4><b>Siguenos</b></h4>
-			<a><i class="fab fa-instagram"></i></a>
-			<a><i class="fab fa-facebook-square"></i></a>
-			<a><i class="fab fa-linkedin"></i></a>	
-			<a><i class="fab fa-google-plus-square"></i></a>
-				
-			<p>Copyright &copy 2019  Art&iacute;culos Bquilla. </p>
-		
-	</div>
--->
-</div>
 <p style="background:rgb(38,76,83);text-align: center; color:rgb(171,217,225)">Copyright &copy 2019  Art&iacute;culos Bquilla. </p>
 
 </body>

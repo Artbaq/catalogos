@@ -1,3 +1,38 @@
+var id = function(x){ return ' id="' + x + '"'}
+var cls = function(x){ return ' class="' + x + '"'}
+var stl = function(x){ return ' style="' + x + '"'}
+var src = function(x){ return ' src="' + x + '"'}
+var href = function(x){ return ' href="' + x + '"'}
+var onclick = function(x){ return ' onclick="' + x + '"'}
+
+var crtDiv = function(attr, content){ return createElem('div', content)}
+var crtA = function(attr, content){ return createElem('a',  content, attr)}
+var crtI = function(attr, content){ return createElem('i',  content, attr)}
+
+var crtImg = function(attr){ return '<img' + attr + '>'}
+
+function createElem(elem,content,attr){
+	let object = {
+		lt:'<',
+        elem: elem,
+        attr:attr,
+		gt:'>',
+		content: content,
+		lts:'</',
+		result: function(){
+			return this.lt + this.elem + [this.attr] + this.gt +
+					[this.content] +
+					this.lts + this.elem + this.gt
+			    }
+    }
+    return object.result()
+}
+
+function compElem(element,id,className){
+    let x = document.createElement(element);
+    x.id = id;  x.className = className;
+return x;
+}
 
 
 /* Social links */	
@@ -5,31 +40,30 @@
 
 var facebook ="fb://facewebmodal/f?href=https://www.facebook.com/articulosbquilla";
 var instagram="https://www.instagram.com/articulos_bquilla";
-var	whatsapp = "https://api.whatsapp.com/send?phone=+573008546921";
+//var	whatsapp = "https://api.whatsapp.com/send?phone=+573008546921";
 var	face_art ='fb://page/378010675934018';
 var	face_gor ='fb://page/581398665578960';
 var server = "https://artbaq.github.io/catalogo/";
 
 
-const redesSociales = [
-	{ brand: "whatsapp" , icon: "fab fa-whatsapp" , link: "https://api.whatsapp.com/send?phone=+573008546921" },
-	{ brand: "facebook" , icon: "fab fa-facebook" , link: "fb://facewebmodal/f?href=https://www.facebook.com/articulosbquilla" },
-	{ brand: "instagram", icon: "fab fa-instagram" , link: "https://www.instagram.com/articulos_bquilla" },
-	{ brand: "whatsapp" , icon: "fab fa-facebook" , link: "https://api.whatsapp.com/send?phone=+573008546921" }
+const navMenu = [
+	{id: 0 , name: "Nosotros" , icon: "fa fa-user" , url: "#" },
+	{id: 1 , name: "Catalogos", icon: "fa fa-list" , url: "#catalogos" },
+	{id: 2 , name: "Whatsapp" , icon: "fab fa-whatsapp" , url: "https://api.whatsapp.com/send?phone=+573008546921" }
 ];
 
-
-
-
-
-var flechas = '<a class="transparent" style="left:0;" onclick="plusDivs(-1)" >&#10094 </a>'+
- 			'<a class="transparent" style="right:0;" onclick="plusDivs(1)">&#10095</a>';
+var socialMedia = [
+	{id: 0 , name: "Facebook" , icon: "fab fa-facebook-square" , url: "fb://facewebmodal/f?href=https://www.facebook.com/articulosbquilla" },
+	{id: 1 , name: "Instagram", icon: "fab fa-instagram" , url: "https://www.instagram.com/articulos_bquilla" },
+	{id: 2 , name: "Linkedin" , icon: "fab fa-linkedin" , url: "#" },
+	{id: 3 , name: "Google" , icon: "fab fa-google-plus-square" , url: "#" }
+];
 
 
 
 const promotion = [
 	{image: "promo_0.png" , title: "Smart TV BOX plus" , senten: "Aprovecha que solo quedan pocos."},
-	{image: "promo_1.png" , title: "Receptor Bluetooth", senten: "Convierte tu viejo equipo de sonido a Bluetooth."},
+	{image: "promo_1.png" , title: "Receptor Bluetooth", senten: "Transmite sonido por Bluetooth."},
 	{image: "promo_2.png" , title: "Speaker Bluetooth" , senten: "Lleva tu musica a donde quieras."},
 	{image: "promo_3.png" , title: "Gorras Planas"	   , senten: "Tu mejor estilo para cada ocacion."},
 	{image: "promo_4.png" , title: "Game pad" 		   , senten: "Llevas tus juegos a otro nivel."}
@@ -42,160 +76,14 @@ var mySidebar = document.getElementById("mySidebar");
 var social = document.getElementById('social');
 var modal = document.getElementById('myModal');
 
+var arrowLeft = crtA( id('arrowLeft') + 
+	stl('position:absolute; top:45%; left:0; z-index:2;') +
+	onclick('plusDivs(-1)') , crtImg( stl('width:50px') + src('arrowLeft.png') )  );
 
-getPromo2();
+var arrowRight = crtA(	id('arrowRight') +
+	stl('position:absolute; top:45%; right:0; z-index:2;') +
+	onclick('plusDivs(1)') , crtImg( stl('width:50px') + src('arrowRight.png') )	)					
 
-var txtx = [" Nosotros", " Catalogos", " Contacto"];
-var faLogo = ["fa fa-user", "fa fa-list", "fab fa-whatsapp"];
-
-
-
-
-
-function navLinks(id , idName) {	
-
-	let myDiv = document.createElement('div'); 
-	let myH = document.createElement('h4'); 
-	id.appendChild(myDiv);
-	myDiv.appendChild(myH)
-	myDiv.id= idName;
-	
-	for (let i = 0; i < txtx.length; i++) 
-	{
-		let mySpan = document.createElement('span');
-		let myA = document.createElement('a');
-		let myI = document.createElement('i'); 
-			
-			myA.className =  
-			myDiv.appendChild(myA);
-			myA.appendChild(myI);
-			myA.appendChild(mySpan);
-			myI.className = faLogo[i];
-
-		if (myDiv.id == "undefined") {	myH.style.display ='none';	}
-			mySpan.innerHTML += txtx[i];
-			myH.innerHTML = myDiv.id.substring(2);
-			myA.href = '#'+ txtx[i].substring(1).toLowerCase();
-			myA.setAttribute('onclick', 'w3_close()');
-	}
-}
-
-navLinks(bottom_header); 
-bottom_header.getElementsByTagName("a")[2].href = whatsapp;
-bottom_header.getElementsByTagName("a")[2].style.ccsText = "font-size:26px; font-weight:800";	
-
-
-
-
-var links = [	"oModal('ear_',3)","oModal('cha_',4)","oModal('spe_',2)","oModal('tec_',20)" ];
-var txt = [	"Audifonos & Bluetooth","Cargadores & Cables","Speakers","Miselaneos & más" ];
-var icon = [ "🎧 ", "🔌 " , "📻 ", "► " ];
-
-const category = [{},{},{},{}];
-
-function getCategory(id , idName) {	
-		
-	let myDiv = document.createElement('div'); 
-	let myH = document.createElement('h4');
-	id.appendChild(myDiv);
-	myDiv.appendChild(myH)
-	myDiv.id= idName;
-
-	for (var i = 0; i < txt.length; i++) {
-			
-	let myP = document.createElement('span'); 
-	let myP2 = document.createElement('p');
-	let myHr = document.createElement('hr');
-	let myImg = document.createElement('img'); 
-		myDiv.appendChild(myP);
-		myDiv.appendChild(myP2);			
-		myDiv.appendChild(myHr);
-		
-		if (myDiv.id == "undefined") {	myH.style.display ='none';	}
-
-			myH.innerHTML = myDiv.id.substring(2);
-			myP.setAttribute('onclick' , links[i]);
-			myP2.setAttribute('onclick' , links[i]);
-			myHr.style.cssText = 'width: 80%; margin: 10px auto ; box-shadow: 1px 1px 3px;';
-			myP2.innerHTML = txt[i];
-
-		if (icon.length == 0)
-		{
-			myP.appendChild(myImg); 
-			myImg.src = imagenes[i];
-		}else{	
-			myP.innerHTML = icon[i];				
-		}
-	}
-}// ►►►►►► Calling the function ◄◄◄◄◄◄◄ 
-
-
-var socialLink = ["fb://facewebmodal/f?href=https://www.facebook.com/articulosbquilla","https://www.instagram.com/articulos_bquilla","#","#"]
-var socialFaLogo = [ "fab fa-facebook-square", "fab fa-instagram", "fab fa-linkedin", "fab fa-google-plus-square"];
-
-function socialLinks(id , idName) {	
-		
-	let myDiv = document.createElement('div'); 
-	let myH = document.createElement('h4'); 
-	id.appendChild(myDiv);
-	myDiv.appendChild(myH)
-	myDiv.id= idName;
-
-	for (let i = 0; i < socialLink.length; i++) 
-	{
-		let myA = document.createElement('a');
-		let myI = document.createElement('i'); 
-			myDiv.appendChild(myA);
-			myA.appendChild(myI);
-
-			if (myDiv.id == "undefined") {	myH.style.display ='none';	}
-
-			myH.innerHTML = myDiv.id.substring(2);
-			myI.className = socialFaLogo[i];
-			myA.href = socialLink[i];
-			//myA.setAttribute('onclick', 'w3_close()');
-			//myA.innerHTML += txt[i];
-	}
-}
-socialLinks(footer , "ftSiguenos");
-
-navLinks(footer , 'ftMenu');  
-ftMenu.getElementsByTagName("a")[2].href = whatsapp;
-
-getCategory(techno);
-getCategory(footer , 'ftTecnología');
-
-	links = ["oModal('cur_',2)" , "oModal('pla_',6)"];
-	txt =	["Gorras Cuvadas" , "Gorras Planas"];
-imagenes = 	["cur_2.png" , "pla_5.png"]
-	icon = 	[];
-
-getCategory(gorras);	
-getCategory(footer , 'ftGorras');
-
-
-function getPromo2(){
-	promotion.forEach(function(item){
-
-		let myDiv = document.createElement("div"); 	myDiv.className = "mySlides fade txt";
-		let myImg = document.createElement("img");	myImg.className = "promo";
-		let myDiv2 = document.createElement("div");	myDiv2.className = "promoTxt";
-		let myH3 = document.createElement("h3");	myH3.className = "enunc";
-		let myp = document.createElement("p");		myp.className = "stat";
-		
-		let slideShow = document.getElementById('slideshow');
-
-				slideShow.appendChild(myDiv)
-				myDiv.appendChild(myImg);
-				myDiv.appendChild(myDiv2);
-				myDiv.appendChild(myH3);
-				myDiv.appendChild(myp);
-
-				myImg.src = item.image;
-				myH3.innerHTML = item.title;
-				myp.innerHTML = item.senten;
-				});
-}
 
 function get_images(y, n)
 {   	
@@ -205,9 +93,10 @@ function get_images(y, n)
 			f1_Set += '<img class="caption" src="logo.png"><img class="passing" src="'+ y + i +'.png" style="width:100%">';
 	 	}	
 			f1_Set += '<img src="marco.png" style="position:absolute; top:0; width: 100%;z-index:2;">';
-			f1_Set += flechas;	
-
-	 	containerModal.innerHTML = f1_Set; 
+				
+			f1_Set += arrowLeft + arrowRight;
+						
+			containerModal.innerHTML = f1_Set ; 		 
 }
 
 
@@ -226,26 +115,7 @@ function exit_Icon(id){
 		x.onclick = function(){ w3_close() };
 		}
 
-
-function w3_open(){ 
-	
-	mySidebar.style.backgroundColor = 'rgba(0,0,0,0.8)'; 
-	mySidebar.style.color = 'white'; 
-	mySidebar.style.width = '40%';
-	mySidebar.style.zIndex = '1';
-	//closeClass[0].style.cssText = 'display:block;';
-}
-function w3_close()	{
-	modal.style.display = 'none';
-	mySidebar.style.width = '0%';
-	mySidebar.style.color = 'rgba(0,0,0,0.1)'; //'rgba(255,255,255,0.8)'
-	
-}
-		
-
-
-var closeClass = document.getElementsByClassName("close");
-
+function w3_close()	{	modal.style.display = 'none'; }
 
 var slideIndex = 1;
 function plusDivs(n)	{ 
@@ -268,52 +138,6 @@ function showDivs(n)	{     var i;
     	y[slideIndex-1].style.display = "block";
 }
 
-
-var slideInd = 1;
-showSlides(slideInd);
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  
-  
-  //Hide all the slide with a loop
-
-   for (i = 0; i < slides.length; i++) {
-
-    slides[i].style.display = "none"; 
-  }
-
-  slideInd++;
-
-  if (slideInd > slides.length) {slideInd = 1}  
-
-  for (i = 0; i < dots.length; i++) {
-
-    dots[i].className = dots[i].className.replace("active", "");
-  }
-
-  slides[slideInd-1].style.display = "block";  
-  dots[slideInd-1].className += " active";
-  setTimeout(showSlides, 4000); // Change image every 4 seconds
-}
-
-
-
-
-
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady()
-{ 
-   document.addEventListener("backbutton", onBackKeyDown, false); 
-} 
-
-function onBackKeyDown() 
-{ 
-  mainView.router.back(); 
-}
 
 
 function backTop(){
@@ -344,17 +168,17 @@ var homeButton = document.getElementById('homeButtom');
 var emptySpace = document.getElementById('emptySpace');
 
 function scrolling(){	
-	if(bottom_header.offsetTop < window.pageYOffset){
-		bottom_header.classList.add("sticky");	
-		logo.style.opacity='1';	
-		logo.style.transition ='1s';
-		emptySpace.style.cssText ='height:3.4em; background:floralwhite';
-	}else{
-		bottom_header.classList.remove("sticky");
-		logo.style.opacity ='0';
-		logo.style.transition ='0s';
-		emptySpace.style.cssText ='height:0em;';
-	}
+		if(header.offsetTop < window.pageYOffset){
+			header.classList.add("sticky");	
+			logo.style.opacity='1';	
+			logo.style.transition ='1s';
+			emptySpace.style.cssText ='height:3.4em;';				
+		}else{
+			header.classList.remove("sticky") ;
+			logo.style.opacity ='0';
+			logo.style.transition ='0s';
+			emptySpace.style.cssText ='height:0em;';
+		}
 }
 
 

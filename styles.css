@@ -49,7 +49,7 @@ button{
 }
 
 #container-modal{
-    background-image:url(blur_large.png);
+    background-image:url(blur_large.jpg);
     background-repeat:no-repeat;
     background-size: 100%;
       margin: auto;
@@ -102,7 +102,8 @@ button{
   text-align: center;
   background-color:rgb(171,217,225);
 }
-.dot {
+
+.dot{
   height: 0.8vw;
   width: 0.8vw;
   border-radius: 2vw;
@@ -127,45 +128,66 @@ button{
 @keyframes fade {   from {opacity: .4}    to {opacity: 1} }
 
 
+#topBar{height:75px; padding: 1%; }
+#topBar h1{display:inline-block; font-weight: 700; }
+#topBar img{height:100%; float: left;}
+
+ header{ height:3.4em; text-align:right; overflow:hidden; box-shadow:1px 1px 3px; }
+.headerBox { font-size: larger; height:3.4em; background:rgb(171,217,225); color:rgb(8,76,83)  }
+.headerBox a { height: 100%; padding: 0.8em 0.8em; font-weight:bold; vertical-align: -webkit-baseline-middle; }
+.headerBox p{ display:none; float: right ;   height: 1.7em ; }
+.headerBox img{ }
+
+.slideshowBox img{ width:280px;}
 
 
+#wrapper{max-width: 60em;  margin: auto; text-align: center;}
 
+.wrapperBox { padding: 4%; text-align: left;}
+.wrapperBox p{ display: inline;}
+.wrapperBox h3{ color :rgb(38,76,83); font-weight : 700; text-shadow : 2px 1px black;}
+.wrapperBox img{ width:3.5em;}
+.wrapperBox span{ font-size: xx-large}
 
-#wrapper{max-width: 60em;  margin: auto;}
+#footer { background-color:rgb(38,76,83); color:rgb(171,217,225); font-size: small; text-align:center;} 
 
-#gorras img { width:3.5em;}
+#footerBox_0 { background-color:rgb(171,217,225); color:rgb(38,76,83); }
+#footerBox_0 a{font-size:2em; margin:7%; }
+#footerBox_1 a{display: block;}
+#footerBox_1 svg{display: none}
 
-#techno,#gorras {padding: 4%}
-#techno div {margin: 0 0.5em }
-#techno p,#gorras p { display: inline;}
-#techno span { font-size: xx-large }
-#techno p:first-child { font-size: 2em; display: inline;}
+.footerBox{vertical-align: top;padding: 5%}
+.footerBox h3{font-size: 18px; font-weight: 700; }
+.footerBox span , .footerBox img, .footerBox hr {display: none;}
 
-/*//////////////////--FOOTER--//////////////////*/
-#footer { background-color:rgb(38,76,83); font-size: small; } 
-#footer div { background-color:rgb(38,76,83);color:rgb(171,217,225);text-align:center; padding:2%; vertical-align: top; }
-#footer h4  { font-weight: bold; }
-#footer div:first-child { color:rgb(38,76,83);background:rgb(171,217,225); }
-#footer hr, #ftTecnología span, #ftGorras span, #ftMenu .svg-inline--fa{ display: none; }
-#ftMenu a {display: block;} 
-#ftSiguenos {padding:1.5em 0; }
-#ftSiguenos a { font-size: 2em; margin:6%;}
+.headerBox h3{display: none}
 
-@media only screen and (min-width: 400px){
-    #footer div{ display: inline-block;}
-    #footer div:first-child { background-color:rgb(38,76,83);color:rgb(171,217,225); }
-    #footer div, #footer h4 { text-align: left; } 
-    #ftSiguenos {width: min-content}
-    #ftSiguenos a{ display: block; padding:0; margin: 0; text-align: center}
+.mySlides { width:100%;  max-width:850px ;  margin: auto;}
+
+.enunc{ color:dodgerblue;  	font-weight:800;  text-shadow:1px 1px white;  	
+  
 }
-/*//////////////////--END OF FOOTER--//////////////////*/
+.stat { font-weight: 600; color: black;  text-shadow: 1px 1px dodgerblue;
+      margin: 0; top: 25%; 
+}
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (min-width: 400px){    
-  	.modal { padding-top:0; }
-  	#bottom_header p{   display:none;   }
-  	#bottom_header a{   display:inline-block;   }
-  	.promo { align:; }
-  	section {  display: inline-table;    width: 47%;  }
-	.mySlides img{width:40%;}
+.text {  color: #f2f2f2;    font-size: 20px;    padding: 8px 12px;  }
+
+
+                                /* 100% Image Width on Smaller Screens */
+@media only screen and (min-width: 400px){
+
+  .slideshowBox img{ width: 39%; max-width:300px;  margin: 0; }
+  .slideshowBox span{ display: inline-block; width: fit-content; padding: 1%;  }
+  
+  .footerBox{ display: inline-block; padding: 1%;}
+  #footerBox_0 { background-color:rgb(38,76,83);color:rgb(171,217,225); } 
+}
+
+@media only screen and (min-width: 400px)
+{    
+	.modal { padding-top:2%; }
+  	.headerBox p{display:inline-block ;}
+  	#header a{   display:inline-block;   }
+    .wrapperBox  {  display: inline-table;    width: 47%;  }
 }
