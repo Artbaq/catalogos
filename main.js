@@ -80,7 +80,7 @@ function innerMenu(id,list,heading){
         list.forEach(function(item){   
                 let i = createI( cls(item.icon) ); 
                 let p = createP( '' , item.name );
-                let result = createA( href(item.url), i + p );
+                let result = createA( cls('w3-btn w3-xlarge') + href(item.url), i + p );
                 
             mainDiv.innerHTML += result;
         });
@@ -162,7 +162,7 @@ function innerSlideshow(id, list, heading){
         
         let h1 = createH1('',item.title );
         let h4 = createH4('', item.senten )
-        let btn = createBtn( stl('position:absolute: bottom:2%') +
+        let btn = createBtn( setId('') + stl('position:absolute: bottom:2%') +
         					cls( btnClasses ),'Mas informaci&oacuten');
 
         let txtCont = createDiv( stl( txtBox ) + cls( /*/** 'w3-border' /***/), h1 + h4 + btn);

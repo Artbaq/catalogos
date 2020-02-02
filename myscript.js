@@ -141,6 +141,7 @@ function showDivs(n)	{     var i;
 
 
 function backTop(){
+
 	let a = document.createElement('a'); 
 	let i = document.createElement('i');
 			a.id = 'homeButtom';
@@ -183,7 +184,7 @@ function scrolling(){
 
 
 function backTopTrigger(){
-	if(dotsBox.offsetTop < window.pageYOffset)
+	if(catalogos.offsetTop < window.pageYOffset)
 	{		homeButton.style.width="40px";
 		}else{		homeButton.style.width="0px";
 	}			

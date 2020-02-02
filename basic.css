@@ -47,7 +47,7 @@ body {
 svg.svg-inline--fa.fa-home.fa-w-18 {
     margin: 8px;
     /*vertical-align: middle;*/
-    font-size:1.8em;
+    font-size:1.6em;
 }
 
 .show { 
@@ -64,12 +64,10 @@ svg.svg-inline--fa.fa-home.fa-w-18 {
 }
 
 #logo{
-  margin-left:2%;
+   margin-left:2%;
    vertical-align:middle; 
    float:left; 
-    height:99%;
+   height:99%;
    opacity:0;
-    margin:; 
-    transition:1s;
-  
+   transition:1s;
   }
