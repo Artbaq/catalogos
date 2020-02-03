@@ -129,14 +129,14 @@ function innerCatalogos(id, list, heading){
     cont++;
 }
 
-var mainStl = 'height:122vw;' +
-            'position:; text-align:center';
+var mainStl = 'height:440px; position:relative;' +
+            'text-align:center';
 
 //var newDiv = ' position:relative; bottom:5%; padding: 6% 0 '; 
 
-var styles2 = 'height:160px;' +
+var styles2 = 'height:160px; width:100%;;' +
 			 'background-color:rgba(8,76,83, 0.6); ' +
-			 'position:relative; bottom:10%; transform:skewY(12deg) ';
+			 'position:absolute; bottom:10%; transform:skewY(12deg) ';
 
 	
 var txtBox = 'width:100%; color:white; ' + //rgb(171,217,225);' +
@@ -147,6 +147,8 @@ var txtBox = 'width:100%; color:white; ' + //rgb(171,217,225);' +
 		//	 background:rgb(171,217,225); color:rgb(8,76,83)
 var btnClasses = 'w3-btn w3-large w3-round-xxlarge w3-red w3-card-4'+
 				'';
+var imgStyle = stl('position:relative; top:0;');
+var imgW3Class = cls('promo /*w3-border w3-border-blue*/')
 
 
 function innerSlideshow(id, list, heading){
@@ -158,7 +160,7 @@ function innerSlideshow(id, list, heading){
     let mainDiv = document.getElementById( id.id + 'Box_' + cont );   
    
     list.forEach(function(item){
-        let img = createImg(  [cls('promo '  /*/**  + 'w3-border w3-border-blue' /***/) + src(item.image)]  );
+        let img = createImg( imgStyle +  imgW3Class + src(item.image)  );
         
         let h1 = createH1('',item.title );
         let h4 = createH4('', item.senten )
@@ -170,10 +172,10 @@ function innerSlideshow(id, list, heading){
        // let content = createDiv( stl( newDiv ) + cls( /**/ 'w3-border' /**/) , skewCont  ) 
         
     ////
-        mainDiv.innerHTML += createDiv( [cls('mySlides w3-border')] + stl(mainStl) , img+skewCont+txtCont );
+        mainDiv.innerHTML += createDiv( [cls('mySlides w3-border')] + stl(mainStl) , skewCont+txtCont + img );
     ////
 	});
-    mainDiv.innerHTML += arrowLeft +arrowRight;
+   // mainDiv.innerHTML += arrowLeft +arrowRight;
 }
 
 
