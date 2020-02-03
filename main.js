@@ -10,14 +10,13 @@ var lo = [
     {url:"oModal('pla_',6)" , txt:'Gorras Planas', img:"" , imges:"pla_5.png"},
 ];
 
-
-
 var cont = 0;
 
 var cls = function(x){ return ' class="' + x + '"'}
 var stl = function(x){ return ' style="' + x + '"'} 
 var href = function(x){ return ' href="' + x + '"'}
 var setId = function(x){ return ' id="' + x + '"'}
+var setOnClk = function(x){ return ' onclick="' + x + '"'}
 
 var createA = function(attr, content){ return createElem('a', content, attr)}
 var createI = function(attr, content){ return createElem('i', content, attr)}
@@ -145,8 +144,8 @@ var txtBox = 'width:100%; color:white; ' + //rgb(171,217,225);' +
 			 
 			 
 		//	 background:rgb(171,217,225); color:rgb(8,76,83)
-var btnClasses = 'w3-btn w3-large w3-round-xxlarge w3-red w3-card-4'+
-				'';
+var btnClasses = 'w3-btn w3-large w3-round-xxlarge w3-red w3-card-4';
+
 var imgStyle = stl('position:relative; top:0;');
 var imgW3Class = cls('promo /*w3-border w3-border-blue*/')
 
@@ -160,19 +159,19 @@ function innerSlideshow(id, list, heading){
     let mainDiv = document.getElementById( id.id + 'Box_' + cont );   
    
     list.forEach(function(item){
+    	let onClk = setOnClk(item.url)
         let img = createImg( imgStyle +  imgW3Class + src(item.image)  );
         
         let h1 = createH1('',item.title );
         let h4 = createH4('', item.senten )
         let btn = createBtn( setId('') + stl('position:absolute: bottom:2%') +
-        					cls( btnClasses ),'Mas informaci&oacuten');
+        					cls( btnClasses ),'Ver Cat&aacutelogos');
 
         let txtCont = createDiv( stl( txtBox ) + cls( /*/** 'w3-border' /***/), h1 + h4 + btn);
         let skewCont= createDiv( stl( styles2 ) ) ;
-       // let content = createDiv( stl( newDiv ) + cls( /**/ 'w3-border' /**/) , skewCont  ) 
-        
+       // let content = createDiv( stl( newDiv ) + cls( /**/ 'w3-border' /**/) , skewCont  )
     ////
-        mainDiv.innerHTML += createDiv( [cls('mySlides w3-border')] + stl(mainStl) , skewCont+txtCont + img );
+        mainDiv.innerHTML += createDiv(onClk+  [cls('mySlides ')] + stl(mainStl) , skewCont+txtCont + img );
     ////
 	});
    // mainDiv.innerHTML += arrowLeft +arrowRight;

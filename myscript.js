@@ -62,11 +62,11 @@ var socialMedia = [
 
 
 const promotion = [
-	{image: "promo_0.png" , title: "Smart TV BOX plus" , senten: "Aprovecha que solo quedan pocos."},
-	{image: "promo_1.png" , title: "Receptor Bluetooth", senten: "Transmite sonido por Bluetooth."},
-	{image: "promo_2.png" , title: "Speaker Bluetooth" , senten: "Lleva tu musica a donde quieras."},
-	{image: "promo_3.png" , title: "Gorras Planas"	   , senten: "Tu mejor estilo para cada ocacion."},
-	{image: "promo_4.png" , title: "Game pad" 		   , senten: "Llevas tus juegos a otro nivel."}
+	{url:"oModal('tec_',20);" , image: "tec_0.png" , title: "Smart TV BOX plus" , senten: "Aprovecha que solo quedan pocos."},
+	{url:"slideIndex = 1; oModal('tec_',20);" , image: "tec_1.png" , title: "Receptor Bluetooth", senten: "Transmite sonido por Bluetooth."},
+	{url:"oModal('tec_',20);" , image: "tec_2.png" , title: "Speaker Bluetooth" , senten: "Lleva tu musica a donde quieras."},
+	{url:"oModal('pla_',6);" , image: "pla_5.png" , title: "Gorras Planas"	   , senten: "Tu mejor estilo para cada ocacion."},
+	{url:"oModal('tec_',20);" , image: "tec_4.png" , title: "Game pad" 		   , senten: "Llevas tus juegos a otro nivel."}
 ]
 
 
