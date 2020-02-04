@@ -116,7 +116,7 @@
 
  header{ height:3.4em; text-align:right; overflow:hidden; box-shadow:1px 1px 3px; }
 .headerBox { font-size: ; height:3.4em; background:rgb(171,217,225); color:rgb(8,76,83)  }
-.headerBox a { height: 100%; margin: 0 8px; font-weight:bold; vertical-align: -webkit-baseline-middle; }
+.headerBox a { margin: 0 8px; font-weight:bold; font-size:26px }
 .headerBox p{ display:none; float: right ;   height: 1.7em ; }
 
 .slideshowBox img{ width:290px;}
@@ -133,7 +133,7 @@
 
 #footerBox_0 { background-color:rgb(171,217,225); color:rgb(38,76,83); }
 #footerBox_0 a{font-size:2em; margin:7%; }
-#footerBox_1 a{display: block;}
+#footerBox_1 a{display: block;padding:0 0}
 #footerBox_1 svg{display: none}
 
 .footerBox{vertical-align: top;padding: 5%}
@@ -168,6 +168,7 @@
 {    
 	.modal { padding-top:2%; }
   	.headerBox p{display:inline-block ;}
-  	#header a{   display:inline-block;   }
+  	
+  	#header a{   display:inline-block; font-size:20px;  }
     .wrapperBox  {  display: inline-table;    width: 47%;  }
 }

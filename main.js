@@ -79,7 +79,7 @@ function innerMenu(id,list,heading){
         list.forEach(function(item){   
                 let i = createI( cls(item.icon) ); 
                 let p = createP( '' , item.name );
-                let result = createA( cls('w3-btn w3-xlarge') + href(item.url), i + p );
+                let result = createA( cls('w3-btn') + href(item.url), i + p );
                 
             mainDiv.innerHTML += result;
         });
@@ -169,7 +169,6 @@ function innerSlideshow(id, list, heading){
 
         let txtCont = createDiv( stl( txtBox ) + cls( /*/** 'w3-border' /***/), h1 + h4 + btn);
         let skewCont= createDiv( stl( styles2 ) ) ;
-       // let content = createDiv( stl( newDiv ) + cls( /**/ 'w3-border' /**/) , skewCont  )
     ////
         mainDiv.innerHTML += createDiv(onClk+  [cls('mySlides ')] + stl(mainStl) , skewCont+txtCont + img );
     ////
