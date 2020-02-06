@@ -6,15 +6,15 @@ var li = [
 ];
 
 var lo = [
-    {url:"oModal('cur_',4)" , txt:'Gorras Curvadas', img:"" , imges:"cur_2.png"},
-    {url:"oModal('pla_',6)" , txt:'Gorras Planas', img:"" , imges:"pla_5.png"},
+    {url:"oModal('cap_',15)" , txt:'Planas & Curvadas', img:"" , imges:"cur_2.png"},
+    //{url:"oModal('pla_',6)" , txt:'Gorras Planas', img:"" , imges:"pla_5.png"},
 ];
 
 var cont = 0;
 
-var cls = function(x){ return ' class="' + x + '"'}
-var stl = function(x){ return ' style="' + x + '"'} 
-var href = function(x){ return ' href="' + x + '"'}
+var setClass = function(x){ return ' class="' + x + '"'}
+var setStyle = function(x){ return ' style="' + x + '"'} 
+var setHref = function(x){ return ' href="' + x + '"'}
 var setId = function(x){ return ' id="' + x + '"'}
 var setOnClk = function(x){ return ' onclick="' + x + '"'}
 
@@ -28,6 +28,8 @@ var createDiv = function(attr, content){ return createElem('div', content, attr)
 var createBtn = function(attr, content){ return createElem('buttom', content, attr)}
 
 var createImg = function(attr){ return '<img' + attr + '>'}
+
+var createElem2 =(elem,attr,content)=>{return '<'+elem +[attr]+'>' +[content]+ '</'+elem+'>' } 
 
 function createElem(elem,content, attr ){
 	let object = {
@@ -45,6 +47,10 @@ function createElem(elem,content, attr ){
     }
     return object.result()
 }
+
+var create_aPlusI =(attr1, content1, attr2, content2 )=>{ return createElem2('a', attr1, createElem2('i', attr2, content2) + content1 )}
+var create_divPlusH3 =(attr1, content1, attr2, content2 )=>{ return createElem2('div', attr1, createElem2('h3', attr2, content2) + content1 )}
+
 
 function compElem(element,id,className){
     let x = document.createElement(element);
@@ -64,43 +70,37 @@ return x;
 }
 
 
-//// Inserting content to the Web-Page ↓ ↓ ↓
 function innerMenu(id,list,heading){
 
-    let myId =  setId(id.id + 'Box_' + cont);
-    let myClass =  cls(id.id + 'Box');
-    let myAttr = myId + myClass; 
-    let h3 = createH3('', heading )
-
-        id.innerHTML += createDiv( myAttr , h3 );
-    
+    let myAttr =  setId(id.id + 'Box_' + cont)+ setClass(id.id + 'Box');
+        id.innerHTML += create_divPlusH3( myAttr, '', '', heading ) ;
     let mainDiv = document.getElementById( id.id + 'Box_' + cont );  
 
         list.forEach(function(item){   
-                let i = createI( cls(item.icon) ); 
-                let p = createP( '' , item.name );
-                let result = createA( cls('w3-btn') + href(item.url), i + p );
+                let i = createI( setClass(item.icon) ); 
+                let p = createP( '' ,' ' + item.name );
+                let result = createA( setClass('w3-btn') + setHref(item.url), i + p );
                 
             mainDiv.innerHTML += result;
         });
         cont++; 
 }
 
-function innerSocialLinks(id , list , heading){
-    let myId =  setId(id.id + 'Box_' + cont);
-    let myClass =  cls(id.id + 'Box');
-    let myAttr = myId + myClass; 
-    let h3 = createH3('', heading )
 
-        id.innerHTML += createDiv( myAttr , h3 );
-    
+
+function innerSocialLinks(id , list , heading){
+
+    let myAttr =  setId(id.id + 'Box_' + cont)+ setClass(id.id + 'Box');
+        id.innerHTML += create_divPlusH3( myAttr, '', '', heading ) ;    
     let mainDiv = document.getElementById( id.id + 'Box_' + cont ); 
     
     list.forEach(function(item){
-        let i = createI( cls(item.icon)    );
-        let result = createA( href(item.url), i );
+        let attr1 = setClass('w3-btn') + setHref(item.url) ;
+        let attr2 = setClass(item.icon);
+    
+    mainDiv.innerHTML += create_aPlusI(attr1 ,'',attr2) ;
 
-        mainDiv.innerHTML +=  result ;
+        
     });
     cont++; 
 }
@@ -128,7 +128,7 @@ function innerCatalogos(id, list, heading){
     cont++;
 }
 
-var mainStl = 'height:440px; position:relative;' +
+var style1 = 'height:440px; position:relative;' +
             'text-align:center';
 
 //var newDiv = ' position:relative; bottom:5%; padding: 6% 0 '; 
@@ -146,13 +146,13 @@ var txtBox = 'width:100%; color:white; ' + //rgb(171,217,225);' +
 		//	 background:rgb(171,217,225); color:rgb(8,76,83)
 var btnClasses = 'w3-btn w3-large w3-round-xxlarge w3-red w3-card-4';
 
-var imgStyle = stl('position:relative; top:0;');
-var imgW3Class = cls('promo /*w3-border w3-border-blue*/')
+var imgStyle = setStyle('position:relative; top:0;');
+var imgW3Class = setClass('promo /*w3-border w3-border-blue*/')
 
 
 function innerSlideshow(id, list, heading){
     let x = setId( id.id + 'Box_' + cont );
-    let y = cls( id.id + 'Box' );
+    let y = setClass( id.id + 'Box' );
     let myAttr = x + y;    
         id.innerHTML += createDiv( myAttr , /* createH3('', heading )*/ );
     ////
@@ -164,13 +164,13 @@ function innerSlideshow(id, list, heading){
         
         let h1 = createH1('',item.title );
         let h4 = createH4('', item.senten )
-        let btn = createBtn( setId('') + stl('position:absolute: bottom:2%') +
-        					cls( btnClasses ),'Ver Cat&aacutelogos');
+        let btn = createBtn( setId('') + setStyle('position:absolute: bottom:2%') +
+        					setClass( btnClasses ),'Ver Cat&aacutelogos');
 
-        let txtCont = createDiv( stl( txtBox ) + cls( /*/** 'w3-border' /***/), h1 + h4 + btn);
-        let skewCont= createDiv( stl( styles2 ) ) ;
+        let txtCont = createDiv( setStyle( txtBox ) + setClass( /*/** 'w3-border' /***/), h1 + h4 + btn);
+        let skewCont= createDiv( setStyle( styles2 ) ) ;
     ////
-        mainDiv.innerHTML += createDiv(onClk+  [cls('mySlides ')] + stl(mainStl) , skewCont+txtCont + img );
+        mainDiv.innerHTML += createDiv(onClk+  [setClass('mySlides ')] + setStyle(style1) , skewCont+txtCont + img );
     ////
 	});
    // mainDiv.innerHTML += arrowLeft +arrowRight;
@@ -180,15 +180,15 @@ function innerSlideshow(id, list, heading){
 
 function myFunction(){
 	
-	let divs = createDiv( stl(styles2) ) ;
+	let divs = createDiv( setStyle(styles2) ) ;
 	let tittle = createElem('h1','', 'Smart Tv Box Plus');
-	let buttom = createElem('buttom' , cls( btnClasses ) , 'Mas informaci&oacuten');
+	let buttom = createElem('buttom' , setClass( btnClasses ) , 'Mas informaci&oacuten');
 	let p = createElem('h4','', 'Aprovecha que solo quedan pocos.')
 	let content = tittle + p + buttom;
 	
-	let square = createDiv( stl(styles3), content );
+	let square = createDiv( setStyle(styles3), content );
 
-return createDiv( stl(mainStl), createImg(  src('promo_0.png')) + divs + square)
+return createDiv( setStyle(style1), createImg(  src('promo_0.png')) + divs + square)
 }
 
 
