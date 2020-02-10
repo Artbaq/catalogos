@@ -10,7 +10,7 @@ var technoCat = [
     {url:"oModal('ear_',3)", imges:"ear_2.png", txt:'Audifonos & Bluetooth'},
     {url:"oModal('cha_',4)", imges:"cha_2.png", txt:'Cargadores & Cables',},
     {url:"oModal('spe_',2)", imges:"spe_2.png", txt:'Speakers'},
-    {url:"oModal('tec_',20)",imges:"tec_9.png", txt:'Miscelaneos & más'},
+    {url:"oModal('tec_',20)",imges:"tec_1.png", txt:'Miscelaneos & más'},
 ];
 
 var promoList = [
