@@ -1,4 +1,4 @@
-var li = [
+var lil = [
     {url:"oModal('ear_',3)" , txt:'Audifonos & Bluetooth', img:"🎧 "},
     {url:"oModal('cha_',4)" , txt:'Cargadores & Cables', img:"🔌 "},
     {url:"oModal('spe_',2)" , txt:'Speakers', img:"📻 "},
@@ -10,11 +10,21 @@ var lo = [
     //{url:"oModal('pla_',6)" , txt:'Gorras Planas', img:"" , imges:"pla_5.png"},
 ];
 
+var li = [
+    {url:"oModal('ear_',3)" , txt:'Audifonos & Bluetooth', img:"", imges:"ear_2.png"},
+    {url:"oModal('cha_',4)" , txt:' Cargadores & Cables', img:"", imges:"cha_2.png"},
+    {url:"oModal('spe_',2)" , txt:'Speakers', img:"", imges:"spe_2.png"},
+    {url:"oModal('tec_',20)" , txt:'Miscelaneos & más', img:"", imges:"tec_5.png"},
+    
+    
+];
+
 var cont = 0;
 
-var setClass = function(x){ return ' class="' + x + '"'}
+var setCls = function(x){ return ' class="' + x + '"'}
 var setStyle = function(x){ return ' style="' + x + '"'} 
 var setHref = function(x){ return ' href="' + x + '"'}
+var setSrc = function(x){ return ' src="' + x + '"'}
 var setId = function(x){ return ' id="' + x + '"'}
 var setOnClk = function(x){ return ' onclick="' + x + '"'}
 
@@ -70,64 +80,61 @@ return x;
 }
 
 
-function innerMenu(id,list,heading){
-
-    let myAttr =  setId(id.id + 'Box_' + cont)+ setClass(id.id + 'Box');
+function setMainBox(id, heading){
+       
+    let myAttr =  setId(id.id + 'Box_' + cont) + setCls(id.id + 'Box');
         id.innerHTML += create_divPlusH3( myAttr, '', '', heading ) ;
-    let mainDiv = document.getElementById( id.id + 'Box_' + cont );  
+            let mainDiv = document.getElementById( id.id + 'Box_' + cont ); 
+    return mainDiv;
+}
 
-        list.forEach(function(item){   
-                let i = createI( setClass(item.icon) ); 
-                let p = createP( '' ,' ' + item.name );
-                let result = createA( setClass('w3-btn') + setHref(item.url), i + p );
-                
-            mainDiv.innerHTML += result;
-        });
-        cont++; 
+function setMainBoxCard(id, heading){
+       
+    let myAttr =  setId(id.id + 'Box_' + cont) + setCls(id.id + 'Box w3-card w3-margin');
+        id.innerHTML += create_divPlusH3( myAttr, '', '', heading ) ;
+            let mainDiv = document.getElementById( id.id + 'Box_' + cont ); 
+    return mainDiv;
 }
 
 
+function innerMenu(id,list,heading){
+    let x = setMainBox(id, heading);
+        list.forEach(function(item){  
+            let a_attr = setCls('w3-btn') + setHref(item.url);
+            let i_attr = setCls(item.icon); 
+            let p = createElem2('p', '', '&nbsp'+item.name );
+                           
+                x.innerHTML += create_aPlusI(a_attr, p, i_attr) ;
+        });
+    cont++; 
+}
 
 function innerSocialLinks(id , list , heading){
-
-    let myAttr =  setId(id.id + 'Box_' + cont)+ setClass(id.id + 'Box');
-        id.innerHTML += create_divPlusH3( myAttr, '', '', heading ) ;    
-    let mainDiv = document.getElementById( id.id + 'Box_' + cont ); 
-    
-    list.forEach(function(item){
-        let attr1 = setClass('w3-btn') + setHref(item.url) ;
-        let attr2 = setClass(item.icon);
-    
-    mainDiv.innerHTML += create_aPlusI(attr1 ,'',attr2) ;
-
-        
+    let x = setMainBox(id, heading);
+        list.forEach(function(item){
+            let a_attr = setCls('w3-btn') + setHref(item.url) ;
+            let i_attr = setCls(item.icon);
+                x.innerHTML += create_aPlusI(a_attr,'',i_attr) ;        
     });
-    cont++; 
+            cont++; 
 }
 
 function innerCatalogos(id, list, heading){
    
-    let div = compElem('div' , id.id + 'Box_'+ cont , id.id + 'Box');
-        div.innerHTML = createElem('h3', heading);
-            id.appendChild(div);
-
-    list.forEach(function(item,index){
-        div.innerHTML += 
-        createElem('span', item.img) + createElem('p',item.txt) + createElem('hr');
-            let span = div.getElementsByTagName('span')[index];
-                let p = div.getElementsByTagName('p')[index];
-                    span.setAttribute('onclick' , item.url);
-                        p.setAttribute('onclick' , item.url);
+    let x = setMainBoxCard(id, heading);
         
-        if(item.img == ""){
-            span.innerHTML = createElem('img');
-                     let img = div.getElementsByTagName('img')[index];
-                        img.src = item.imges;
-		}
+    list.forEach(function(item){
+        let img_attr = setSrc(item.imges) ; 
+        let div_attr = setCls('w3-container ') + setOnClk(item.url) ;
+
+    let content =  createElem2('img', img_attr, item.img) +
+                    createElem2('p','', item.txt);
+
+        x.innerHTML += createElem2('div', div_attr, content) + createElem2('hr');
+            
     })
     cont++;
 }
-
 var style1 = 'height:440px; position:relative;' +
             'text-align:center';
 
@@ -139,56 +146,37 @@ var styles2 = 'height:160px; width:100%;;' +
 
 	
 var txtBox = 'width:100%; color:white; ' + //rgb(171,217,225);' +
-             'background:rgba(8,76,83,0); position:absolute; bottom:2%; '+
+             'background:rgba(8,76,83,0); position:absolute; bottom:4%; '+
              ' padding-bottom:3%; transform:skewY(0deg);' ;
 			 
 			 
 		//	 background:rgb(171,217,225); color:rgb(8,76,83)
-var btnClasses = 'w3-btn w3-large w3-round-xxlarge w3-red w3-card-4';
+var btnClasses = 'w3-btn w3-large w3-round-xxlarge w3-red w3-text-shadow';
 
 var imgStyle = setStyle('position:relative; top:0;');
-var imgW3Class = setClass('promo /*w3-border w3-border-blue*/')
+var imgW3Class = setCls('promo /*w3-border w3-border-blue*/')
 
 
 function innerSlideshow(id, list, heading){
-    let x = setId( id.id + 'Box_' + cont );
-    let y = setClass( id.id + 'Box' );
-    let myAttr = x + y;    
-        id.innerHTML += createDiv( myAttr , /* createH3('', heading )*/ );
-    ////
-    let mainDiv = document.getElementById( id.id + 'Box_' + cont );   
-   
+    let x = setMainBox(id, heading);
+ 
     list.forEach(function(item){
     	let onClk = setOnClk(item.url)
         let img = createImg( imgStyle +  imgW3Class + src(item.image)  );
-        
+        let classes = 'w3-text-shadow';
+        let btn_atrr = setStyle('position:absolute: bottom:2%') + setCls( btnClasses )
+
         let h1 = createH1('',item.title );
         let h4 = createH4('', item.senten )
-        let btn = createBtn( setId('') + setStyle('position:absolute: bottom:2%') +
-        					setClass( btnClasses ),'Ver Cat&aacutelogos');
+        let btn = createBtn(btn_atrr ,'Ver Cat&aacutelogos');
 
-        let txtCont = createDiv( setStyle( txtBox ) + setClass( /*/** 'w3-border' /***/), h1 + h4 + btn);
+        let txtCont = createDiv( setStyle( txtBox ) + setCls( /*/** 'w3-border' /***/), h1 + h4 + btn);
         let skewCont= createDiv( setStyle( styles2 ) ) ;
-    ////
-        mainDiv.innerHTML += createDiv(onClk+  [setClass('mySlides ')] + setStyle(style1) , skewCont+txtCont + img );
-    ////
+
+        x.innerHTML += createDiv(onClk+  [setCls('mySlides ')] + setStyle(style1) , skewCont+txtCont + img );
+
 	});
    // mainDiv.innerHTML += arrowLeft +arrowRight;
-}
-
-
-
-function myFunction(){
-	
-	let divs = createDiv( setStyle(styles2) ) ;
-	let tittle = createElem('h1','', 'Smart Tv Box Plus');
-	let buttom = createElem('buttom' , setClass( btnClasses ) , 'Mas informaci&oacuten');
-	let p = createElem('h4','', 'Aprovecha que solo quedan pocos.')
-	let content = tittle + p + buttom;
-	
-	let square = createDiv( setStyle(styles3), content );
-
-return createDiv( setStyle(style1), createImg(  src('promo_0.png')) + divs + square)
 }
 
 
@@ -234,7 +222,6 @@ innerSocialLinks(footer , socialMedia , 'Siguenos');
 innerMenu(footer,navMenu, 'Menú');
 innerCatalogos(footer,li,'Tecnología');
 innerCatalogos(footer,lo,'Gorras');
-
 
 
 

@@ -119,27 +119,32 @@
 .headerBox a { margin: 0 8px; font-weight:bold; font-size:26px }
 .headerBox p{ display:none; float: right ;   height: 1.7em ; }
 
-.slideshowBox img{ width:290px;}
+.slideshowBox img{ width:307px;}
 
 #wrapper{max-width: 60em;  margin: auto; text-align: center;}
 
-.wrapperBox { padding: 4%; text-align: left;}
-.wrapperBox p{ display: inline;}
+.wrapperBox{ text-align: left;}
+.wrapperBox hr{ margin: 20px 30px  }
 .wrapperBox h3{ color :rgb(38,76,83); font-weight : 700; text-shadow : 2px 1px black;}
-.wrapperBox img{ width:3.5em;}
-.wrapperBox span{ font-size: xx-large}
+.wrapperBox img{ width:3em; font-size: 3em}
+.wrapperBox p{ display: inline; font-size: 1em; font-style:italic; font-weight:bold;}
+
 
 #footer { background-color:rgb(38,76,83); color:rgb(171,217,225); font-size: small; text-align:center;} 
+
+#footer div { border: none !important;  margin: auto !important; }
 
 #footerBox_0 { background-color:rgb(171,217,225); color:rgb(38,76,83); }
 #footerBox_0 a{font-size:2em; margin:0.7%; }
 #footerBox_1 a{display: block;padding:0 0}
 #footerBox_1 svg{display: none}
+#footerBox_2, #footerBox_3 {box-shadow: none}
 
-.footerBox{vertical-align: top;padding: 5%}
+
+.footerBox{vertical-align: top;padding: 5%;}
 .footerBox h3{font-size: 18px; font-weight: 700; }
 .footerBox span , .footerBox img, .footerBox hr {display: none;}
-
+.footerBox p{ font-style:italic; font-weight:bold; }
 .headerBox h3{display: none}
 
 .mySlides { width:100%;  max-width:850px ;  margin: auto;}
@@ -170,5 +175,6 @@
   	.headerBox p{display:inline-block ;}
   	
   	#header a{   display:inline-block; font-size:20px;  }
-    .wrapperBox  {  display: inline-table;    width: 47%;  }
+    .wrapperBox  { text-align: center;  display: inline-table;    width: 43%;  }
+    .wrapperBox p{ display:block ;}
 }
