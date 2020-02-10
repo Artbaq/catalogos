@@ -5,10 +5,12 @@
 @keyframes animateleft{   from{left:-300px;opacity:0}   to{left:0;opacity:1}    }
 @keyframes animateright{  from{right:-300px;opacity:0}    to{right:0;opacity:1}   }
 
-.animate-left{    position:relative;    animation:animateleft 0.4s    }
-.animate-right{   position:relative;    animation:animateright 0.4s    }
-
-
+.animate-left{
+position:relative; animation:animateleft 0.4s
+}
+.animate-right{
+position:relative; animation:animateright 0.4s   
+}
 
 /* The Modal (background) */
 .modal {
@@ -82,14 +84,15 @@
 /* The dots/bullets/indicators */
 .dots{
   text-align: center;
-  background-color:rgb(171,217,225);
+  background-color:rgba(171,217,225,0.4);
 }
 
 .dot{
-  height: 0.8vw;
-  width: 0.8vw;
-  border-radius: 2vw;
-  background-color:white;
+  height:0.5em;
+  width: 0.5em;
+  border-radius: 0.5em;
+  border:1px solid teal;
+  background-color:whitesmoke;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
@@ -110,8 +113,8 @@
 @keyframes fade {   from {opacity: .4}    to {opacity: 1} }
 
 
-#topBar{height:75px; padding: 1%; }
-#topBar h1{display:inline-block; font-weight: 700; }
+#topBar{height:55px; padding: 1%; }
+#topBar h1{display:inline-block; margin:0;font-weight: 700; }
 #topBar img{height:100%; float: left;}
 
  header{ height:3.4em; text-align:right; overflow:hidden; box-shadow:1px 1px 3px; }
@@ -119,8 +122,8 @@
 .headerBox a { margin: 0 8px; font-weight:bold; font-size:26px }
 .headerBox p{ display:none; float: right ;   height: 1.7em ; }
 
-.slideshowBox .mySlides{width:100%; max-width:850px; color: white;  height:440px; position:relative;  text-align:center }
-.slideshowBox img{ width:307px; position:relative; top:0; }
+.slideshowBox .mySlides{width:100%; max-width:850px; color: white;  height:420px; position:relative;  text-align:center }
+.slideshowBox img{ width:280px; position:relative; top:0; }
 .slideshowBox button{ font-size: 18px; border-radius: 32px;}
 .slideshowBox .txtCont {background:rgba(8,76,83,0); bottom:4%; padding-bottom:3%; transform:skewY(0deg); width:100%; position:absolute;}
 .slideshowBox .skewCont{background:rgba(8,76,83, 0.6); height:160px; bottom:10%; transform:skewY(12deg); width:100%; position:absolute; } 
