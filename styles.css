@@ -147,7 +147,7 @@
 
 
 .footerBox{vertical-align: top;padding: 5%}
-.footerBox p{font-style:italic;font-weight:bold;}
+.footerBox p{font-style:italic;}
 .footerBox h3{font-size: 22px; font-weight: 700; }
 .footerBox span , .footerBox img, .footerBox hr {display: none;}
 
