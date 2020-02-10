@@ -119,15 +119,20 @@
 .headerBox a { margin: 0 8px; font-weight:bold; font-size:26px }
 .headerBox p{ display:none; float: right ;   height: 1.7em ; }
 
-.slideshowBox img{ width:307px;}
+.slideshowBox .mySlides{width:100%; max-width:850px; color: white;  height:440px; position:relative;  text-align:center }
+.slideshowBox img{ width:307px; position:relative; top:0; }
+.slideshowBox button{ font-size: 18px; border-radius: 32px;}
+.slideshowBox .txtCont {background:rgba(8,76,83,0); bottom:4%; padding-bottom:3%; transform:skewY(0deg); width:100%; position:absolute;}
+.slideshowBox .skewCont{background:rgba(8,76,83, 0.6); height:160px; bottom:10%; transform:skewY(12deg); width:100%; position:absolute; } 
+.slideshowBox span{margin: 0 7px;}
 
 #wrapper{max-width: 60em;  margin: auto; text-align: center;}
 
 .wrapperBox{ text-align: left;}
 .wrapperBox hr{ margin: 20px 30px  }
 .wrapperBox h3{ color :rgb(38,76,83); font-weight : 700; text-shadow : 2px 1px black;}
-.wrapperBox img{ width:2.6em; font-size: 3em}
-.wrapperBox p{ display: inline; font-size: 1.1em; font-weight:bold;}
+.wrapperBox img{ width:6.5em; }
+.wrapperBox p{ display: inline; font-size:1.3em;}
 
 
 #footer { background-color:rgb(38,76,83); color:rgb(171,217,225); font-size: small; text-align:center;} 
@@ -136,35 +141,26 @@
 
 #footerBox_0 { background-color:rgb(171,217,225); color:rgb(38,76,83); }
 #footerBox_0 a{font-size:2em; margin:0.7%; }
-#footerBox_1 { padding:0 15px}
 #footerBox_1 a{display: block;padding:0 0}
 #footerBox_1 svg{display: none}
 #footerBox_2, #footerBox_3 {box-shadow: none}
 
 
-.footerBox{vertical-align: top;padding: 5%;}
-.footerBox h3{font-size: 18px; font-weight: 700; }
+.footerBox{vertical-align: top;padding: 5%}
+.footerBox p{font-style:italic;font-weight:bold;}
+.footerBox h3{font-size: 22px; font-weight: 700; }
 .footerBox span , .footerBox img, .footerBox hr {display: none;}
-.footerBox p{ font-style:italic; font-weight:bold; }
+
 .headerBox h3{display: none}
 
-.mySlides { width:100%;  max-width:850px ;  margin: auto;}
 
-.enunc{ color:dodgerblue;  	font-weight:800;  text-shadow:1px 1px white;  	
-  
-}
-.stat { font-weight: 600; color: black;  text-shadow: 1px 1px dodgerblue;
-      margin: 0; top: 25%; 
-}
-
-.text {  color: #f2f2f2;    font-size: 20px;    padding: 8px 12px;  }
 
 
                                 /* 100% Image Width on Smaller Screens */
 @media only screen and (min-width: 400px){
 
   .slideshowBox img{ width: 39%; max-width:300px;  margin: 0; }
-  .slideshowBox span{ display: inline-block; width: fit-content; padding: 1%;  }
+  .slideshowBox span{ display: inline-block; width:15px; margin: 0 7px;  }
   
   .footerBox{ display: inline-block; padding: 1%;}
   #footerBox_0 { background-color:rgb(38,76,83);color:rgb(171,217,225); } 

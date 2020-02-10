@@ -13,12 +13,8 @@ var crtImg = function(attr){ return '<img' + attr + '>'}
 
 function createElem(elem,content,attr){
 	let object = {
-		lt:'<',
-        elem: elem,
-        attr:attr,
-		gt:'>',
-		content: content,
-		lts:'</',
+		lt:'<',	elem: elem, attr:attr, gt:'>',
+		content: content, lts:'</',
 		result: function(){
 			return this.lt + this.elem + [this.attr] + this.gt +
 					[this.content] +
@@ -34,19 +30,13 @@ function compElem(element,id,className){
 return x;
 }
 
-
-/* Social links */	
-
-
 var facebook ="fb://facewebmodal/f?href=https://www.facebook.com/articulosbquilla";
 var instagram="https://www.instagram.com/articulos_bquilla";
-//var	whatsapp = "https://api.whatsapp.com/send?phone=+573008546921";
 var	face_art ='fb://page/378010675934018';
 var	face_gor ='fb://page/581398665578960';
 var server = "https://artbaq.github.io/catalogo/";
 
-
-const navMenu = [
+const menuList = [
 	{id: 0 , name: "Nosotros" , icon: "fa fa-user" , url: "#" },
 	{id: 1 , name: "Catalogos", icon: "fa fa-list" , url: "#catalogos" },
 	{id: 2 , name: "Whatsapp" , icon: "fab fa-whatsapp" , url: "https://api.whatsapp.com/send?phone=+573008546921" }
@@ -59,18 +49,6 @@ var socialMedia = [
 	{id: 3 , name: "Google" , icon: "fab fa-google-plus-square" , url: "#" }
 ];
 
-
-
-const promotion = [
-	{url:"oModal('tec_',20);" , image: "tec_0.png" , title: "Smart TV BOX plus" , senten: "Aprovecha que solo quedan pocos."},
-	{url:"slideIndex = 1; oModal('tec_',20);" , image: "tec_1.png" , title: "Receptor Bluetooth", senten: "Transmite sonido por Bluetooth."},
-	{url:"oModal('tec_',20);" , image: "tec_2.png" , title: "Speaker Bluetooth" , senten: "Lleva tu musica a donde quieras."},
-	{url:"oModal('cap_',13);" , image: "cap_5.png" , title: "Gorras Planas"	   , senten: "Tu mejor estilo para cada ocacion."},
-	{url:"oModal('tec_',20);" , image: "tec_4.png" , title: "Game pad" 		   , senten: "Llevas tus juegos a otro nivel."}
-]
-
-
-//**********************
 var containerModal = document.getElementById('container-modal');
 var mySidebar = document.getElementById("mySidebar");
 var social = document.getElementById('social');
@@ -82,7 +60,7 @@ var arrowLeft = crtA( id('arrowLeft') +
 
 var arrowRight = crtA(	id('arrowRight') +
 	stl('position:absolute; top:45%; right:0; z-index:2;') +
-	onclick('plusDivs(1)') , crtImg( stl('width:50px') + src('arrowRight.png') )	)					
+	onclick('plusDivs(1)') , crtImg( stl('width:50px') + src('arrowRight.png') ));					
 
 
 function get_images(y, n)
@@ -101,11 +79,11 @@ function get_images(y, n)
 
 
 // Get the modal
-function oModal(nam , num){
+function oModal(nam, num,){
 	exit_Icon(myModal);
 		modal.style.display = "block";    
-    get_images(nam , num)
-    showDivs(slideIndex); 
+	get_images(nam , num)
+	showDivs(slideIndex); 
 	}
 
 function exit_Icon(id){
@@ -117,23 +95,26 @@ function exit_Icon(id){
 
 function w3_close()	{	modal.style.display = 'none'; }
 
-var slideIndex = 1;
-function plusDivs(n)	{ 
-	showDivs(slideIndex += n);
+var slideIndex = 0;
+
+
+function plusDivs( n
+){	showDivs(slideIndex += n);
 }
 
-function showDivs(n)	{     var i;   
+
+function showDivs(n){     var i;   
 	var x = document.getElementsByClassName("passing");
 	var y = document.getElementsByClassName("caption");
   	
   	if (n > x.length)	{ slideIndex = 1; }   	
 	if (n < 1) 	{ slideIndex = x.length } 
 	
-	  	for (i = 0; i < x.length; i++)  {
-		x[i].style.display = "none";
-		y[i].style.display = "none";
-		}
-    
+		for ( i = 0; i < x.length; i++
+		){
+			x[i].style.display = "none";
+			y[i].style.display = "none";
+		}    
     	x[slideIndex-1].style.display = "block";  
     	y[slideIndex-1].style.display = "block";
 }
