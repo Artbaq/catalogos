@@ -36,18 +36,7 @@ var	face_art ='fb://page/378010675934018';
 var	face_gor ='fb://page/581398665578960';
 var server = "https://artbaq.github.io/catalogo/";
 
-const menuList = [
-	{id: 0 , name: "Nosotros" , icon: "fa fa-user" , url: "#" },
-	{id: 1 , name: "Catalogos", icon: "fa fa-list" , url: "#catalogos" },
-	{id: 2 , name: "Whatsapp" , icon: "fab fa-whatsapp" , url: "https://api.whatsapp.com/send?phone=+573008546921" }
-];
 
-var socialMedia = [
-	{id: 0 , name: "Facebook" , icon: "fab fa-facebook-square" , url: "fb://facewebmodal/f?href=https://www.facebook.com/articulosbquilla" },
-	{id: 1 , name: "Instagram", icon: "fab fa-instagram" , url: "https://www.instagram.com/articulos_bquilla" },
-	{id: 2 , name: "Linkedin" , icon: "fab fa-linkedin" , url: "#" },
-	{id: 3 , name: "Google" , icon: "fab fa-google-plus-square" , url: "#" }
-];
 
 var containerModal = document.getElementById('container-modal');
 var mySidebar = document.getElementById("mySidebar");

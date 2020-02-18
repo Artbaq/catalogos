@@ -84,7 +84,7 @@ position:relative; animation:animateright 0.4s
 /* The dots/bullets/indicators */
 .dots{
   text-align: center;
-  background-color:rgba(171,217,225,0.4);
+  background-color:rgba(171,217,225,0.8);
 }
 
 .dot{
@@ -122,7 +122,7 @@ position:relative; animation:animateright 0.4s
 .headerBox a { margin: 0 8px; font-weight:bold; font-size:26px }
 .headerBox p{ display:none; float: right ;   height: 1.7em ; }
 
-.slideshowBox .mySlides{width:100%; max-width:850px; color: white;  height:420px; position:relative;  text-align:center }
+.slideshowBox .mySlides{width:100%; max-width:850px; color: white;  height:420px; position:relative;  text-align:center; margin: auto; }
 .slideshowBox img{ width:280px; position:relative; top:0; }
 .slideshowBox button{ font-size: 18px; border-radius: 32px;}
 .slideshowBox .txtCont {background:rgba(8,76,83,0); bottom:4%; padding-bottom:3%; transform:skewY(0deg); width:100%; position:absolute;}
@@ -136,23 +136,25 @@ position:relative; animation:animateright 0.4s
 .wrapperBox h3{ color :rgb(38,76,83); font-weight : 700; text-shadow : 2px 1px black;}
 .wrapperBox img{ width:6.5em; }
 .wrapperBox p{ display: inline; font-size:1.3em;}
+.wrapperBox b {color: red;}
 
 
-#footer { background-color:rgb(38,76,83); color:rgb(171,217,225); font-size: small; text-align:center;} 
+#footer { background-color:rgb(38,76,83); color:rgb(171,217,225) !important ; font-size: small; text-align:center;} 
 
 #footer div { border: none !important;  margin: auto !important; }
 
 #footerBox_0 { background-color:rgb(171,217,225); color:rgb(38,76,83); }
-#footerBox_0 a{font-size:2em; margin:0.7%; }
+#footerBox_0 a{font-size:2em; margin:0.7%;}
 #footerBox_1 a{display: block;padding:0 0}
+#footerBox_1 a:hover{box-shadow: 0 0 0; }
 #footerBox_1 svg{display: none}
 #footerBox_2, #footerBox_3 {box-shadow: none}
 
 
 .footerBox{vertical-align: top;padding: 5%}
-.footerBox p{font-style:italic;}
+.footerBox p:hover{ text-decoration: underline;}
 .footerBox h3{font-size: 22px; font-weight: 700; }
-.footerBox span , .footerBox img, .footerBox hr {display: none;}
+.footerBox img, .footerBox hr {display: none;}
 
 .headerBox h3{display: none}
 
