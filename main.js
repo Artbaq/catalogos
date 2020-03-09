@@ -1,8 +1,8 @@
 
 
-var gorrasCat = [   {url:"oModal('cur_',5)",  imges:"cur_2.png", txt:'Gorras Curvadas'},
-                    {url:"oModal('pla_',6)",  imges:"pla_5.png", txt:'Gorras Planas'},
-	                {url:"oModal('cap_',15)", imges:"cap_all.png", txt:'Ver todas <b>&#X271A</b>'}  ];
+var gorrasCat = [   {url:"oModal('cur_',8)",  imges:"cur_2.png", txt:'Gorras Curvadas'},
+                    {url:"oModal('pla_',9)",  imges:"pla_5.png", txt:'Gorras Planas'},
+	                {url:"oModal('cap_',18)", imges:"cap_all.png", txt:'Ver todas <b>&#X271A</b>'}  ];
 
 var technoCat = [   {url:"oModal('ear_',4)", imges:"ear_4.png", txt:'Audifonos & Bluetooth'},
                     {url:"oModal('cha_',4)", imges:"cha_2.png", txt:'Cargadores & Cables',},
@@ -170,7 +170,6 @@ innerSocialLinks(footer, socialIcons, 'Siguenos');
 innerMenu(footer, menuIcons, 'Menú');
 innerCatalogos(footer, technoCat, 'Tecnología');
 innerCatalogos(footer, gorrasCat, 'Gorras');
-
 
 
 
