@@ -1,0 +1,75 @@
+
+@media only screen and (max-width: 400px){}
+
+
+.container-product {
+	box-shadow: 0 0.3px blue;
+}
+
+.container-product div {	
+	display:inline-block;
+	width: 50%;
+}
+.container-product img {
+	width: 100%;
+	}
+
+.txt-column{
+	padding-left:5%;
+}
+
+.mySlides button {
+	display: block;
+	margin: auto;
+	}
+	
+.mySlides img{
+	width: 100%;
+	
+	}
+
+.dots{
+  text-align: center;
+  background-color:rgba(171,217,225,0.8);
+}
+
+.dot{
+  height:0.5em;
+  width: 0.5em;
+  border-radius: 0.5em;
+  border:1px solid teal;
+  background-color:whitesmoke;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin: 0 7px;
+}
+
+#categories div:first-child {
+	background: rgba(38,76,83, 0.7);
+	text-align:center;
+	width: 100%;
+	border-radius:45%;
+}
+
+#categories a {
+	display:inline-block;
+	margin:1%;
+	width:30%;
+  
+}
+
+
+#categories img{
+  width: 100%;
+  background:red;
+  border-radius:45%;
+  
+}
+
+/* Add Animation */
+.passing, .caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.9s;
+    animation-name: zoom;
+    animation-duration: 0.9s;
+}
